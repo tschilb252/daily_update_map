@@ -1,0 +1,264 @@
+{
+    "forecasts": {},
+    "regions": {
+        "Colorado Headwaters": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                40,
+                -107.1
+            ],
+            "huc-level": 6
+        },
+        "Gunnison": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                39.0,
+                -108.3
+            ],
+            "huc-level": 6
+        },
+        "Lower Green": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                40.5,
+                -110.8
+            ],
+            "huc-level": 6
+        },
+        "Lower San Juan": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                37.7,
+                -110.2
+            ],
+            "huc-level": 6
+        },
+        "Upper Colorado": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                39.8,
+                -110.7
+            ],
+            "huc-level": 2
+        },
+        "Upper Colorado-Dirty Devil": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                38.2,
+                -112.25
+            ],
+            "huc-level": 6
+        },
+        "Upper Colorado-Dolores": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                37.7,
+                -108.2
+            ],
+            "huc-level": 6
+        },
+        "Upper Green": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                42.9,
+                -110.5
+            ],
+            "huc-level": 6
+        },
+        "Upper San Juan": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                36.3,
+                -108.5
+            ],
+            "huc-level": 6
+        },
+        "White-Yampa": {
+            "anchor": [
+                0,
+                0
+            ],
+            "coords": [
+                40.9,
+                -107.9
+            ],
+            "huc-level": 6
+        }
+    },
+    "reservoirs": {
+        "Blue Mesa": {
+            "anchor": [
+                -110,
+                25
+            ],
+            "anno": "",
+            "cap": 829.5,
+            "coords": [
+                38.453,
+                -107.337
+            ],
+            "id": 913,
+            "pop_dir": "right",
+            "region": "uc",
+            "sdis": {
+                "elev": 1923,
+                "inflow": 1787,
+                "release": 1867,
+                "storage": 1714
+            }
+        },
+        "Crystal": {
+            "anchor": [
+                105,
+                -25
+            ],
+            "anno": "",
+            "cap": 17.536,
+            "coords": [
+                38.51,
+                -107.624
+            ],
+            "id": 915,
+            "pop_dir": "left",
+            "region": "uc",
+            "sdis": {
+                "elev": 1925,
+                "inflow": 1844,
+                "release": 1869,
+                "storage": 1716
+            }
+        },
+        "Flaming Gorge": {
+            "anchor": [
+                0,
+                0
+            ],
+            "anno": "",
+            "cap": 3749,
+            "coords": [
+                41.0934,
+                -109.5406
+            ],
+            "id": 917,
+            "pop_dir": "right",
+            "region": "uc",
+            "sdis": {
+                "elev": 1927,
+                "inflow": 1791,
+                "release": 1871,
+                "storage": 1718
+            }
+        },
+        "Fontenelle": {
+            "anchor": [
+                0,
+                0
+            ],
+            "anno": "",
+            "cap": 344.8,
+            "coords": [
+                42.026,
+                -110.068
+            ],
+            "id": 916,
+            "pop_dir": "left",
+            "region": "uc",
+            "sdis": {
+                "elev": 1926,
+                "inflow": 1790,
+                "release": 1870,
+                "storage": 1717
+            }
+        },
+        "Lake Powell": {
+            "anchor": [
+                0,
+                0
+            ],
+            "anno": "",
+            "cap": 24322,
+            "coords": [
+                37.0688,
+                -111.2439
+            ],
+            "id": 919,
+            "pop_dir": "up",
+            "region": "uc",
+            "sdis": {
+                "elev": 1928,
+                "inflow": 1792,
+                "release": 1872,
+                "storage": 1719
+            }
+        },
+        "Morrow Point": {
+            "anchor": [
+                0,
+                0
+            ],
+            "anno": "",
+            "cap": 117.25,
+            "coords": [
+                38.452,
+                -107.538
+            ],
+            "id": 914,
+            "pop_dir": "up",
+            "region": "uc",
+            "sdis": {
+                "elev": 1924,
+                "inflow": 1843,
+                "release": 1868,
+                "storage": 1715
+            }
+        },
+        "Navajo": {
+            "anchor": [
+                0,
+                0
+            ],
+            "anno": "",
+            "cap": 1696,
+            "coords": [
+                36.801,
+                -107.612
+            ],
+            "id": 920,
+            "pop_dir": "up",
+            "region": "uc",
+            "sdis": {
+                "elev": 1929,
+                "inflow": 1793,
+                "release": 1873,
+                "storage": 1720
+            }
+        }
+    }
+}

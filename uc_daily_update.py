@@ -6,22 +6,24 @@ Created on Tue Jan  7 06:55:24 2020
 """
 
 import re
+import json
 from io import StringIO
 from datetime import datetime as dt
 from os import path, makedirs
 from requests import get as r_get
 import folium
+import branca
 import pandas as pd
 from folium.plugins import FloatImage, MousePosition
 from folium.features import DivIcon
 # import geopandas as gpd
 # from shapely.geometry import Point
 # from shapely.ops import cascaded_union
-from region_status_utils import get_fa_icon, get_icon_color, get_season
-from region_status_utils import add_optional_tilesets, add_huc_layer, get_huc
-from region_status_utils import get_favicon, get_bor_seal
-from region_status_utils import get_bor_js, get_bor_css
-from region_status_utils import get_default_js, get_default_css
+from uc_update_utils import get_fa_icon, get_icon_color, get_season
+from uc_update_utils import add_optional_tilesets, add_huc_layer, get_huc
+from uc_update_utils import get_favicon, get_bor_seal
+from uc_update_utils import get_bor_js, get_bor_css
+from uc_update_utils import get_default_js, get_default_css
 
 bor_js = get_bor_js()
 bor_css = get_bor_css()
@@ -35,112 +37,286 @@ folium.folium._default_css = default_css
 # folium.folium._default_css = bor_css
 
 nrcs_url = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
+NRCS_CHARTS_URL = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 
 regions = {
-    'Arkansas-White-Red': {
-        'coords': [37, -103]
-    }, 
-    'California': {
-        'coords': [37.5, -123.5]
-    },
-    'Great Basin': {
-        'coords': [40.75, -117]
-    },
-    'Lower Colorado': {
-        'coords': [35, -113]
-    },
-    'Missouri': {
-        'coords': [46.7, -106.2]
-    },
-    'Pacific Northwest': {
-        'coords': [45, -117.5]
-    },
-    'Rio Grande':{
-        'coords': [35.2, -107.7]
-    },
     'Upper Colorado': {
-        'coords': [39.5, -110.7]
-    }
+        'coords': [39.8, -110.7], 'huc-level': 2, 'anchor': (0,0)
+    },
+    'Gunnison': {
+        'coords': [39.0, -108.3], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Colorado Headwaters': {
+        'coords': [40, -107.1], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'White-Yampa': {
+        'coords': [40.9, -107.9], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Upper Green': {
+        'coords': [42.9, -110.5], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Lower Green': {
+        'coords': [40.5, -110.8], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Upper Colorado-Dirty Devil': {
+        'coords': [38.2, -112.25], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Upper Colorado-Dolores': {
+        'coords': [37.7, -108.2], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Lower San Juan': {
+        'coords': [37.7, -110.2], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Upper San Juan': {
+        'coords': [36.3, -108.5], 'huc-level': 6, 'anchor': (0,0)
+    },
 }
+
+forecasts = {}
 
 reservoirs = {
-    'Canyon Ferry': {
-        'coords': [46.487414, -111.544201], 'region': 'gp', 'anno': 1, 'cap': 1891.888, 'id': 'cfr'
-    },
-    'Bighorn': {
-        'coords': [44.848426, -108.179062], 'region': 'gp', 'anno': 1, 'cap': 1020.573, 'id': 'bhr'
-    },
-    'Shadehill Reservoir': {
-        'coords': [45.729203, -102.256583], 'region': 'gp', 'anno': 1, 'cap': 120.172, 'id': 'shr'
-    },
-    'Angostura Reservoir': {
-        'coords': [43.308556, -103.422114], 'region': 'gp', 'anno': 1, 'cap': 123.048, 'id': 'agr'
-    },
-    'Palisades Reservoir': {
-        'coords': [43.194831, -111.081225], 'region': 'pn', 'anno': 1, 'cap': 1200, 'id': 'pal'
-    },
-    'Arrowrock Reservoir': {
-        'coords': [43.604093, -115.858169], 'region': 'pn', 'anno': 1, 'cap': 272.2, 'id': 'ark'
-    },
-    'Trinity Dam': {
-        'coords': [40.969630, -122.676816], 'region': 'mp', 'anno': 1, 'cap': 2447.7, 'id': 'cle'
-    },
-    'Shasta Lake': {
-        'coords': [40.735191, -122.414965], 'region': 'mp', 'anno': 1, 'cap': 4552, 'id': 'sha'
-    },
-    'Folsom Lake': {
-        'coords': [38.729518, -121.119817], 'region': 'mp', 'anno': 1, 'cap': 977, 'id': 'fol'
-    },
-    'Millerton Lake': {
-        'coords': [37.004422, -119.690673], 'region': 'mp', 'anno': 1, 'cap': 520.5, 'id': 'mil'
+    'Fontenelle': {
+        'coords': [42.026, -110.068], 'region': 'uc', 'anno': '', 'cap': 344.8, 
+        'id': 916, 'anchor': (0,0), 'pop_dir': 'left',
+        'sdis': 
+            {'storage': 1717, 'elev': 1926, 'inflow': 1790, 'release': 1870}
     },
     'Flaming Gorge': {
-        'coords': [41.093419, -109.540657], 'region': 'uc', 'anno': 1, 'cap': 3749, 'id': 1718
+        'coords': [41.0934, -109.5406], 'region': 'uc', 'anno': '', 'cap': 3749,
+        'id': 917, 'anchor': (0,0), 'pop_dir': 'right',
+        'sdis': 
+            {'storage': 1718, 'elev': 1927, 'inflow': 1791, 'release': 1871}
+    },
+    'Blue Mesa': {
+        'coords': [38.453, -107.337], 'region': 'uc', 'anno': '', 'cap': 829.5,
+        'id': 913, 'anchor': (-110,25), 'pop_dir': 'right',
+        'sdis': 
+            {'storage': 1714, 'elev': 1923, 'inflow': 1787, 'release': 1867}
+    },
+    'Morrow Point': {
+        'coords': [38.452, -107.538], 'region': 'uc', 'anno': '', 'cap': 117.25,
+        'id': 914, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1715, 'elev': 1924, 'inflow': 1843, 'release': 1868}
+    },
+    'Crystal': {
+        'coords': [38.51, -107.624], 'region': 'uc', 'anno': '', 'cap': 17.536,
+        'id': 915, 'anchor': (105,-25), 'pop_dir': 'left',
+        'sdis': 
+            {'storage': 1716, 'elev': 1925, 'inflow': 1844, 'release': 1869}
+    },
+    'Navajo': {
+        'coords': [36.801, -107.612], 'region': 'uc', 'anno': '', 'cap': 1696,
+        'id': 920, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1720, 'elev': 1929, 'inflow': 1793, 'release': 1873}
     },
     'Lake Powell': {
-        'coords': [37.068847, -111.243924], 'region': 'uc', 'anno':2, 'cap': 24322, 'id': 1719
-    },
-    'Lake Mead': {
-        'coords': [36.145605, -114.41476], 'region': 'lc', 'anno': 2, 'cap': 28945, 'id': 1721
-    },
-    'Elephant Butte': {
-        'coords': [33.251770, -107.166321], 'region': 'uc', 'anno': 2, 'cap': 1973.358, 'id': 2684
-    },
-}
-
-forecasts = {
-    'Grand Coulee': {
-        'coords': [47.952807, -118.980527], 'region': 'pn', 'anno': 1, 'avg': 56763, 'id': 'GCDW1'
-    },
-    'Columbia River': {
-        'coords': [45.604048, -121.173913], 'region': 'pn', 'anno': 1, 'avg': 87532, 'id': 'TDAO3'
+        'coords': [37.0688, -111.2439], 'region': 'uc', 'anno': '', 'cap': 24322,
+        'id': 919, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1719, 'elev': 1928, 'inflow': 1792, 'release': 1872}
     }
 }
+
+    
+# uc_config = dict(regions=regions, forecasts=forecasts, reservoirs=reservoirs)
+
+# with open(path.join('config', 'uc_config.json'), 'w') as j:
+#     json.dump(uc_config, j, indent=4, sort_keys=True)
+# import sys
+# sys.exit(0)
+# colormap = branca.colormap.LinearColormap(['red', 'yellow', 'green', 'blue'], index=[50, 70, 100, 150])
+def get_huc_nrcs_stats(huc_level='6', try_all=False):
+    print(f'  Getting NRCS stats for HUC{huc_level}...')
+    data_types = ['prec', 'wteq']
+    index_pg_urls = [f'{NRCS_CHARTS_URL}/{i.upper()}/assocHUC{huc_level}' 
+                     for i in data_types]
+    index_pg_resps = [r_get(i) for i in index_pg_urls]
+    index_pg_codes = [i.status_code for i in index_pg_resps]
+    if not set(index_pg_codes) == set([200]):
+        print(
+            index_pg_urls, 
+            f'  Could not download index file, trying all basins...'
+        )
+        try_all = True
+        index_page_strs = ['' for i in index_pg_resps]
+    else:
+        index_page_strs = [i.text for i in index_pg_resps]
+    topo_json_path = f'./gis/HUC{huc_level}.topojson'
+    with open(topo_json_path, 'r') as tj:
+        topo_json = json.load(tj)
+    huc_str = f'HUC{huc_level}'
+    attrs = topo_json['objects'][huc_str]['geometries']
+    for attr in attrs:
+        props = attr['properties']
+        huc_name = props['Name']
+        file_name = f'href="{huc_name.replace(" ", "%20")}.html"'
+        if not try_all and file_name in index_page_strs[0]:
+            print(f'  Getting NRCS PREC stats for {huc_name}...')
+            props['prec_percent'] = get_nrcs_basin_stat(
+                huc_name, huc_level=huc_level, data_type='prec'
+            )
+        else:
+            props['prec_percent'] = "N/A"
+        if not try_all and file_name in index_page_strs[1]:
+            print(f'  Getting NRCS WTEQ stats for {huc_name}...')
+            props['swe_percent'] = get_nrcs_basin_stat(
+                huc_name, huc_level=huc_level, data_type='wteq'
+            )
+        else:
+            props['swe_percent'] = "N/A"
+    topo_json['objects'][huc_str]['geometries'] = attrs
+    with open(topo_json_path, 'w') as tj:
+        json.dump(topo_json, tj)
+    
+def get_nrcs_basin_stat(basin_name, huc_level='2', data_type='wteq'):
+    stat_type_dict = {'wteq': 'Median', 'prec': 'Average'}
+    url = f'{NRCS_CHARTS_URL}/{data_type.upper()}/assocHUC{huc_level}/{basin_name}.html'
+    try:
+        response = r_get(url)
+        if not response.status_code == 200:
+            print(f'      Skipping {basin_name} {data_type.upper()}, NRCS does not publish stats.')
+            return 'N/A'
+        html_txt = response.text
+        stat_type = stat_type_dict.get(data_type, 'Median')
+        regex = f"(?<=% of {stat_type} - )(.*)(?=%<br>%)"
+        swe_re = re.search(regex, html_txt, re.MULTILINE)
+        stat = html_txt[swe_re.start():swe_re.end()]
+    except Exception as err:
+        print(f'      Error gathering data for {basin_name} - {err}')
+        stat = 'N/A'
+    return stat
+
+def add_huc_chropleth(m, data_type='swe', show=True, huc_level='6', 
+                      gis_path='gis', filter_str=None):
+    huc_str = f'HUC{huc_level}'
+    topo_json_path = path.join(gis_path, f'{huc_str}.topojson')
+    stat_type_dict = {'swe': 'Median', 'prec': 'Avg.'}
+    stat_type = stat_type_dict.get(data_type, '')
+    layer_name = f'{huc_str} % {stat_type} {data_type.upper()}'
+    with open(topo_json_path, 'r') as tj:
+        topo_json = json.load(tj)
+    if filter_str:
+        topo_json = filter_topo_json(
+            topo_json, huc_level=huc_level, filter_str=filter_str
+        )
+    style_chropleth_dict = {
+        'swe': style_swe_chropleth, 'prec': style_prec_chropleth
+    }
+    folium.TopoJson(
+        topo_json,
+        f'objects.{huc_str}',
+        name=layer_name,
+        show=show,
+        style_function=style_chropleth_dict[data_type],
+        tooltip=folium.features.GeoJsonTooltip(
+            ['Name', f'{data_type}_percent'],
+            aliases=['Basin Name:', f'{layer_name}:'])
+    ).add_to(m)
+
+def style_swe_chropleth(feature):
+    colormap = get_colormap()
+    stat_value = feature['properties'].get('swe_percent', 'N/A')
+    if stat_value == 'N/A':
+        fill_opacity = 0
+    else:
+        stat_value = float(stat_value)
+        fill_opacity = (abs(stat_value - 100)) / 100
+    return {
+        'fillOpacity': 0 if stat_value == 'N/A' else 0.5,#0.75 if fill_opacity > 0.75 else fill_opacity,
+        'weight': 0,
+        'fillColor': '#00000000' if stat_value == 'N/A' else colormap(stat_value)
+    }
+
+def style_prec_chropleth(feature):
+    colormap = get_colormap()
+    stat_value = feature['properties'].get('swe_percent', 'N/A')
+    if stat_value == 'N/A':
+        fill_opacity = 0
+    else:
+        stat_value = float(stat_value)
+        fill_opacity = (abs(stat_value - 100)) / 100
+    return {
+        'fillOpacity': 0 if stat_value == 'N/A' else 0.5,#0.75 if fill_opacity > 0.75 else fill_opacity,
+        'weight': 0,
+        'fillColor': '#00FFFFFF' if stat_value == 'N/A' else colormap(stat_value)
+    }
+
+def filter_geo_json(geo_json_path, filter_attr='HUC2', filter_str='14'):
+    f_geo_json = {'type': 'FeatureCollection'}
+    with open(geo_json_path, 'r') as gj:
+        geo_json = json.load(gj)
+    features = [i for i in geo_json['features'] if 
+                i['properties'][filter_attr][:2] == filter_str]
+    f_geo_json['features'] = features
+    
+    return f_geo_json
+
+def filter_topo_json(topo_json, huc_level=2, filter_str='14'):
+    geometries = topo_json['objects'][f'HUC{huc_level}']['geometries']
+    geometries[:] = [i for i in geometries if 
+                i['properties'][f'HUC{huc_level}'][:len(filter_str)] == filter_str]
+    topo_json['geometries'] = geometries
+    return topo_json
+
+def get_colormap(low=50, high=150):
+    colormap = branca.colormap.linear.RdYlBu_09.scale(low, high)
+    colormap.caption = '% of Average/Median Precip./SWE'
+    return colormap
 
 def get_legend():
     update_date = dt.now().strftime('%B %d, %Y')
-    legend_html = f'''
-    <div style="position: fixed; bottom: 205px; left: 30px; z-index:9999; font-size:26px;">
-      <b>Reclamation West-Wide Summary</b><br>
-    </div>
-    <div style="position: fixed; bottom: 180px; left: 30px; z-index:9999; font-size:22px;">
-        Precipitation and Storage Figures<br>
-    </div>
-    <div style="position: fixed; bottom: 30px; left: 30px; z-index:9999; font-size:13px;">
-      <sup>1</sup>Storage percent of capacity more sensitive to seasonal flows<br>
-      <sup>2</sup>Storage percent of capacity less sensitive to seasonal flows<br>
-      <i class="fa fa-umbrella"></i>&nbsp Water year-to-date precipitation (precip) provided as % of average<br>
-      <i class="fa fa-snowflake-o"></i>&nbsp Snow water equivalent (snow) provided as % of median<br>
-      <i class="fa fa-tint"></i>&nbsp Reservoir storage provided as percentage of capacity<br>
-      <i class="fa fa-tachometer"></i>&nbsp Forecast volumes provided as percentage of 30-yr average<br>
-      Precipitation, SWE, and reservoir data available from 
-      <a href="https://www.wcc.nrcs.usda.gov/">NRCS</a>/
-      <a href="https://www.usbr.gov/">BOR</a>/
-      <a href="https://cdec.water.ca.gov/">CDEC</a><br>
-      Updated as of {update_date}
-    </div>
+    legend_items = f'''
+      <a class="dropdown-item" href="#">
+        <b>Basin Data</b>
+      </a>
+      <a class="dropdown-item" href="https://www.wcc.nrcs.usda.gov/" target="_blank">
+        <span><i class="fa fa-umbrella"></i>&nbsp % Avg. Precipitation
+      </a>
+      <a class="dropdown-item" href="https://www.wcc.nrcs.usda.gov/" target="_blank">
+        <span><i class="fa fa-snowflake-o"></i>&nbsp % Median SWE
+      </a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">
+        <b>Reservoir Data</b>
+      </a>
+      <a class="dropdown-item" href="https://www.usbr.gov/library/glossary/#S" target="_blank">
+        <i class="fa fa-tint"></i>&nbsp Storage
+      </a>
+      <a class="dropdown-item" href="https://www.usbr.gov/library/glossary/#P" target="_blank">
+        <span><i class="fa fa-caret-down"></i>&nbsp Pool Elevation
+      </a>
+      <a class="dropdown-item" href="https://www.usbr.gov/library/glossary/#I" target="_blank">
+        <i class="fa fa-sign-in"></i>&nbsp Inflow
+      </a>
+      <a class="dropdown-item" href="https://www.usbr.gov/library/glossary/#R" target="_blank">
+        <i class="fa fa-external-link"></i>&nbsp Release
+      </a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">
+        <sup>1</sup>Sensitive to seasonal flows<br>
+      </a>
+      <a class="dropdown-item" href="#">
+        <sup>2</sup>Less sensitive to seasonal flows<br>
+      </a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">
+        Updated: {update_date}<br>
+      </a>
     '''
-    return legend_html
+    legend_dd = f'''
+    <div class="dropdup" style="position: fixed; top: 10px; left: 50px; z-index:9999;">
+      <button type="button" class="btn btn-warning btn-lg dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Legend
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+{legend_items}   
+      </div>   
+    </div>
+  
+  '''
+    return legend_dd
 
 def get_uc_data(sdi, map_date=dt.now()):
     base_url = 'https://www.usbr.gov/pn-bin/hdb/hdb.pl?svr=uchdb2'
@@ -153,7 +329,10 @@ def get_uc_data(sdi, map_date=dt.now()):
     t2 = f'&t2={dt_t2}'
     suffix= '&table=R&mrid=0&format=88'
     request_url = f'{base_url}{sdi}{tstp}{t1}{t2}{suffix}'
-    df = pd.read_csv(request_url, index_col='Date', parse_dates=True)
+    response = StringIO(r_get(request_url).text)
+    df = pd.read_csv(
+        response, index_col='Date', parse_dates=True
+    )
     df = df.astype(float)
     df.dropna(inplace=True)
     return {
@@ -173,79 +352,16 @@ def get_lc_data(sdi, map_date=dt.now()):
     t2 = f'&t2={dt_t2}'
     suffix= '&table=R&mrid=0&format=88'
     request_url = f'{base_url}{sdi}{tstp}{t1}{t2}{suffix}'
-    df = pd.read_csv(request_url, index_col='Date', parse_dates=True)
+    response = StringIO(r_get(request_url).text)
+    df = pd.read_csv(
+        response, index_col='Date', parse_dates=True
+    )
     df = df.astype(float)
     df.dropna(inplace=True)
     return {
         'data': df.iloc[-1,0], 
         'dt': df.index[-1].to_pydatetime(),
         'url': request_url.replace('format=88', 'format=html')
-    }
-
-def get_pn_data(site_id, map_date=dt.now()):
-    base_url = 'https://www.usbr.gov/pn-bin/daily.pl'
-    station = f'?station={site_id}'
-    frmt = '&format=csv'
-    now = map_date
-    dt_t1 = dt(now.year - 1, now.month, now.day)
-    s_date = f'&year={dt_t1.year}&month={dt_t1.month}&day={dt_t1.day}'
-    dt_t2 = dt(now.year, now.month, now.day)
-    e_date = f'&year={dt_t2.year}&month={dt_t2.month}&day={dt_t2.day}'
-    pcode = '&pcode=af'
-    request_url = f'{base_url}{station}{frmt}{s_date}{e_date}{pcode}'
-    df = pd.read_csv(request_url, index_col='DateTime', parse_dates=True)
-    df = df.astype(float)
-    df.dropna(inplace=True)
-    return {
-        'data': df.iloc[-1,0], 
-        'dt': df.index[-1].to_pydatetime(),
-        'url': request_url.replace('csv', 'html')
-    }
-
-def get_gp_data(site_id, map_date=dt.now()):
-    base_url = 'https://www.usbr.gov/gp-bin/webarccsv.pl'
-    param = f'?parameter={site_id.upper()}%20AF'
-    now = map_date
-    dt_t1 = dt(now.year - 1, now.month, now.day)
-    s_date = f'&syer={dt_t1.year}&smnth={dt_t1.month}&sdy={dt_t1.day}'
-    dt_t2 = dt(now.year, now.month, now.day)
-    e_date = f'&eyer={dt_t2.year}&emnth={dt_t2.month}&edy={dt_t2.day}'
-    frmt = '&format=4'
-    request_url = f'{base_url}{param}{s_date}{e_date}{frmt}'
-    df = pd.read_csv(
-        request_url, index_col='#DATE', parse_dates=True, na_values='MISSING'
-    )
-    df = df.astype(float)
-    df.dropna(inplace=True)
-    df.index = pd.to_datetime(df.index)
-    return {
-        'data': df.iloc[-1,0], 
-        'dt': df.index[-1].to_pydatetime(),
-        'url': request_url.replace('format=4', 'format=3')
-    }
-
-def get_mp_data(site_id, map_date=dt.now()):
-    base_url = 'http://cdec.water.ca.gov/dynamicapp/req/CSVDataServlet'
-    station = f'?Stations={site_id.upper()}'
-    sensor = '&SensorNums=15'
-    duration = '&dur_code=D'
-    now = map_date
-    t1 = dt(now.year - 1, now.month, now.day).strftime('%Y-%m-%d')
-    s_date = f'&Start={t1}'
-    t2 = dt(now.year, now.month, now.day).strftime('%Y-%m-%d')
-    e_date = f'&End={t2}'
-    request_url = f'{base_url}{station}{sensor}{duration}{s_date}{e_date}'
-    df_all = pd.read_csv(
-        request_url, index_col='DATE TIME', parse_dates=True, na_values='---'
-    )
-    df = df_all[['VALUE']].copy()
-    df = df.astype(float)
-    df.dropna(inplace=True)
-    df.index = pd.to_datetime(df.index)
-    return {
-        'data': df.iloc[-1,0], 
-        'dt': df.index[-1].to_pydatetime(),
-        'url': request_url
     }
 
 def get_frcst_data(site_id, map_date=dt.now()):
@@ -289,11 +405,17 @@ def get_embed(href):
     )   
     return embed
 
-def add_region_markers(rs_map, regions=regions, nrcs_url=nrcs_url, map_date=None):
+def add_region_markers(basin_map, regions=regions, nrcs_url=nrcs_url, map_date=None):
     for region, region_meta in regions.items():
         print(f'    Adding {region} to the map...')
-        swe_url = f'{nrcs_url}/WTEQ/assocHUC2/{region} Region.html'
-        prec_url = f'{nrcs_url}/PREC/assocHUC2/{region} Region.html'
+        huc_level = region_meta['huc-level']
+        btn_size = ''
+        region_suffix = ' Region'
+        if huc_level > 2:
+            btn_size = 'btn-sm'
+            region_suffix = ''
+        swe_url = f'{nrcs_url}/WTEQ/assocHUC{huc_level}/{region}{region_suffix}.html'
+        prec_url = f'{nrcs_url}/PREC/assocHUC{huc_level}/{region}{region_suffix}.html'
         try:
             swe_txt = r_get(swe_url).text
             prec_txt = r_get(prec_url).text
@@ -318,19 +440,19 @@ def add_region_markers(rs_map, regions=regions, nrcs_url=nrcs_url, map_date=None
             other_chart_type = 'Snow'
             
         popup_html = (
-                f'<div class="container">'
-                f'<div class="row justify-content-center">'
-                f'<div class="col">'
-                f'<a href="{other_season_url}" target="_blank">'
-                f'<button class="btn btn-primary btn-sm btn-block">'
-                f'Go to {region} {other_chart_type} Chart...</button></a></div>'
-                f'<div class="row justify-content-center">{get_embed(seasonal_url)}</div>'
-                f'</div></div>'
-            )
+            f'<div class="container">'
+            f'<div class="row justify-content-center">'
+            f'<div class="col">'
+            f'<a href="{other_season_url}" target="_blank">'
+            f'<button class="btn btn-primary btn-sm btn-block">'
+            f'Go to {region} {other_chart_type} Chart...</button></a></div>'
+            f'<div class="row justify-content-center">{get_embed(seasonal_url)}</div>'
+            f'</div></div>'
+        )
         popup = folium.map.Popup(html=popup_html)
             
         marker_label = f'''
-        <button type="button" class="btn btn-primary">
+        <button type="button" class="btn btn-primary {btn_size}">
           <span style="white-space: nowrap;">{region}</span><br>
           <span style="white-space: nowrap;">
             {prec_percent}% <i class="fa fa-umbrella"></i>
@@ -348,53 +470,90 @@ def add_region_markers(rs_map, regions=regions, nrcs_url=nrcs_url, map_date=None
             popup=popup,
             tooltip='Click for chart.',
             icon=div_icon
-        ).add_to(rs_map)
+        ).add_to(basin_map)
 
-def add_res_markers(rs_map, reservoirs=reservoirs, map_date=None):
+def add_res_markers(basin_map, reservoirs=reservoirs, map_date=None):
+    prefix = 'https://www.usbr.gov/uc/water/hydrodata/RESERVOIR_DATA'
     for res_name, res_meta in reservoirs.items():
         print(f'    Adding {res_name} to map...')
         try:
             if res_meta['region'] == 'uc':
-                current_data = get_uc_data(res_meta['id'], map_date=map_date)
+                current_storage = get_uc_data(res_meta['sdis']['storage'], map_date=map_date)
+                current_date = current_storage['dt']
+                current_storage = current_storage['data']
+                current_elev = get_uc_data(res_meta['sdis']['elev'], map_date=map_date)['data']
+                current_inflow = get_uc_data(res_meta['sdis']['inflow'], map_date=map_date)['data']
+                current_release = get_uc_data(res_meta['sdis']['release'], map_date=map_date)['data']
             elif res_meta['region'] == 'lc':
-                current_data = get_lc_data(res_meta['id'], map_date=map_date)
-            elif res_meta['region'] == 'pn':
-                current_data = get_pn_data(res_meta['id'], map_date=map_date)
-            elif res_meta['region'] == 'gp':
-                current_data = get_gp_data(res_meta['id'], map_date=map_date)
-            elif res_meta['region'] == 'mp':
-                current_data = get_mp_data(res_meta['id'], map_date=map_date)
+                current_storage = get_lc_data(res_meta['sdis']['storage'], map_date=map_date)['data']
+                current_elev = get_lc_data(res_meta['sdis']['elev'], map_date=map_date)['data']
+                current_inflow = get_lc_data(res_meta['sdis']['inflow'], map_date=map_date)['data']
+                current_release = get_lc_data(res_meta['sdis']['release'], map_date=map_date)['data']
             else:
-                current_data = None
+                current_storage = None
+                current_elev = None
+                current_inflow = None
+                current_release = None
+                
         except Exception as err:
             print(f'      Error gathering data for {res_name} - {err}')
-            current_data = None
+            current_storage = None
+            current_elev = None
+            current_inflow = None
+            current_release = None
                 
-        if current_data:
-            percent_cap = 100 * round(current_data['data'] / (1000 * res_meta['cap']), 2)
+        if current_storage and res_meta['region'].lower() == 'uc':
+            percent_cap = 100 * round(current_storage / (1000 * res_meta['cap']), 2)
             percent_cap = f'{percent_cap:0.0f}'
-            tooltip = f"As of: {current_data['dt'].strftime('%x')}"
+            tooltip = f"As of: {current_date.strftime('%x')}"
             anno = res_meta['anno']
-            url = current_data['url']
+            url_storage = f"{prefix}/{res_meta['id']}/dashboard.html#inflow"
+            url_elev = f"{prefix}/{res_meta['id']}/dashboard.html#pool_elevation"
+            url_inflow = f"{prefix}/{res_meta['id']}/dashboard.html#inflow"
+            url_release = f"{prefix}/{res_meta['id']}/dashboard.html#total_release"
+            current_storage = f'{current_storage/1000:,.1f}'
+            current_elev = f'{current_elev:,.1f}'
+            current_inflow = f'{current_inflow:,.0f}'
+            current_release = f'{current_release:,.0f}'
         else:
+            current_storage = 'N/A'
+            current_elev = 'N/A'
+            current_inflow = 'N/A'
+            current_release = 'N/A'
             percent_cap = 'N/A'
             tooltip = 'Error retrieving data!'
             anno = ''
-            url = ''
-            
+            url_storage = ''
+            url_elev = ''
+            url_inflow = ''
+            url_release = ''
+        
         marker_label = f'''
-        <a href="{url}" target="_blank">
-          <button type="button" class="btn btn-sm btn-info">
-            <span style="white-space: nowrap;">{res_name}</span><br>
+        <div class="drop{res_meta['pop_dir']}">
+          <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span style="white-space: nowrap;">
-              {percent_cap}%<sup>{anno}</sup> <i class="fa fa-tint"></i>
+                <b>{res_name}</b><br>{percent_cap}% capacity<sup>{anno}</sup>
             </span>
           </button>
-        </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="{url_storage}" target="_blank">
+              <i class="fa fa-tint"></i> &nbsp; {current_storage} kaf
+            </a>
+            <a class="dropdown-item" href="{url_elev}" target="_blank">
+              <i class="fa fa-caret-down"></i>  &nbsp; {current_elev}' 
+            </a>  
+            <a class="dropdown-item" href="{url_inflow}" target="_blank">
+              <i class="fa fa-sign-in"></i> &nbsp; {current_inflow} cfs 
+            </a>  
+            <a class="dropdown-item" href="{url_release}" target="_blank">
+              <i class="fa fa-external-link"></i> &nbsp; {current_release} cfs
+            </a>
+          </div>
+        </div>
+          
         '''
-        icon_anchor = (0,0)
-        if res_name.lower() in ['elephant butte', 'trinity dam']:
-            icon_anchor = (80,35)
+        
+        icon_anchor = res_meta['anchor']
             
         div_icon = DivIcon(
             # icon_size=(120,40),
@@ -402,14 +561,37 @@ def add_res_markers(rs_map, reservoirs=reservoirs, map_date=None):
             html=marker_label,
         )
         
+        bar = {
+          "data": {
+            "values": [
+              {"%": int(percent_cap)}
+            ]
+          },
+          "mark": {"type": "bar"},
+          "encoding": {
+            "y": {
+              "field": "%",
+              "type": "quantitative",
+              "axis": {"title": "% Capacity"}
+            }
+          }
+        }
+        vega = folium.features.VegaLite(
+            bar,
+            width='100%',
+            height='100%',
+        )
+        
+        div_icon.add_to(vega)
+        
         folium.Marker(
             location=res_meta['coords'],
             # popup=popup,
             tooltip=tooltip,
             icon=div_icon
-        ).add_to(rs_map)
+        ).add_to(basin_map)
 
-def add_frcst_markers(rs_map, forecasts=forecasts, map_date=None):
+def add_frcst_markers(basin_map, forecasts=forecasts, map_date=None):
     for frcst_name, frcst_meta in forecasts.items():
         print(f'    Adding {frcst_name} to map...')
         
@@ -449,7 +631,6 @@ def add_frcst_markers(rs_map, forecasts=forecasts, map_date=None):
         '''
 
         div_icon = DivIcon(
-            # icon_size=(120,40),
             icon_anchor=(0,0),
             html=marker_label,
         )
@@ -459,17 +640,18 @@ def add_frcst_markers(rs_map, forecasts=forecasts, map_date=None):
             # popup=popup,
             tooltip=tooltip,
             icon=div_icon
-        ).add_to(rs_map)
+        ).add_to(basin_map)
         
 if __name__ == '__main__':
     import argparse
-    cli_desc = 'Creates West-Wide Summary map for USBR.'
+    cli_desc = 'Creates Upper Colorado Daily Summary map for USBR.'
     parser = argparse.ArgumentParser(description=cli_desc)
     parser.add_argument("-V", "--version", help="show program version", action="store_true")
     parser.add_argument("-d", "--date", help="run for specific date (YYYY-MM-DD), currently no support for region prec/swe data, only res/frcst data")
     parser.add_argument("-o", "--output", help="set output folder")
     parser.add_argument("-n", "--name", help="use alternate name *.html")
     parser.add_argument("-m", "--makedir", help="create output folder if it doesn't exist", action='store_true')
+    parser.add_argument("-g", "--gis", help="update gis files with current NRCS data", action='store_true')
     
     args = parser.parse_args()
     
@@ -500,41 +682,72 @@ if __name__ == '__main__':
     if args.name:
         map_path = path.join(map_dir, f'{args.name}.html')
     else:
-        map_path = path.join(map_dir, 'regional_status.html')
+        map_path = path.join(map_dir, 'uc_status.html')
+    
+    if args.gis:
+        for huc_level in ['2', '6', '8']:
+            get_huc_nrcs_stats(huc_level)
         
     print(f'Creating map here: {map_dir}')
+    print(f'  Adding layers and controls...')
     gis_dir = path.join(this_dir, 'gis')
     
-    rs_map = folium.Map(
-            tiles=None,
-            # location=[39.5, -110],
-            # zoom_start=5.5
+    basin_map = folium.Map(
+        tiles=None, location=(39.0, -108.6), zoom_start=7, control_scale=True
+    )
+    
+    for huc_level in ['6', '8']:
+        show_prec = False
+        show_swe = False
+        if huc_level == '8':
+            show_swe = True
+            if get_season() =='summer':
+                show_prec = True
+                show_swe = False
+        add_huc_chropleth(
+            basin_map, 
+            data_type='swe', 
+            show=show_swe, 
+            huc_level=huc_level, 
+            gis_path='gis', 
+            filter_str='14'
         )
-    add_huc_layer(rs_map, 2)
-    add_optional_tilesets(rs_map)
-    folium.LayerControl().add_to(rs_map)
+        add_huc_chropleth(
+            basin_map, 
+            data_type='prec', 
+            show=show_prec, 
+            huc_level=huc_level, 
+            gis_path='gis', 
+            filter_str='14'
+        )
+    add_huc_layer(basin_map, level=6, show=True, embed=False, filter_on='14')
+    add_huc_layer(basin_map, level=8, show=False, embed=False, filter_on='14')
+    add_huc_layer(basin_map, level=2, show=False, embed=False,  filter_on='14')
+    
+    add_optional_tilesets(basin_map)
+    folium.LayerControl('topleft', collapsed=True).add_to(basin_map)
     FloatImage(
         get_bor_seal(orient='horz'),
-        bottom=78,
+        bottom=5,
         left=1
-    ).add_to(rs_map)
-    # MousePosition(prefix="Location: ").add_to(rs_map)
-    
-    print('  Adding Regional Forecast markers...')
-    add_frcst_markers(rs_map, map_date=map_date)
-    print('  Adding Regional Reservoir markers...')
-    add_res_markers(rs_map, map_date=map_date)
-    print('  Adding Regional PREC/SWE markers...')
-    add_region_markers(rs_map, map_date=map_date)
+    ).add_to(basin_map)
+    MousePosition(prefix="Location: ").add_to(basin_map)
+    get_colormap().add_to(basin_map)
+    # print('  Adding Regional Forecast markers...')
+    # add_frcst_markers(basin_map, map_date=map_date)
+    print('  Adding Reservoir markers...')
+    add_res_markers(basin_map, map_date=map_date)
+    print('  Adding PREC/SWE markers...')
+    add_region_markers(basin_map, map_date=map_date)
     
     all_coords = [i['coords'] for i in reservoirs.values()]
     all_coords = all_coords + [i['coords'] for i in forecasts.values()]
     all_coords = all_coords + [i['coords'] for i in regions.values()]
-    rs_map.fit_bounds(all_coords)
+    # basin_map.fit_bounds(all_coords)
 
     legend = folium.Element(get_legend())
-    rs_map.get_root().html.add_child(legend)
-    rs_map.save(map_path)
+    basin_map.get_root().html.add_child(legend)
+    basin_map.save(map_path)
     flavicon = (
         f'<link rel="shortcut icon" '
         f'href="{get_favicon()}"></head>'
@@ -546,9 +759,22 @@ if __name__ == '__main__':
         chart_file_str = chart_file_str.replace(r'</head>', flavicon)
         replace_str = (
             '''left:1%;
-                    max-width:20%;
-                    max-height:20%;'''
+                    max-width:15%;
+                    max-height:15%;
+                    background-color:rgba(255,255,255,0.5);
+                    border-radius: 10px;
+                    padding: 10px;'''
         )
         chart_file_str = chart_file_str.replace(r'left:1%;', replace_str)
+        find_str = (
+                """.append("svg")
+        .attr("id", 'legend')"""
+            )
+        replace_str = (
+                '''.append("svg")
+                     .attr("id", "legend")
+                     .attr("style", "background-color:rgba(255,255,255,0.75);border-radius: 10px;")'''
+            )
+        chart_file_str = chart_file_str.replace(find_str, replace_str)
         html_file.write(chart_file_str)
     print(f'\nCreated map here: {map_path}')

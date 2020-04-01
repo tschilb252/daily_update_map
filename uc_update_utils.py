@@ -12,7 +12,7 @@ import pandas as pd
 from shapely.geometry import Point
 from datetime import datetime
 
-STATIC_URL = f'https://www.usbr.gov/uc/water/ff/assets'
+STATIC_URL = f'https://www.usbr.gov/uc/water/hydrodata/assets'
 
 def get_plotly_js():
     return f'{STATIC_URL}/plotly.js'
@@ -175,16 +175,21 @@ def add_optional_tilesets(folium_map):
     for name, tileset in tilesets.items():
         folium.TileLayer(tileset, name=name).add_to(folium_map)
 
-def add_huc_layer(huc_map, level=2, huc_geojson_path=None, embed=False):
+def add_huc_layer(huc_map, level=2, huc_geojson_path=None, embed=False, show=True, filter_on=None):
     try:
         if not huc_geojson_path:
             huc_geojson_path = f'{STATIC_URL}/gis/HUC{level}.geojson'
-        huc_style = lambda x: {
-            'fillColor': '#ffffff00', 'color': '#1f1f1faa', 'weight': 2
-        }
-        show = False
-        if level == 2:
-            show = True
+        else:
+            embed = True
+        if filter_on:
+           huc_style = lambda x: {
+            'fillColor': '#ffffff00', 'color': '#1f1f1faa', 
+            'weight': 2 if x['properties'][f'HUC{level}'][:len(filter_on)] == filter_on else 0
+        } 
+        else:
+            huc_style = lambda x: {
+                'fillColor': '#ffffff00', 'color': '#1f1f1faa', 'weight': 2
+            }
         folium.GeoJson(
             huc_geojson_path,
             name=f'HUC {level}',
