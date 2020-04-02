@@ -224,7 +224,7 @@ def style_swe_chropleth(feature):
         stat_value = float(stat_value)
         fill_opacity = (abs(stat_value - 100)) / 100
     return {
-        'fillOpacity': 0 if stat_value == 'N/A' else 0.5,#0.75 if fill_opacity > 0.75 else fill_opacity,
+        'fillOpacity': 0 if stat_value == 'N/A' else 0.75,#0.75 if fill_opacity > 0.75 else fill_opacity,
         'weight': 0,
         'fillColor': '#00000000' if stat_value == 'N/A' else colormap(stat_value)
     }
@@ -238,7 +238,7 @@ def style_prec_chropleth(feature):
         stat_value = float(stat_value)
         fill_opacity = (abs(stat_value - 100)) / 100
     return {
-        'fillOpacity': 0 if stat_value == 'N/A' else 0.5,#0.75 if fill_opacity > 0.75 else fill_opacity,
+        'fillOpacity': 0 if stat_value == 'N/A' else 0.75,#0.75 if fill_opacity > 0.75 else fill_opacity,
         'weight': 0,
         'fillColor': '#00FFFFFF' if stat_value == 'N/A' else colormap(stat_value)
     }
