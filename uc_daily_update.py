@@ -702,6 +702,7 @@ if __name__ == '__main__':
     
     gis_dir = path.join(this_dir, 'gis')
     if path.isdir(str(args.gis)):
+        print('Using alt gis dir: {args.gis}')
         gis_dir = args.gis
     if args.gis == True:
         for huc_level in ['2', '6', '8']:
