@@ -577,28 +577,29 @@ def add_res_markers(basin_map, reservoirs=reservoirs, map_date=None):
             html=marker_label,
         )
         
-        bar = {
-          "data": {
-            "values": [
-              {"%": int(percent_cap)}
-            ]
-          },
-          "mark": {"type": "bar"},
-          "encoding": {
-            "y": {
-              "field": "%",
-              "type": "quantitative",
-              "axis": {"title": "% Capacity"}
+        if current_storage and res_meta['region'].lower() == 'uc':
+            bar = {
+              "data": {
+                "values": [
+                  {"%": int(percent_cap)}
+                ]
+              },
+              "mark": {"type": "bar"},
+              "encoding": {
+                "y": {
+                  "field": "%",
+                  "type": "quantitative",
+                  "axis": {"title": "% Capacity"}
+                }
+              }
             }
-          }
-        }
-        vega = folium.features.VegaLite(
-            bar,
-            width='100%',
-            height='100%',
-        )
-        
-        div_icon.add_to(vega)
+            vega = folium.features.VegaLite(
+                bar,
+                width='100%',
+                height='100%',
+            )
+            
+            div_icon.add_to(vega)
         
         folium.Marker(
             location=res_meta['coords'],
@@ -702,7 +703,7 @@ if __name__ == '__main__':
     
     gis_dir = path.join(this_dir, 'gis')
     if path.isdir(str(args.gis)):
-        print('Using alt gis dir: {args.gis}')
+        print(f'Using alt gis dir: {args.gis}')
         gis_dir = args.gis
     if args.gis == True:
         for huc_level in ['2', '6', '8']:
