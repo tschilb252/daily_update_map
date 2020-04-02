@@ -728,7 +728,7 @@ if __name__ == '__main__':
             data_type='swe', 
             show=show_swe, 
             huc_level=huc_level, 
-            gis_path='gis', 
+            gis_path=gis_dir, 
             filter_str='14'
         )
         add_huc_chropleth(
@@ -736,7 +736,7 @@ if __name__ == '__main__':
             data_type='prec', 
             show=show_prec, 
             huc_level=huc_level, 
-            gis_path='gis', 
+            gis_path=gis_dir, 
             filter_str='14'
         )
     add_huc_layer(basin_map, level=6, show=True, embed=False, filter_on='14')
