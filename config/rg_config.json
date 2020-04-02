@@ -1,0 +1,81 @@
+{
+    "rg": {
+        "center": [
+            35.1,
+            -106
+        ],
+        "filter_huc": 13,
+        "forecasts": {},
+        "huc_level": 2,
+        "regions": {
+            "Rio Grande": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    34.5,
+                    -106.5
+                ],
+                "huc-level": 2
+            },
+            "Rio Grande Headwaters": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    38,
+                    -106.5
+                ],
+                "huc-level": 6
+            },
+            "Rio Grande-Elephant Butte": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    35.3,
+                    -107.5
+                ],
+                "huc-level": 6
+            },
+            "Upper Pecos": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    33,
+                    -105
+                ],
+                "huc-level": 6
+            }
+        },
+        "reservoirs": {
+            "Elephant Butte": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 2010.9,
+                "coords": [
+                    33.15,
+                    -107.2
+                ],
+                "id": 1119,
+                "pop_dir": "left",
+                "region": "uc",
+                "sdis": {
+                    "elev": 2685,
+                    "inflow": 2686,
+                    "release": 2688,
+                    "storage": 2684
+                }
+            }
+        },
+        "zoom": 7
+    }
+}
