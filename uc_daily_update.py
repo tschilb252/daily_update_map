@@ -651,7 +651,7 @@ if __name__ == '__main__':
     parser.add_argument("-o", "--output", help="set output folder")
     parser.add_argument("-n", "--name", help="use alternate name *.html")
     parser.add_argument("-m", "--makedir", help="create output folder if it doesn't exist", action='store_true')
-    parser.add_argument("-g", "--gis", help="update gis files with current NRCS data", action='store_true')
+    parser.add_argument("-g", "--gis", help="update local gis files with current NRCS data, or pass path for alt gis folder.", const=True, nargs='?')
     
     args = parser.parse_args()
     
@@ -684,13 +684,15 @@ if __name__ == '__main__':
     else:
         map_path = path.join(map_dir, 'uc_status.html')
     
-    if args.gis:
+    gis_dir = path.join(this_dir, 'gis')
+    if path.isdir(str(args.gis)):
+        gis_dir = args.gis
+    if args.gis == True:
         for huc_level in ['2', '6', '8']:
             get_huc_nrcs_stats(huc_level)
         
     print(f'Creating map here: {map_dir}')
     print(f'  Adding layers and controls...')
-    gis_dir = path.join(this_dir, 'gis')
     
     basin_map = folium.Map(
         tiles=None, location=(39.0, -108.6), zoom_start=7, control_scale=True

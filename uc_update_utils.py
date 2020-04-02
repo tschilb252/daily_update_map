@@ -177,6 +177,7 @@ def add_optional_tilesets(folium_map):
 
 def add_huc_layer(huc_map, level=2, huc_geojson_path=None, embed=False, show=True, filter_on=None):
     try:
+        weight = -0.25 * float(level) + 2.5
         if not huc_geojson_path:
             huc_geojson_path = f'{STATIC_URL}/gis/HUC{level}.geojson'
         else:
@@ -184,11 +185,11 @@ def add_huc_layer(huc_map, level=2, huc_geojson_path=None, embed=False, show=Tru
         if filter_on:
            huc_style = lambda x: {
             'fillColor': '#ffffff00', 'color': '#1f1f1faa', 
-            'weight': 2 if x['properties'][f'HUC{level}'][:len(filter_on)] == filter_on else 0
+            'weight': weight if x['properties'][f'HUC{level}'][:len(filter_on)] == filter_on else 0
         } 
         else:
             huc_style = lambda x: {
-                'fillColor': '#ffffff00', 'color': '#1f1f1faa', 'weight': 2
+                'fillColor': '#ffffff00', 'color': '#1f1f1faa', 'weight': weight
             }
         folium.GeoJson(
             huc_geojson_path,
