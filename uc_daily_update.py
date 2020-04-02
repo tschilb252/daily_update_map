@@ -190,6 +190,7 @@ def get_nrcs_basin_stat(basin_name, huc_level='2', data_type='wteq'):
 
 def add_huc_chropleth(m, data_type='swe', show=True, huc_level='6', 
                       gis_path='gis', filter_str=None):
+    
     huc_str = f'HUC{huc_level}'
     topo_json_path = path.join(gis_path, f'{huc_str}.topojson')
     stat_type_dict = {'swe': 'Median', 'prec': 'Avg.'}
@@ -243,7 +244,26 @@ def style_prec_chropleth(feature):
         'fillColor': '#00FFFFFF' if stat_value == 'N/A' else colormap(stat_value)
     }
 
+def get_colormap(low=50, high=150):
+    # colormap = branca.colormap.linear.RdYlBu_09.scale(low, high)
+    colormap = branca.colormap.LinearColormap(
+        # colors=['red','yellow','green','blue', 'purple'],
+        colors=[
+            (255,51,51,150), 
+            (255,255,51,150), 
+            (51,255,51,150), 
+            (51,153,255,150), 
+            (153,51,255,150)
+        ], 
+        index=[50, 75, 100, 125, 150], 
+        vmin=50,
+        vmax=150
+    )
+    colormap.caption = '% of Average Precipitation or % Median Snow Water Equivalent'
+    return colormap
+
 def filter_geo_json(geo_json_path, filter_attr='HUC2', filter_str='14'):
+   
     f_geo_json = {'type': 'FeatureCollection'}
     with open(geo_json_path, 'r') as gj:
         geo_json = json.load(gj)
@@ -254,16 +274,12 @@ def filter_geo_json(geo_json_path, filter_attr='HUC2', filter_str='14'):
     return f_geo_json
 
 def filter_topo_json(topo_json, huc_level=2, filter_str='14'):
+    
     geometries = topo_json['objects'][f'HUC{huc_level}']['geometries']
     geometries[:] = [i for i in geometries if 
                 i['properties'][f'HUC{huc_level}'][:len(filter_str)] == filter_str]
     topo_json['geometries'] = geometries
     return topo_json
-
-def get_colormap(low=50, high=150):
-    colormap = branca.colormap.linear.RdYlBu_09.scale(low, high)
-    colormap.caption = '% of Average/Median Precip./SWE'
-    return colormap
 
 def get_legend():
     update_date = dt.now().strftime('%B %d, %Y')
