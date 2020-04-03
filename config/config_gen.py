@@ -91,7 +91,7 @@ regions = {
         'coords': [33, -105], 'huc-level': 8, 'anchor': (0,0)
     },
     'North Fork Gunnison': {
-        'coords': [39.3, -107.7], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [39, -107.7], 'huc-level': 8, 'anchor': (0,0)
     },
    
 }
@@ -202,13 +202,14 @@ reservoirs_uc = {
 if __name__ == '__main__':
 
     import json
+    import sys
     from os import path
     import argparse
     cli_desc = 'Creates Upper Colorado Daily Summary map for USBR.'
     parser = argparse.ArgumentParser(description=cli_desc)
     parser.add_argument("-V", "--version", help="show program version", action="store_true")
     parser.add_argument("-A", "--add", help="adds current config to all_config.json", action="store_true")   
-    
+    parser.add_argument("-r", "--remove", help="removes a config from all_config.json")   
     args = parser.parse_args()
     
     if args.version:
@@ -216,6 +217,16 @@ if __name__ == '__main__':
         
     this_dir = path.dirname(path.realpath(__file__))
     
+    if args.remove:
+        print(f'Removing {args.remove} from all_config.json if present.')
+        all_config_file_name = f'all_config.json'
+        with open(all_config_file_name, 'r') as j:
+            all_config = json.load(j)
+        all_config.pop(args.remove, None)
+        with open(all_config_file_name, 'w') as j:
+            json.dump(all_config, j, indent=4, sort_keys=True)
+        sys.exit(0)
+        
     config_name = 'gunn'
     map_center = (38.5, -107.5)
     initial_zoom = 9
@@ -237,7 +248,7 @@ if __name__ == '__main__':
     
     with open(config_file_name, 'w') as j:
         json.dump(config, j, indent=4, sort_keys=True)
-        
+    print(f'Created {config_file_name}.')
     if args.add:
         all_config_file_name = f'all_config.json'
         with open(all_config_file_name, 'r') as j:
@@ -245,3 +256,4 @@ if __name__ == '__main__':
         all_config[config_name] = config
         with open(all_config_file_name, 'w') as j:
             json.dump(all_config, j, indent=4, sort_keys=True)
+        print(f'added {config_file_name} to all_config.json.')
