@@ -25,6 +25,7 @@ from uc_update_utils import get_bor_js, get_bor_css
 from uc_update_utils import get_default_js, get_default_css
 from uc_update_utils import get_huc_nrcs_stats, add_huc_chropleth, get_colormap
 from config.config_gen import forecasts, reservoirs, regions
+from browser_print import BrowserPrint
 
 bor_js = get_bor_js()
 bor_css = get_bor_css()
@@ -557,6 +558,7 @@ if __name__ == '__main__':
     
         legend = folium.Element(get_legend())
         basin_map.get_root().html.add_child(legend)
+        BrowserPrint().add_to(rs_map)
         basin_map.save(map_path)
         flavicon = (
             f'<link rel="shortcut icon" '
