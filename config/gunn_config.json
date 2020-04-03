@@ -19,7 +19,7 @@
                 ],
                 "huc-level": 8
             },
-            "Gunnison Basin": {
+            "Gunnison": {
                 "anchor": [
                     0,
                     0
@@ -28,7 +28,7 @@
                     34.5,
                     -106.5
                 ],
-                "huc-level": 6
+                "huc-level": 4
             },
             "Lower Gunnison": {
                 "anchor": [
@@ -52,6 +52,17 @@
                 ],
                 "huc-level": 8
             },
+            "Pecos Headwaters": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    33,
+                    -105
+                ],
+                "huc-level": 8
+            },
             "Tomichi": {
                 "anchor": [
                     0,
@@ -64,17 +75,6 @@
                 "huc-level": 8
             },
             "Uncompahgre": {
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    33,
-                    -105
-                ],
-                "huc-level": 8
-            },
-            "Upper Pecos": {
                 "anchor": [
                     0,
                     0

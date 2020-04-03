@@ -72,8 +72,8 @@ reservoirs = {
     },
 }
 regions = {
-    'Gunnison Basin': {
-        'coords': [34.5, -106.5], 'huc-level': 6, 'anchor': (0,0)
+    'Gunnison': {
+        'coords': [34.5, -106.5], 'huc-level': 4, 'anchor': (0,0)
     },
     'East-Taylor': {
         'coords': [33, -105], 'huc-level': 8, 'anchor': (0,0)
@@ -87,7 +87,7 @@ regions = {
     'Lower Gunnison': {
         'coords': [33, -105], 'huc-level': 8, 'anchor': (0,0)
     },
-    'Upper Pecos': {
+    'Pecos Headwaters': {
         'coords': [33, -105], 'huc-level': 8, 'anchor': (0,0)
     },
     'North Fork Gunnison': {
