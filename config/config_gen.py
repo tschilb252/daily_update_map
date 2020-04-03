@@ -253,7 +253,7 @@ if __name__ == '__main__':
         all_config_file_name = f'all_config.json'
         with open(all_config_file_name, 'r') as j:
             all_config = json.load(j)
-        all_config[config_name] = config
+        all_config[config_name] = config[config_name]
         with open(all_config_file_name, 'w') as j:
             json.dump(all_config, j, indent=4, sort_keys=True)
         print(f'added {config_file_name} to all_config.json.')
