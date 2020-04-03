@@ -1,0 +1,240 @@
+{
+    "gunn": {
+        "center": [
+            38.5,
+            -107.5
+        ],
+        "filter_huc": 140200,
+        "forecasts": {},
+        "huc_level": 6,
+        "regions": {
+            "East-Taylor": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    33,
+                    -105
+                ],
+                "huc-level": 8
+            },
+            "Gunnison Basin": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    34.5,
+                    -106.5
+                ],
+                "huc-level": 6
+            },
+            "Lower Gunnison": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    33,
+                    -105
+                ],
+                "huc-level": 8
+            },
+            "North Fork Gunnison": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    33,
+                    -105
+                ],
+                "huc-level": 8
+            },
+            "Tomichi": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    33,
+                    -105
+                ],
+                "huc-level": 8
+            },
+            "Uncompahgre": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    33,
+                    -105
+                ],
+                "huc-level": 8
+            },
+            "Upper Pecos": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    33,
+                    -105
+                ],
+                "huc-level": 8
+            }
+        },
+        "reservoirs": {
+            "Blue Mesa": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 829.5,
+                "coords": [
+                    38.45305,
+                    -107.33677
+                ],
+                "id": 913,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1923,
+                    "inflow": 1787,
+                    "release": 1867,
+                    "storage": 1714
+                }
+            },
+            "Crystal": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 17.536,
+                "coords": [
+                    38.51046,
+                    -107.62374
+                ],
+                "id": 915,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1925,
+                    "inflow": 1789,
+                    "release": 1869,
+                    "storage": 1716
+                }
+            },
+            "Morrow Point": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 117.025,
+                "coords": [
+                    38.45191,
+                    -107.53791
+                ],
+                "id": 914,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1924,
+                    "inflow": 1788,
+                    "release": 1868,
+                    "storage": 1715
+                }
+            },
+            "Paonia": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 15.522,
+                "coords": [
+                    38.94919,
+                    -107.34347
+                ],
+                "id": 945,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1950,
+                    "inflow": 1814,
+                    "release": 1894,
+                    "storage": 1743
+                }
+            },
+            "Ridgway": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 82.98,
+                "coords": [
+                    38.23636,
+                    -107.75914
+                ],
+                "id": 912,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1922,
+                    "inflow": 1786,
+                    "release": 1860,
+                    "storage": 1713
+                }
+            },
+            "Silver Jack": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 13.0,
+                "coords": [
+                    38.22692,
+                    -107.54041
+                ],
+                "id": 939,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1944,
+                    "inflow": 1808,
+                    "release": 1888,
+                    "storage": 1737
+                }
+            },
+            "Taylor Park": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 106.21,
+                "coords": [
+                    38.81844,
+                    -106.60592
+                ],
+                "id": 948,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1953,
+                    "inflow": 1817,
+                    "release": 1897,
+                    "storage": 1746
+                }
+            }
+        },
+        "zoom": 9
+    }
+}
