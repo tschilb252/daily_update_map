@@ -220,7 +220,7 @@ if __name__ == '__main__':
     map_center = (38.5, -107.5)
     initial_zoom = 9
     huc_level = 6
-    filter_huc = 140200
+    filter_huc = 1402
     config = {
         config_name: {
             'huc_level': huc_level,
