@@ -544,11 +544,11 @@ if __name__ == '__main__':
         MousePosition(prefix="Location: ").add_to(basin_map)
         get_colormap().add_to(basin_map)
         # print('  Adding Regional Forecast markers...')
-        # add_frcst_markers(basin_map, map_date=map_date)
+        # add_frcst_markers(basin_map, forecasts, map_date=map_date)
         print('  Adding Reservoir markers...')
-        add_res_markers(basin_map, map_date=map_date)
+        add_res_markers(basin_map, reservoirs, map_date=map_date)
         print('  Adding PREC/SWE markers...')
-        add_region_markers(basin_map, map_date=map_date)
+        add_region_markers(basin_map, regions, map_date=map_date)
         
         if not str(map_zoom).isnumeric():
             all_coords = [i['coords'] for i in reservoirs.values()]
@@ -558,7 +558,7 @@ if __name__ == '__main__':
     
         legend = folium.Element(get_legend())
         basin_map.get_root().html.add_child(legend)
-        BrowserPrint().add_to(rs_map)
+        BrowserPrint().add_to(basin_map)
         basin_map.save(map_path)
         flavicon = (
             f'<link rel="shortcut icon" '
