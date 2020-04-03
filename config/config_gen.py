@@ -79,19 +79,19 @@ regions = {
         'coords': [39, -106.9], 'huc-level': 8, 'anchor': (0,0)
     },
     'Tomichi': {
-        'coords': [38.5, -106.5], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [38.5, -106.7], 'huc-level': 8, 'anchor': (0,0)
     },
     'Uncompahgre': {
         'coords': [38.5, -108.1], 'huc-level': 8, 'anchor': (0,0)
     },
     'Lower Gunnison': {
-        'coords': [39, -108.5], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [38.7, -108.5], 'huc-level': 8, 'anchor': (0,0)
     },
     'Pecos Headwaters': {
         'coords': [33, -105], 'huc-level': 8, 'anchor': (0,0)
     },
     'North Fork Gunnison': {
-        'coords': [39, -107.7], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [39.3, -107.7], 'huc-level': 8, 'anchor': (0,0)
     },
    
 }
