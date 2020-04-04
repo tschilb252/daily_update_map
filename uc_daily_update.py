@@ -174,14 +174,19 @@ def get_embed(href):
     return embed
 
 def add_region_markers(basin_map, regions, nrcs_url=nrcs_url, map_date=None):
+    huc_levels = {v['huc-level']:k for k, v in regions.items()}
+    lowest_huc = min(huc_levels, key=huc_levels.get)
     for region, region_meta in regions.items():
         print(f'    Adding {region} to the map...')
         huc_level = region_meta['huc-level']
-        btn_size = ''
-        region_suffix = ' Region'
-        if huc_level > 2:
-            btn_size = 'btn-sm'
-            region_suffix = ''
+        btn_size = 'btn-sm'
+        region_suffix = ''
+        button_color = 'btn-info'
+        if huc_level == 2:
+            region_suffix = ' Region'
+        if huc_level == lowest_huc:
+            btn_size = 'btn-md'
+            button_color = 'btn-primary'
         swe_url = f'{nrcs_url}/WTEQ/assocHUC{huc_level}/{region}{region_suffix}.html'
         prec_url = f'{nrcs_url}/PREC/assocHUC{huc_level}/{region}{region_suffix}.html'
         try:
@@ -220,7 +225,7 @@ def add_region_markers(basin_map, regions, nrcs_url=nrcs_url, map_date=None):
         popup = folium.map.Popup(html=popup_html)
             
         marker_label = f'''
-        <button type="button" class="btn btn-primary {btn_size}">
+        <button type="button" class="btn {button_color} {btn_size}">
           <span style="white-space: nowrap;">{region}</span><br>
           <span style="white-space: nowrap;">
             {prec_percent}% <i class="fa fa-umbrella"></i>
@@ -418,7 +423,7 @@ if __name__ == '__main__':
     cli_desc = 'Creates Upper Colorado Daily Summary map for USBR.'
     parser = argparse.ArgumentParser(description=cli_desc)
     parser.add_argument("-V", "--version", help="show program version", action="store_true")
-    parser.add_argument("-c", "--config", help="name of config file to use in local config folder", required=True)   
+    parser.add_argument("-c", "--config", help="name of config file to use in local config folder, pass keyword 'all' for all_config.json", required=True)
     parser.add_argument("-d", "--date", help="run for specific date (YYYY-MM-DD), currently no support for region prec/swe data, only res/frcst data")
     parser.add_argument("-o", "--output", help="set output folder")
     parser.add_argument("-n", "--name", help="use alternate name *.html, only works for configs with one entry")
@@ -426,7 +431,7 @@ if __name__ == '__main__':
     parser.add_argument("-g", "--gis", help="update local gis files with current NRCS data, or pass path for alt gis folder.", const=True, nargs='?')
     
     args = parser.parse_args()
-    
+
     if args.version:
         print('region_status.py v1.0')
     map_date = dt.now()
@@ -438,7 +443,10 @@ if __name__ == '__main__':
     
     this_dir = path.dirname(path.realpath(__file__))
     config_dir = path.join(this_dir, 'config')
-    config_path = path.join(config_dir, args.config)
+    if args.config.lower() == 'all':
+        config_path = path.join(config_dir, 'all_config.json')
+    else:
+        config_path = path.join(config_dir, args.config)
     if path.exists(config_path):
         with open(config_path, 'r') as cfg:
             config = json.load(cfg)

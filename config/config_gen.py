@@ -6,28 +6,83 @@ Created on Fri Apr  3 08:08:44 2020
 """
 
 '''
-1) HUC Level 6 - Gunnison Basin (140200)
-
-2) HUC Level 8 -  East-Taylor (140200XX)
-    HUC Level 8 -  Tomichi (140200XX)
-    HUC Level 8 -  Upper Gunnison (140200XX)
-    HUC Level 8 -  Uncompahgre (140200XX)
-    HUC Level 8 -  Lower Gunnison (140200XX)
-    HUC Level 8 -  North Fork Gunnison (140200XX)
-
-3) I would like the following reservoirs included with info provided in this order:
-site_name (site_id, inflowSDI, elevationSDI, storageSDI, releaseSDI, lat, long)
-
-Crystal (915, 1789, 1925, 1716, 1869, 38.51046, -107.62374)
-Morrow Point (914, 1788, 1924, 1715, 1868, 38.45191, -107.53791)
-Blue Mesa (913, 1787, 1923, 1714, 1867, 38.45305, -107.33677)
-Taylor Park (948, 1817, 1953, 1746, 1897, 38.81844, -106.60592)
-Silver Jack (939, 1808, 1944, 1737, 1888, 38.22692, -107.54041)
-Ridgway (912, 1786, 1922, 1713, 1860, 38.23636, -107.75914)
-Paonia (945, 1814, 1950, 1743, 1894, 38.94919, -107.34347)
+Keep in mind the top left corner of the button is the anchor point
 '''
 
+regions = {
+    'San Juan': {
+        'coords': [37, -108.26], 'huc-level': 4, 'anchor': (0,0)
+    },
+    'Upper San Juan': {
+        'coords': [37, -107], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Piedra': {
+        'coords': [37.53, -107.34], 'huc-level': 8, 'anchor': (0,0)
+    },
+    # 'Blanco': {
+    #     'coords': [38.7, -107.6], 'huc-level': 8, 'anchor': (0,0)
+    # },
+    'Animas': {
+        'coords': [37.65, -107.8], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Middle San Juan': {
+        'coords': [36.9, -109], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Chaco': {
+        'coords': [36.45, -108.84], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Mancos': {
+        'coords': [37.2, -108.7], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Montezuma': {
+        'coords': [37.7, -109.28], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Chinle': {
+        'coords': [36.8, -109.8], 'huc-level': 8, 'anchor': (0,0)
+    },
+    
+}
+
 reservoirs = {
+    'Navajo': {
+        'coords': [36.80063, -107.61203], 'region': 'uc', 'anno': '', 'cap': 1701.3, 
+        'id': 920, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1720, 'elev': 1929, 'inflow': 1793, 'release': 1873}
+    },
+    'Vallecito': {
+        'coords': [37.37834, -107.57486], 'region': 'uc', 'anno': '', 'cap': 125.442, 
+        'id': 933, 'anchor': (-85,-40), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1731, 'elev': 1938, 'inflow': 1802, 'release': 1882}
+    },
+    'Lemon': {
+        'coords': [37.39538, -107.66269], 'region': 'uc', 'anno': '', 'cap': 39.792, 
+        'id': 934, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1732, 'elev': 1939, 'inflow': 1803, 'release': 1883}
+    },
+    'McPhee': {
+        'coords': [37.57588, -108.57307], 'region': 'uc', 'anno': '', 'cap': 381.0, 
+        'id': 958, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1756, 'elev': 1963, 'inflow': 1827, 'release': 1907}
+    },
+    'Nighthorse': {
+        'coords': [37.22392, -107.91694], 'region': 'uc', 'anno': '', 'cap': 115.075, 
+        'id': 3083, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 14623, 'elev': 14621, 'inflow': 14617, 'release': 14620}
+    },
+    'Jackson': {
+        'coords': [37.40186, -108.27342], 'region': 'uc', 'anno': '', 'cap': 115.075, 
+        'id': 935, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1733, 'elev': 1940, 'inflow': 1804, 'release': 1884}
+    },
+}
+
+reservoirs_gunn = {
     'Paonia': {
         'coords': [38.94919, -107.34347], 'region': 'uc', 'anno': '', 'cap': 15.522, 
         'id': 945, 'anchor': (0,0), 'pop_dir': 'up',
@@ -71,7 +126,7 @@ reservoirs = {
             {'storage': 1716, 'elev': 1925, 'inflow': 1789, 'release': 1869}
     },
 }
-regions = {
+regions_gunn = {
     'Gunnison': {
         'coords': [38.7, -107.6], 'huc-level': 4, 'anchor': (0,0)
     },
@@ -227,11 +282,11 @@ if __name__ == '__main__':
             json.dump(all_config, j, indent=4, sort_keys=True)
         sys.exit(0)
         
-    config_name = 'gunn'
-    map_center = (38.5, -107.5)
+    config_name = 'sj'
+    map_center = (37, -108.1)
     initial_zoom = 9
-    huc_level = 6
-    filter_huc = 1402
+    huc_level = 4
+    filter_huc = 1408
     config = {
         config_name: {
             'huc_level': huc_level,
