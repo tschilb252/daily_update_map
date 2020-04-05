@@ -9,6 +9,12 @@ Created on Fri Apr  3 08:08:44 2020
 Keep in mind the top left corner of the button is the anchor point
 '''
 
+config_name = 'sj'
+map_center = (37, -108.1)
+initial_zoom = 9
+huc_level = 4
+filter_huc = 1408
+
 regions = {
     'San Juan': {
         'coords': [37, -108.26], 'huc-level': 4, 'anchor': (0,0)
@@ -81,23 +87,108 @@ reservoirs = {
             {'storage': 1733, 'elev': 1940, 'inflow': 1804, 'release': 1884}
     },
 }
+    
+sj_config_name = 'sj'
+sj_map_center = (37, -108.1)
+sj_initial_zoom = 9
+sj_huc_level = 4
+sj_filter_huc = 1408
+
+regions_sj = {
+    'San Juan': {
+        'coords': [37, -108.26], 'huc-level': 4, 'anchor': (0,0)
+    },
+    'Upper San Juan': {
+        'coords': [37, -107], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Piedra': {
+        'coords': [37.53, -107.34], 'huc-level': 8, 'anchor': (0,0)
+    },
+    # 'Blanco': {
+    #     'coords': [38.7, -107.6], 'huc-level': 8, 'anchor': (0,0)
+    # },
+    'Animas': {
+        'coords': [37.65, -107.8], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Middle San Juan': {
+        'coords': [36.9, -109], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Chaco': {
+        'coords': [36.45, -108.84], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Mancos': {
+        'coords': [37.2, -108.7], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Montezuma': {
+        'coords': [37.7, -109.28], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Chinle': {
+        'coords': [36.8, -109.8], 'huc-level': 8, 'anchor': (0,0)
+    },
+    
+}
+
+reservoirs_sj = {
+    'Navajo': {
+        'coords': [36.80063, -107.61203], 'region': 'uc', 'anno': '', 'cap': 1701.3, 
+        'id': 920, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1720, 'elev': 1929, 'inflow': 1793, 'release': 1873}
+    },
+    'Vallecito': {
+        'coords': [37.37834, -107.57486], 'region': 'uc', 'anno': '', 'cap': 125.442, 
+        'id': 933, 'anchor': (-85,-40), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1731, 'elev': 1938, 'inflow': 1802, 'release': 1882}
+    },
+    'Lemon': {
+        'coords': [37.39538, -107.66269], 'region': 'uc', 'anno': '', 'cap': 39.792, 
+        'id': 934, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1732, 'elev': 1939, 'inflow': 1803, 'release': 1883}
+    },
+    'McPhee': {
+        'coords': [37.57588, -108.57307], 'region': 'uc', 'anno': '', 'cap': 381.0, 
+        'id': 958, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1756, 'elev': 1963, 'inflow': 1827, 'release': 1907}
+    },
+    'Nighthorse': {
+        'coords': [37.22392, -107.91694], 'region': 'uc', 'anno': '', 'cap': 115.075, 
+        'id': 3083, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 14623, 'elev': 14621, 'inflow': 14617, 'release': 14620}
+    },
+    'Jackson': {
+        'coords': [37.40186, -108.27342], 'region': 'uc', 'anno': '', 'cap': 115.075, 
+        'id': 935, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1733, 'elev': 1940, 'inflow': 1804, 'release': 1884}
+    },
+}
+ 
+gunn_config_name = 'gunn'
+gunn_map_center = (38.5, -107.5)
+gunn_initial_zoom = 9
+gunn_huc_level = 6
+gunn_filter_huc = 1402
 
 reservoirs_gunn = {
     'Paonia': {
         'coords': [38.94919, -107.34347], 'region': 'uc', 'anno': '', 'cap': 15.522, 
-        'id': 945, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 945, 'anchor': (-10,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1743, 'elev': 1950, 'inflow': 1814, 'release': 1894}
     },
     'Ridgway': {
         'coords': [38.23636, -107.75914], 'region': 'uc', 'anno': '', 'cap': 82.98, 
-        'id': 912, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 912, 'anchor': (20,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1713, 'elev': 1922, 'inflow': 1786, 'release': 1860}
     },
     'Silver Jack': {
         'coords': [38.22692, -107.54041], 'region': 'uc', 'anno': '', 'cap': 13.0, 
-        'id': 939, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 939, 'anchor': (-20,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1737, 'elev': 1944, 'inflow': 1808, 'release': 1888}
     },
@@ -109,19 +200,19 @@ reservoirs_gunn = {
     },
     'Blue Mesa': {
         'coords': [38.45305, -107.33677], 'region': 'uc', 'anno': '', 'cap': 829.5, 
-        'id': 913, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 913, 'anchor': (-40,35), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1714, 'elev': 1923, 'inflow': 1787, 'release': 1867}
     },
     'Morrow Point': {
         'coords': [38.45191, -107.53791], 'region': 'uc', 'anno': '', 'cap': 117.025, 
-        'id': 914, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 914, 'anchor': (-10,-25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1715, 'elev': 1924, 'inflow': 1788, 'release': 1868}
     },
     'Crystal': {
         'coords': [38.51046, -107.62374], 'region': 'uc', 'anno': '', 'cap': 17.536, 
-        'id': 915, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 915, 'anchor': (-10,10), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1716, 'elev': 1925, 'inflow': 1789, 'release': 1869}
     },
@@ -146,25 +237,31 @@ regions_gunn = {
         'coords': [33, -105], 'huc-level': 8, 'anchor': (0,0)
     },
     'North Fork Gunnison': {
-        'coords': [39, -107.7], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [39.04, -107.74], 'huc-level': 8, 'anchor': (0,0)
     },
    
 }
 
 forecasts = {}
-  
+
+rg_config_name = 'rg'
+rg_map_center = (35.3, -106)
+rg_initial_zoom = 7
+rg_huc_level = 2
+rg_filter_huc = 13
+
 regions_rg = {
     'Rio Grande': {
         'coords': [34.5, -106.5], 'huc-level': 2, 'anchor': (0,0)
     },
     'Upper Pecos': {
-        'coords': [33, -105], 'huc-level': 6, 'anchor': (0,0)
+        'coords': [33.6, -105.3], 'huc-level': 6, 'anchor': (0,0)
     },
     'Rio Grande Headwaters': {
-        'coords': [38, -106.5], 'huc-level': 6, 'anchor': (0,0)
+        'coords': [38.25, -106.65], 'huc-level': 6, 'anchor': (0,0)
     },
     'Rio Grande-Elephant Butte': {
-        'coords': [35.3, -107.5], 'huc-level': 6, 'anchor': (0,0)
+        'coords': [35.15, -107.8], 'huc-level': 6, 'anchor': (0,0)
     }
 }
 
@@ -208,6 +305,12 @@ regions_uc = {
         'coords': [36.3, -108.5], 'huc-level': 6, 'anchor': (0,0)
     },
 }
+
+uc_config_name = 'sj'
+uc_map_center = (39.0, -108.6)
+uc_initial_zoom = 7
+uc_huc_level = 2
+uc_filter_huc = 14
 
 reservoirs_uc = {
     'Fontenelle': {
@@ -281,20 +384,16 @@ if __name__ == '__main__':
         with open(all_config_file_name, 'w') as j:
             json.dump(all_config, j, indent=4, sort_keys=True)
         sys.exit(0)
-        
-    config_name = 'sj'
-    map_center = (37, -108.1)
-    initial_zoom = 9
-    huc_level = 4
-    filter_huc = 1408
+    
+    config_name = 'rg'
     config = {
         config_name: {
-            'huc_level': huc_level,
-            'filter_huc': filter_huc,
-            'zoom': initial_zoom, 
-            'center': map_center, 
-            'reservoirs': reservoirs, 
-            'regions': regions, 
+            'huc_level': rg_huc_level,
+            'filter_huc': rg_filter_huc,
+            'zoom': rg_initial_zoom, 
+            'center': rg_map_center, 
+            'reservoirs': reservoirs_rg, 
+            'regions': regions_rg, 
             'forecasts': forecasts
         }
     } 
