@@ -334,29 +334,29 @@ def add_res_markers(basin_map, reservoirs, map_date=None):
             html=marker_label,
         )
         
-        if current_storage and res_meta['region'].lower() == 'uc':
-            bar = {
-              "data": {
-                "values": [
-                  {"%": int(percent_cap)}
-                ]
-              },
-              "mark": {"type": "bar"},
-              "encoding": {
-                "y": {
-                  "field": "%",
-                  "type": "quantitative",
-                  "axis": {"title": "% Capacity"}
-                }
-              }
-            }
-            vega = folium.features.VegaLite(
-                bar,
-                width='100%',
-                height='100%',
-            )
+        # if current_storage and res_meta['region'].lower() == 'uc':
+        #     bar = {
+        #       "data": {
+        #         "values": [
+        #           {"%": int(percent_cap)}
+        #         ]
+        #       },
+        #       "mark": {"type": "bar"},
+        #       "encoding": {
+        #         "y": {
+        #           "field": "%",
+        #           "type": "quantitative",
+        #           "axis": {"title": "% Capacity"}
+        #         }
+        #       }
+        #     }
+        #     vega = folium.features.VegaLite(
+        #         bar,
+        #         width='100%',
+        #         height='100%',
+        #     )
             
-            div_icon.add_to(vega)
+        #     div_icon.add_to(vega)
         
         folium.Marker(
             location=res_meta['coords'],
