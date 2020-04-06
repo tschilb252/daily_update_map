@@ -252,7 +252,7 @@ rg_filter_huc = 13
 
 regions_rg = {
     'Rio Grande': {
-        'coords': [34.5, -106.5], 'huc-level': 2, 'anchor': (0,0)
+        'coords': [35.5, -107], 'huc-level': 2, 'anchor': (0,0)
     },
     'Upper Pecos': {
         'coords': [33.6, -105.3], 'huc-level': 6, 'anchor': (0,0)
@@ -261,7 +261,10 @@ regions_rg = {
         'coords': [38.25, -106.65], 'huc-level': 6, 'anchor': (0,0)
     },
     'Rio Grande-Elephant Butte': {
-        'coords': [35.15, -107.8], 'huc-level': 6, 'anchor': (0,0)
+        'coords': [34.7, -108.2], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Upper Rio Grande': {
+        'coords': [36.9, -106.85], 'huc-level': 6, 'anchor': (0,0)
     }
 }
 
@@ -307,7 +310,7 @@ regions_uc = {
 }
 
 uc_config_name = 'sj'
-uc_map_center = (39.0, -108.6)
+uc_map_center = (39.0, -109.3)
 uc_initial_zoom = 7
 uc_huc_level = 2
 uc_filter_huc = 14
@@ -355,8 +358,9 @@ reservoirs_uc = {
         'sdis': 
             {'storage': 1719, 'elev': 1928, 'inflow': 1792, 'release': 1872}
     }
-}
+} 
 
+    
 if __name__ == '__main__':
 
     import json
