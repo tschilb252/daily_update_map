@@ -345,6 +345,7 @@ def add_huc_chropleth(m, data_type='swe', show=True, huc_level='6',
             topo_json,
             f'objects.{huc_str}',
             name=layer_name,
+            overlay=True,
             show=show,
             style_function=style_chropleth_dict[data_type],
             tooltip=folium.features.GeoJsonTooltip(
@@ -371,7 +372,7 @@ def style_swe_chropleth(feature, huc_level='2', huc_filter='14'):
     huc_level = str(huc_level)
     colormap = get_colormap()
     stat_value = feature['properties'].get('swe_percent', 'N/A')
-    huc_id = str(feature['properties'].get('HUC{huc_level}', 'N/A'))
+    huc_id = str(feature['properties'].get(f'HUC{huc_level}', 'N/A'))
     if not stat_value == 'N/A':
         stat_value = float(stat_value)
     return {
