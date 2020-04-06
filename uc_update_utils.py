@@ -337,8 +337,8 @@ def add_huc_chropleth(m, data_type='swe', show=True, huc_level='6',
             topo_json, huc_level=huc_level, filter_str=filter_str
         )
     style_chropleth_dict = {
-        'swe': style_swe_chropleth(huc_level, filter_str), 
-        'prec': style_prec_chropleth(huc_level, filter_str)
+        'swe': lambda x: style_swe_chropleth(x, huc_level=huc_level, huc_filter=filter_str), 
+        'prec': lambda x: style_prec_chropleth(x, huc_level=huc_level, huc_filter=filter_str)
     }
     if use_topo:
         folium.TopoJson(
