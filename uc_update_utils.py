@@ -337,7 +337,8 @@ def add_huc_chropleth(m, data_type='swe', show=True, huc_level='6',
             topo_json, huc_level=huc_level, filter_str=filter_str
         )
     style_chropleth_dict = {
-        'swe': style_swe_chropleth, 'prec': style_prec_chropleth
+        'swe': style_swe_chropleth(huc_level, filter_str), 
+        'prec': style_prec_chropleth(huc_level, filter_str)
     }
     if use_topo:
         folium.TopoJson(
@@ -365,32 +366,32 @@ def add_huc_chropleth(m, data_type='swe', show=True, huc_level='6',
                 aliases=['Basin Name:', f'{layer_name}:'])
         ).add_to(m)
 
-def style_swe_chropleth(feature):
+def style_swe_chropleth(feature, huc_level='2', huc_filter='14'):
+    huc_filter = str(huc_filter)
+    huc_level = str(huc_level)
     colormap = get_colormap()
     stat_value = feature['properties'].get('swe_percent', 'N/A')
-    if stat_value == 'N/A':
-        fill_opacity = 0
-    else:
+    huc_id = str(feature['properties'].get('HUC{huc_level}', 'N/A'))
+    if not stat_value == 'N/A':
         stat_value = float(stat_value)
-        fill_opacity = (abs(stat_value - 100)) / 100
     return {
-        'fillOpacity': 0 if stat_value == 'N/A' else 0.75,#0.75 if fill_opacity > 0.75 else fill_opacity,
+        'fillOpacity': 0 if stat_value == 'N/A' or huc_id[:len(huc_filter)] != huc_filter else 0.75,
         'weight': 0,
-        'fillColor': '#00000000' if stat_value == 'N/A' else colormap(stat_value)
+        'fillColor': '#00000000' if stat_value == 'N/A' or huc_id[:len(huc_filter)] != huc_filter else colormap(stat_value)
     }
 
-def style_prec_chropleth(feature):
+def style_prec_chropleth(feature, huc_level='2', huc_filter='14'):
+    huc_filter = str(huc_filter)
+    huc_level = str(huc_level)
     colormap = get_colormap()
     stat_value = feature['properties'].get('swe_percent', 'N/A')
-    if stat_value == 'N/A':
-        fill_opacity = 0
-    else:
+    huc_id = str(feature['properties'].get('HUC{huc_level}', 'N/A'))
+    if not stat_value == 'N/A':
         stat_value = float(stat_value)
-        fill_opacity = (abs(stat_value - 100)) / 100
     return {
-        'fillOpacity': 0 if stat_value == 'N/A' else 0.75,#0.75 if fill_opacity > 0.75 else fill_opacity,
+        'fillOpacity': 0 if stat_value == 'N/A' or huc_id[:len(huc_filter)] != huc_filter else 0.75,
         'weight': 0,
-        'fillColor': '#00FFFFFF' if stat_value == 'N/A' else colormap(stat_value)
+        'fillColor': '#00000000' if stat_value == 'N/A' or huc_id[:len(huc_filter)] != huc_filter else colormap(stat_value)
     }
 
 def get_colormap(low=50, high=150):
