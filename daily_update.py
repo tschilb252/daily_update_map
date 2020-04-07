@@ -18,12 +18,12 @@ from folium.features import DivIcon
 # import geopandas as gpd
 # from shapely.geometry import Point
 # from shapely.ops import cascaded_union
-from uc_update_utils import get_season
-from uc_update_utils import add_optional_tilesets, add_huc_layer
-from uc_update_utils import get_favicon, get_bor_seal
-from uc_update_utils import get_bor_js, get_bor_css
-from uc_update_utils import get_default_js, get_default_css
-from uc_update_utils import get_huc_nrcs_stats, add_huc_chropleth, get_colormap
+from daily_update_utils import get_season
+from daily_update_utils import add_optional_tilesets, add_huc_layer
+from daily_update_utils import get_favicon, get_bor_seal
+from daily_update_utils import get_bor_js, get_bor_css
+from daily_update_utils import get_default_js, get_default_css
+from daily_update_utils import get_huc_nrcs_stats, add_huc_chropleth, get_colormap
 from config.config_gen import forecasts, reservoirs, regions
 from browser_print import BrowserPrint
 
