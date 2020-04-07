@@ -510,13 +510,9 @@ if __name__ == '__main__':
         huc_levels[:] = [i for i in huc_levels if int(i) >= int(map_huc_level)]
         for huc_level in huc_levels:
             print(f'    Adding HUC{huc_level} boundary and SWE/PREC layers...')
-            show_prec = False
-            show_swe = False
-            if huc_level == '8':
-                show_swe = True
-                if get_season() =='summer':
-                    show_prec = True
-                    show_swe = False
+            show_prec = True if get_season() =='summer' and huc_level == '8' else False
+            show_swe = True if not show_prec and huc_level == '8' else False
+            
             add_huc_layer(
                 basin_map, 
                 level=int(huc_level), 
@@ -529,7 +525,6 @@ if __name__ == '__main__':
                 data_type='swe', 
                 show=show_swe, 
                 huc_level=huc_level, 
-                gis_path=gis_dir, 
                 filter_str=str(filter_huc)
             )
             add_huc_chropleth(
@@ -537,7 +532,6 @@ if __name__ == '__main__':
                 data_type='prec', 
                 show=show_prec, 
                 huc_level=huc_level, 
-                gis_path=gis_dir, 
                 filter_str=str(filter_huc)
             )
             
