@@ -323,7 +323,7 @@ def get_nrcs_basin_stat(basin_name, huc_level='2', data_type='wteq'):
     return stat
 
 def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6', 
-                      gis_path='gis', filter_str=None, use_topo=False):
+                      gis_path='gis', filter_str='', use_topo=False):
     
     huc_str = f'HUC{huc_level}'
     stat_type_dict = {'swe': 'Median', 'prec': 'Avg.'}
@@ -348,7 +348,7 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
             name=layer_name,
             overlay=True,
             show=show,
-            smooth_factor=2.0,
+            # smooth_factor=2.0,
             style_function=style_function,
             tooltip=folium.features.GeoJsonTooltip(
                 ['Name', f'{data_type}_percent'],
@@ -362,7 +362,7 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
             embed=False,
             overlay=True,
             control=True,
-            smooth_factor=2.0,
+            # smooth_factor=2.0,
             style_function=style_function,
             show=show,
             tooltip=folium.features.GeoJsonTooltip(
@@ -378,6 +378,7 @@ def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):
     huc_id = str(feature['properties'].get(f'HUC{huc_level}', 'N/A'))
     if not stat_value == 'N/A':
         stat_value = float(stat_value)
+    
     return {
         'fillOpacity': 
             0 if stat_value == 'N/A' or 
@@ -389,6 +390,7 @@ def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):
             not huc_id[:len(huc_filter)] == huc_filter else 
             colormap(stat_value)
     }
+
 
 def get_colormap(low=50, high=150):
     # colormap = branca.colormap.linear.RdYlBu_09.scale(low, high)

@@ -495,7 +495,7 @@ if __name__ == '__main__':
         if not str(map_zoom).isnumeric():
             zoom_start = 6
             
-        filter_huc = map_config.get('filter_huc', None)    
+        filter_huc = map_config.get('filter_huc', '')    
         reservoirs = map_config.get('reservoirs', reservoirs)
         regions = map_config.get('regions', regions)
         forecasts = map_config.get('forecasts', forecasts)
@@ -520,20 +520,16 @@ if __name__ == '__main__':
                 embed=False, 
                 filter_on=str(filter_huc)
             )
-            add_huc_chropleth(
-                basin_map, 
-                data_type='swe', 
-                show=show_swe, 
-                huc_level=huc_level, 
-                filter_str=str(filter_huc)
-            )
-            add_huc_chropleth(
-                basin_map, 
-                data_type='prec', 
-                show=show_prec, 
-                huc_level=huc_level, 
-                filter_str=str(filter_huc)
-            )
+            for data_type in ['swe', 'prec']:
+                show_dict = {'swe': show_swe, 'prec': show_prec}
+                show = show_dict[data_type]
+                add_huc_chropleth(
+                    basin_map, 
+                    data_type=data_type, 
+                    show=show_dict[data_type], 
+                    huc_level=huc_level, 
+                    filter_str=str(filter_huc)
+                )
             
         print(f'    Adding tilesets, legend, and controls...')
         add_optional_tilesets(basin_map)
