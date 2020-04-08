@@ -323,7 +323,7 @@ def get_nrcs_basin_stat(basin_name, huc_level='2', data_type='wteq'):
     return stat
 
 def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6', 
-                      gis_path='gis', filter_str='', use_topo=False):
+                      gis_path='gis', huc_filter='', use_topo=False):
     
     huc_str = f'HUC{huc_level}'
     stat_type_dict = {'swe': 'Median', 'prec': 'Avg.'}
@@ -333,12 +333,12 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
         topo_json_path = path.join(gis_path, f'{huc_str}.topojson')
         with open(topo_json_path, 'r') as tj:
             topo_json = json.load(tj)
-        if filter_str:
+        if huc_filter:
             topo_json = filter_topo_json(
-                topo_json, huc_level=huc_level, filter_str=filter_str
+                topo_json, huc_level=huc_level, filter_str=huc_filter
             )
     style_function = lambda x: style_chropleth(
-        x, data_type=data_type, huc_level=huc_level, huc_filter=filter_str
+        x, data_type=data_type, huc_level=huc_level, huc_filter=huc_filter
     )
        
     if use_topo:
@@ -348,7 +348,7 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
             name=layer_name,
             overlay=True,
             show=show,
-            # smooth_factor=2.0,
+            smooth_factor=2.0,
             style_function=style_function,
             tooltip=folium.features.GeoJsonTooltip(
                 ['Name', f'{data_type}_percent'],
@@ -362,7 +362,7 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
             embed=False,
             overlay=True,
             control=True,
-            # smooth_factor=2.0,
+            smooth_factor=2.0,
             style_function=style_function,
             show=show,
             tooltip=folium.features.GeoJsonTooltip(
@@ -393,9 +393,8 @@ def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):
 
 
 def get_colormap(low=50, high=150):
-    # colormap = branca.colormap.linear.RdYlBu_09.scale(low, high)
+    
     colormap = branca.colormap.LinearColormap(
-        # colors=['red','yellow','green','blue', 'purple'],
         colors=[
             (255,51,51,150), 
             (255,255,51,150), 
@@ -410,23 +409,25 @@ def get_colormap(low=50, high=150):
     colormap.caption = '% of Average Precipitation or % Median Snow Water Equivalent'
     return colormap
 
-def filter_geo_json(geo_json_path, filter_attr='HUC2', filter_str='14'):
+def filter_geo_json(geo_json_path, huc_level=2, filter_str=''):
    
+    filter_attr = f'HUC{huc_level}'
     f_geo_json = {'type': 'FeatureCollection'}
     with open(geo_json_path, 'r') as gj:
         geo_json = json.load(gj)
     features = [i for i in geo_json['features'] if 
-                i['properties'][filter_attr][:2] == filter_str]
+                i['properties'][filter_attr][:len(filter_str)] == filter_str]
     f_geo_json['features'] = features
     
     return f_geo_json
 
-def filter_topo_json(topo_json, huc_level=2, filter_str='14'):
+def filter_topo_json(topo_json, huc_level=2, filter_str=''):
     
     geometries = topo_json['objects'][f'HUC{huc_level}']['geometries']
     geometries[:] = [i for i in geometries if 
                 i['properties'][f'HUC{huc_level}'][:len(filter_str)] == filter_str]
     topo_json['geometries'] = geometries
     return topo_json
+
 if __name__ == '__main__':
     print('Just a utility module')

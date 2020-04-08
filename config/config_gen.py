@@ -313,7 +313,7 @@ regions_uc = {
 }
 
 uc_config_name = 'uc'
-uc_map_center = (38.7, -109.3)
+uc_map_center = (39.3, -109.1)
 uc_initial_zoom = 7
 uc_huc_level = 2
 uc_filter_huc = 14
@@ -398,7 +398,7 @@ if __name__ == '__main__':
             'huc_level': uc_huc_level,
             'filter_huc': uc_filter_huc,
             'zoom': uc_initial_zoom, 
-            'center': rg_map_center, 
+            'center': uc_map_center, 
             'reservoirs': reservoirs_uc, 
             'regions': regions_uc, 
             'forecasts': forecasts
