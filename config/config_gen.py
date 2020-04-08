@@ -13,7 +13,7 @@ config_name = 'sj'
 map_center = (37, -108.1)
 initial_zoom = 9
 huc_level = 4
-filter_huc = 1408
+huc_filter = 1408
 
 regions = {
     'San Juan': {
@@ -92,7 +92,7 @@ sj_config_name = 'sj'
 sj_map_center = (37, -108.1)
 sj_initial_zoom = 9
 sj_huc_level = 4
-sj_filter_huc = 1408
+sj_huc_filter = 1408
 
 regions_sj = {
     'San Juan': {
@@ -171,7 +171,7 @@ gunn_config_name = 'gunn'
 gunn_map_center = (38.5, -107.5)
 gunn_initial_zoom = 9
 gunn_huc_level = 6
-gunn_filter_huc = 1402
+gunn_huc_filter = 1402
 
 reservoirs_gunn = {
     'Paonia': {
@@ -248,7 +248,7 @@ rg_config_name = 'rg'
 rg_map_center = (35.3, -106)
 rg_initial_zoom = 7
 rg_huc_level = 2
-rg_filter_huc = 13
+rg_huc_filter = 13
 
 regions_rg = {
     'Rio Grande': {
@@ -316,7 +316,7 @@ uc_config_name = 'uc'
 uc_map_center = (39.3, -109.1)
 uc_initial_zoom = 7
 uc_huc_level = 2
-uc_filter_huc = 14
+uc_huc_filter = 14
 
 reservoirs_uc = {
     'Fontenelle': {
@@ -396,7 +396,7 @@ if __name__ == '__main__':
     config = {
         config_name: {
             'huc_level': uc_huc_level,
-            'filter_huc': uc_filter_huc,
+            'huc_filter': uc_huc_filter,
             'zoom': uc_initial_zoom, 
             'center': uc_map_center, 
             'reservoirs': reservoirs_uc, 

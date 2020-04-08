@@ -582,8 +582,8 @@
             39.3,
             -109.1
         ],
-        "filter_huc": 14,
         "forecasts": {},
+        "huc_filter": 14,
         "huc_level": 2,
         "regions": {
             "Colorado Headwaters": {

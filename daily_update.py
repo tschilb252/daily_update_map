@@ -495,7 +495,7 @@ if __name__ == '__main__':
         if not str(map_zoom).isnumeric():
             zoom_start = 6
             
-        filter_huc = map_config.get('filter_huc', '')    
+        huc_filter = map_config.get('huc_filter', '')    
         reservoirs = map_config.get('reservoirs', reservoirs)
         regions = map_config.get('regions', regions)
         forecasts = map_config.get('forecasts', forecasts)
@@ -518,7 +518,7 @@ if __name__ == '__main__':
                 level=int(huc_level), 
                 show=True, 
                 embed=False, 
-                filter_on=str(filter_huc)
+                filter_on=str(huc_filter)
             )
             for data_type in ['swe', 'prec']:
                 show_dict = {'swe': show_swe, 'prec': show_prec}
@@ -528,7 +528,7 @@ if __name__ == '__main__':
                     data_type=data_type, 
                     show=show_dict[data_type], 
                     huc_level=huc_level, 
-                    filter_str=str(filter_huc)
+                    huc_filter=str(huc_filter)
                 )
             
         print(f'    Adding tilesets, legend, and controls...')
