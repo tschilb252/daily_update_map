@@ -62,6 +62,17 @@
                     -106.85
                 ],
                 "huc-level": 6
+            },
+            "Upper San Juan": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    37,
+                    -108.25
+                ],
+                "huc-level": 8
             }
         },
         "reservoirs": {

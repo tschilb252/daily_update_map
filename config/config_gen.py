@@ -265,7 +265,10 @@ regions_rg = {
     },
     'Upper Rio Grande': {
         'coords': [36.9, -106.85], 'huc-level': 6, 'anchor': (0,0)
-    }
+    },
+    'Upper San Juan': {
+        'coords': [37, -108.25], 'huc-level': 8, 'anchor': (0,0)
+    },
 }
 
 reservoirs_rg = {
@@ -309,8 +312,8 @@ regions_uc = {
     },
 }
 
-uc_config_name = 'sj'
-uc_map_center = (39.0, -109.3)
+uc_config_name = 'uc'
+uc_map_center = (38.7, -109.3)
 uc_initial_zoom = 7
 uc_huc_level = 2
 uc_filter_huc = 14
@@ -389,15 +392,15 @@ if __name__ == '__main__':
             json.dump(all_config, j, indent=4, sort_keys=True)
         sys.exit(0)
     
-    config_name = 'rg'
+    config_name = 'uc'
     config = {
         config_name: {
-            'huc_level': rg_huc_level,
-            'filter_huc': rg_filter_huc,
-            'zoom': rg_initial_zoom, 
+            'huc_level': uc_huc_level,
+            'filter_huc': uc_filter_huc,
+            'zoom': uc_initial_zoom, 
             'center': rg_map_center, 
-            'reservoirs': reservoirs_rg, 
-            'regions': regions_rg, 
+            'reservoirs': reservoirs_uc, 
+            'regions': regions_uc, 
             'forecasts': forecasts
         }
     } 
