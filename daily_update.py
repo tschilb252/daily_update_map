@@ -518,7 +518,7 @@ if __name__ == '__main__':
                 level=int(huc_level), 
                 show=True, 
                 embed=False, 
-                filter_on=huc_filter
+                huc_filter=huc_filter
             )
             for data_type in ['swe', 'prec']:
                 show_dict = {'swe': show_swe, 'prec': show_prec}
