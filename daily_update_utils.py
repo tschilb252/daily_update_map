@@ -16,7 +16,7 @@ from shapely.geometry import Point
 from datetime import datetime
 from requests import get as r_get
 
-STATIC_URL = f'https://www.usbr.gov/uc/water/hydrodata/assets'
+STATIC_URL = 'http://127.0.0.1:8887'#f'https://www.usbr.gov/uc/water/hydrodata/assets'
 nrcs_url = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 NRCS_CHARTS_URL = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 
@@ -371,9 +371,10 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
         ).add_to(m)
 
 def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):
-    huc_filter = str(huc_filter)
-    huc_level = str(huc_level)
     colormap = get_colormap()
+    huc_filter = str(huc_filter)
+    filter_len = len(huc_filter)
+    huc_level = str(huc_level)
     stat_value = feature['properties'].get(f'{data_type}_percent', 'N/A')
     huc_id = str(feature['properties'].get(f'HUC{huc_level}', 'N/A'))
     if not stat_value == 'N/A':
@@ -382,12 +383,12 @@ def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):
     return {
         'fillOpacity': 
             0 if stat_value == 'N/A' or 
-            not huc_id[:len(huc_filter)] == huc_filter else 
+            huc_id[:filter_len] != huc_filter else 
             0.75,
         'weight': 0,
         'fillColor': 
             '#00000000' if stat_value == 'N/A' or 
-            not huc_id[:len(huc_filter)] == huc_filter else 
+            huc_id[:filter_len] != huc_filter else 
             colormap(stat_value)
     }
 

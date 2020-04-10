@@ -518,7 +518,7 @@ if __name__ == '__main__':
                 level=int(huc_level), 
                 show=True, 
                 embed=False, 
-                filter_on=str(huc_filter)
+                filter_on=huc_filter
             )
             for data_type in ['swe', 'prec']:
                 show_dict = {'swe': show_swe, 'prec': show_prec}
@@ -528,7 +528,7 @@ if __name__ == '__main__':
                     data_type=data_type, 
                     show=show_dict[data_type], 
                     huc_level=huc_level, 
-                    huc_filter=str(huc_filter)
+                    huc_filter=huc_filter
                 )
             
         print(f'    Adding tilesets, legend, and controls...')
