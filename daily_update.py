@@ -494,8 +494,11 @@ if __name__ == '__main__':
         zoom_start = map_zoom
         if not str(map_zoom).isnumeric():
             zoom_start = 6
-            
-        huc_filter = tuple(str(i) for i in map_config.get('huc_filter', ['']))
+        
+        huc_filter = map_config.get('huc_filter', [''])
+        if type(huc_filter) == list:
+            huc_filter = tuple(str(i) for i in huc_filter)
+
         reservoirs = map_config.get('reservoirs', reservoirs)
         regions = map_config.get('regions', regions)
         forecasts = map_config.get('forecasts', forecasts)
