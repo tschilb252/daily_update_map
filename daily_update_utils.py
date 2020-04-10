@@ -16,7 +16,8 @@ from shapely.geometry import Point
 from datetime import datetime
 from requests import get as r_get
 
-STATIC_URL = f'https://www.usbr.gov/uc/water/hydrodata/assets'
+STATIC_URL = 'http://127.0.0.1:8887'
+# STATIC_URL = f'https://www.usbr.gov/uc/water/hydrodata/assets'
 nrcs_url = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 NRCS_CHARTS_URL = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 
@@ -181,33 +182,6 @@ def add_optional_tilesets(folium_map):
     for name, tileset in tilesets.items():
         folium.TileLayer(tileset, name=name).add_to(folium_map)
 
-def add_huc_layer(huc_map, level=2, huc_geojson_path=None, embed=False, show=True, huc_filter=None):
-    try:
-        huc_filter = str(huc_filter)
-        weight = -0.25 * float(level) + 2.5
-        if not huc_geojson_path:
-            huc_geojson_path = f'{STATIC_URL}/gis/HUC{level}.geojson'
-        else:
-            embed = True
-        if huc_filter:
-           huc_style = lambda x: {
-            'fillColor': '#ffffff00', 'color': '#1f1f1faa', 
-            'weight': weight if x['properties'][f'HUC{level}'][:len(huc_filter)] == huc_filter else 0
-        } 
-        else:
-            huc_style = lambda x: {
-                'fillColor': '#ffffff00', 'color': '#1f1f1faa', 'weight': weight
-            }
-        folium.GeoJson(
-            huc_geojson_path,
-            name=f'HUC {level}',
-            embed=embed,
-            style_function=huc_style,
-            show=show
-        ).add_to(huc_map)
-    except Exception as err:
-        print(f'Could not add HUC {level} layer to map! - {err}')
-
 def clean_coords(coord_series, force_neg=False):
     
     coord_series = coord_series.apply(
@@ -323,6 +297,35 @@ def get_nrcs_basin_stat(basin_name, huc_level='2', data_type='wteq'):
         stat = 'N/A'
     return stat
 
+def add_huc_layer(huc_map, level=2, huc_geojson_path=None, embed=False, 
+                  show=True, huc_filter=''):
+    try:
+        if type(huc_filter) == int:
+            huc_filter = str(huc_filter)
+        weight = -0.25 * float(level) + 2.5
+        if not huc_geojson_path:
+            huc_geojson_path = f'{STATIC_URL}/gis/HUC{level}.geojson'
+        else:
+            embed = True
+        if huc_filter:
+           huc_style = lambda x: {
+            'fillColor': '#ffffff00', 'color': '#1f1f1faa', 
+            'weight': weight if x['properties'][f'HUC{level}'].startswith(huc_filter) else 0
+        } 
+        else:
+            huc_style = lambda x: {
+                'fillColor': '#ffffff00', 'color': '#1f1f1faa', 'weight': weight
+            }
+        folium.GeoJson(
+            huc_geojson_path,
+            name=f'HUC {level}',
+            embed=embed,
+            style_function=huc_style,
+            show=show
+        ).add_to(huc_map)
+    except Exception as err:
+        print(f'Could not add HUC {level} layer to map! - {err}')
+        
 def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6', 
                       gis_path='gis', huc_filter='', use_topo=False):
     
@@ -373,8 +376,8 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
 
 def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):
     colormap = get_colormap()
-    huc_filter = str(huc_filter)
-    filter_len = len(huc_filter)
+    if type(huc_filter) == int:
+        huc_filter = str(huc_filter)
     huc_level = str(huc_level)
     stat_value = feature['properties'].get(f'{data_type}_percent', 'N/A')
     huc_id = str(feature['properties'].get(f'HUC{huc_level}', 'N/A'))
@@ -384,12 +387,12 @@ def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):
     return {
         'fillOpacity': 
             0 if stat_value == 'N/A' or 
-            huc_id[:filter_len] != huc_filter else 
+            not huc_id.startswith(huc_filter) else 
             0.75,
         'weight': 0,
         'fillColor': 
             '#00000000' if stat_value == 'N/A' or 
-            huc_id[:filter_len] != huc_filter else 
+            not huc_id.startswith(huc_filter) else 
             colormap(stat_value)
     }
 

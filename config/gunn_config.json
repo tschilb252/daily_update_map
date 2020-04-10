@@ -4,7 +4,7 @@
             38.5,
             -107.5
         ],
-        "filter_huc": 1402,
+        "huc_filter": 1402,
         "forecasts": {},
         "huc_level": 6,
         "regions": {
