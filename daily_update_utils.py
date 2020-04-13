@@ -370,8 +370,8 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
             style_function=style_function,
             show=show,
             tooltip=folium.features.GeoJsonTooltip(
-                ['Name', f'{data_type}_percent', f'HUC{huc_level}'],
-                aliases=['Basin Name:', f'{layer_name}:', 'ID:'])
+                ['Name', f'{data_type}_percent'],
+                aliases=['Basin Name:', f'{layer_name}:'])
         ).add_to(m)
 
 def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):
