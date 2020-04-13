@@ -280,7 +280,7 @@ def add_res_markers(basin_map, reservoirs, map_date=None):
             percent_cap = f'{percent_cap:0.0f}'
             tooltip = f"As of: {current_date.strftime('%x')}"
             anno = res_meta['anno']
-            url_storage = f"{prefix}/{res_meta['id']}/dashboard.html#inflow"
+            url_storage = f"{prefix}/{res_meta['id']}/dashboard.html#storage"
             url_elev = f"{prefix}/{res_meta['id']}/dashboard.html#pool_elevation"
             url_inflow = f"{prefix}/{res_meta['id']}/dashboard.html#inflow"
             url_release = f"{prefix}/{res_meta['id']}/dashboard.html#total_release"
@@ -587,4 +587,4 @@ if __name__ == '__main__':
                 )
             chart_file_str = chart_file_str.replace(find_str, replace_str)
             html_file.write(chart_file_str)
-        print(f'\nCreated map here: {map_path}')
+        print(f'\nCreated map here: {map_path}\n\n')

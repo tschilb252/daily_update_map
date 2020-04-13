@@ -105,14 +105,112 @@ reservoirs = {
             {'storage': 1757, 'elev': 1964, 'inflow': 1828, 'release': 1908}
     },
 }
+
+gb_config_name = 'gb'
+gb_map_center = (41.05, -111.95)
+gb_initial_zoom = 9
+gb_huc_level = 4
+gb_huc_filter = [1601,160201,160202]
+
+gb_regions = {
+    'Bear': {
+        'coords': [41.6, -112.75], 'huc-level': 4, 'anchor': (0,0)
+    },
+    'Upper Bear': {
+        'coords': [41.66, -111.21], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Lower Bear': {
+        'coords': [41.6, -112.31], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Provo': {
+        'coords': [40.54, -111.75], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Jordan': {
+        'coords': [40.7, -111.98], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Spanish Fork': {
+        'coords': [40.1, -111.58], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Weber': {
+        'coords': [41.1, -111.85], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Great Salt Lake': {
+        'coords': [40.77, -112.5], 'huc-level': 4, 'anchor': (0,0)
+    },
     
+}
+
+gb_reservoirs = {
+    'Willard Bay': {
+        'coords': [41.37738, -112.08339], 'region': 'uc', 'anno': '', 'cap': 222.273, 
+        'id': 925, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1723, 'elev': 1932, 'inflow': 1796, 'release': 1876}
+    },
+    'Jordanelle': {
+        'coords': [40.59833, -111.42304], 'region': 'uc', 'anno': '', 'cap': 311.0, 
+        'id': 964, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1762, 'elev': 1969, 'inflow': 1833, 'release': 1913}
+    },
+    'Deer Creek': {
+        'coords': [40.40837, -111.52908], 'region': 'uc', 'anno': '', 'cap': 150.161, 
+        'id': 953, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1751, 'elev': 1958, 'inflow': 1822, 'release': 1902}
+    },
+    'Causey': {
+        'coords': [41.29828, -111.58591], 'region': 'uc', 'anno': '', 'cap': 7.07, 
+        'id': 938, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1736, 'elev': 1943, 'inflow': 1807, 'release': 1887}
+    },
+    'Lost Creek': {
+        'coords': [41.18318, -111.39905], 'region': 'uc', 'anno': '', 'cap': 22.501, 
+        'id': 942, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1740, 'elev': 1947, 'inflow': 1811, 'release': 1891}
+    },
+    'Echo': {
+        'coords': [40.96412, -111.43239], 'region': 'uc', 'anno': '', 'cap': 73.94, 
+        'id': 941, 'anchor': (-28,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1739, 'elev': 1946, 'inflow': 1810, 'release': 1890}
+    },
+    'East Canyon': {
+        'coords': [40.92027, -111.60099], 'region': 'uc', 'anno': '', 'cap': 49.510, 
+        'id': 940, 'anchor': (28,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1738, 'elev': 1945, 'inflow': 1809, 'release': 1889}
+    },
+    'Rockport': {
+        'coords': [40.78944, -111.40263], 'region': 'uc', 'anno': '', 'cap': 115.075, 
+        'id': 947, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1745, 'elev': 1952, 'inflow': 1816, 'release': 1896}
+    },
+    'Hyrum': {
+        'coords': [41.62117, -111.86099], 'region': 'uc', 'anno': '', 'cap': 14.734, 
+        'id': 957, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1755, 'elev': 1962, 'inflow': 1826, 'release': 1906}
+    },
+    'Newton': {
+        'coords': [41.8998, -111.97562], 'region': 'uc', 'anno': '', 'cap': 5.374, 
+        'id': 959, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1757, 'elev': 1964, 'inflow': 1828, 'release': 1908}
+    },
+}    
+    
+
 sj_config_name = 'sj'
 sj_map_center = (37, -108.1)
 sj_initial_zoom = 9
 sj_huc_level = 4
 sj_huc_filter = 1408
 
-regions_sj = {
+sj_regions = {
     'San Juan': {
         'coords': [37, -108.26], 'huc-level': 4, 'anchor': (0,0)
     },
@@ -146,7 +244,7 @@ regions_sj = {
     
 }
 
-reservoirs_sj = {
+sj_reservoirs = {
     'Navajo': {
         'coords': [36.80063, -107.61203], 'region': 'uc', 'anno': '', 'cap': 1701.3, 
         'id': 920, 'anchor': (0,0), 'pop_dir': 'up',
@@ -191,7 +289,7 @@ gunn_initial_zoom = 9
 gunn_huc_level = 6
 gunn_huc_filter = 1402
 
-reservoirs_gunn = {
+gunn_reservoirs = {
     'Paonia': {
         'coords': [38.94919, -107.34347], 'region': 'uc', 'anno': '', 'cap': 15.522, 
         'id': 945, 'anchor': (-10,0), 'pop_dir': 'up',
@@ -235,7 +333,8 @@ reservoirs_gunn = {
             {'storage': 1716, 'elev': 1925, 'inflow': 1789, 'release': 1869}
     },
 }
-regions_gunn = {
+    
+gunn_regions = {
     'Gunnison': {
         'coords': [38.7, -107.6], 'huc-level': 4, 'anchor': (0,0)
     },
@@ -260,15 +359,13 @@ regions_gunn = {
    
 }
 
-forecasts = {}
-
 rg_config_name = 'rg'
 rg_map_center = (35.3, -106)
 rg_initial_zoom = 7
 rg_huc_level = 2
 rg_huc_filter = 13
 
-regions_rg = {
+rg_regions = {
     'Rio Grande': {
         'coords': [35.5, -107], 'huc-level': 2, 'anchor': (0,0)
     },
@@ -289,7 +386,7 @@ regions_rg = {
     },
 }
 
-reservoirs_rg = {
+rg_reservoirs = {
     'Elephant Butte': {
         'coords': [33.15, -107.2], 'region': 'uc', 'anno': '', 'cap': 2010.9, 
         'id': 1119, 'anchor': (0,0), 'pop_dir': 'left',
@@ -297,7 +394,14 @@ reservoirs_rg = {
             {'storage': 2684, 'elev': 2685, 'inflow': 2686, 'release': 2688}
     },
 }
-regions_uc = {
+ 
+uc_config_name = 'uc'
+uc_map_center = (39.3, -109.1)
+uc_initial_zoom = 7
+uc_huc_level = 2
+uc_huc_filter = 14
+
+uc_regions = {
     'Upper Colorado': {
         'coords': [39.8, -110.7], 'huc-level': 2, 'anchor': (0,0)
     },
@@ -330,13 +434,7 @@ regions_uc = {
     },
 }
 
-uc_config_name = 'uc'
-uc_map_center = (39.3, -109.1)
-uc_initial_zoom = 7
-uc_huc_level = 2
-uc_huc_filter = 14
-
-reservoirs_uc = {
+uc_reservoirs = {
     'Fontenelle': {
         'coords': [42.026, -110.068], 'region': 'uc', 'anno': '', 'cap': 344.8, 
         'id': 916, 'anchor': (0,0), 'pop_dir': 'left',
@@ -381,7 +479,8 @@ reservoirs_uc = {
     }
 } 
 
-    
+forecasts = {}
+  
 if __name__ == '__main__':
 
     import json
