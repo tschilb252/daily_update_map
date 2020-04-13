@@ -452,7 +452,7 @@ if __name__ == '__main__':
             config = json.load(cfg)
         print(f'Creating map(s) for config: {config_path}...\n')
     else:
-        print('Invalid config path - {config_path} - please try again.')
+        print(f'Invalid config path - {config_path} - please try again.')
         sys.exit(0)
         
     map_dir = path.join(this_dir, 'maps')

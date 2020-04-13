@@ -9,82 +9,100 @@ Created on Fri Apr  3 08:08:44 2020
 Keep in mind the top left corner of the button is the anchor point
 '''
 
-config_name = 'sj'
-map_center = (37, -108.1)
+config_name = 'gb'
+map_center = (41.05, -111.95)
 initial_zoom = 9
 huc_level = 4
-huc_filter = 1408
+huc_filter = [1601,160201,160202]
 
 regions = {
-    'San Juan': {
-        'coords': [37, -108.26], 'huc-level': 4, 'anchor': (0,0)
+    'Bear': {
+        'coords': [41.6, -112.75], 'huc-level': 4, 'anchor': (0,0)
     },
-    'Upper San Juan': {
-        'coords': [37, -107], 'huc-level': 8, 'anchor': (0,0)
+    'Upper Bear': {
+        'coords': [41.66, -111.21], 'huc-level': 6, 'anchor': (0,0)
     },
-    'Piedra': {
-        'coords': [37.53, -107.34], 'huc-level': 8, 'anchor': (0,0)
+    'Lower Bear': {
+        'coords': [41.6, -112.31], 'huc-level': 6, 'anchor': (0,0)
     },
-    # 'Blanco': {
-    #     'coords': [38.7, -107.6], 'huc-level': 8, 'anchor': (0,0)
-    # },
-    'Animas': {
-        'coords': [37.65, -107.8], 'huc-level': 8, 'anchor': (0,0)
+    'Provo': {
+        'coords': [40.54, -111.75], 'huc-level': 8, 'anchor': (0,0)
     },
-    'Middle San Juan': {
-        'coords': [36.9, -109], 'huc-level': 8, 'anchor': (0,0)
+    'Jordan': {
+        'coords': [40.7, -111.98], 'huc-level': 8, 'anchor': (0,0)
     },
-    'Chaco': {
-        'coords': [36.45, -108.84], 'huc-level': 8, 'anchor': (0,0)
+    'Spanish Fork': {
+        'coords': [40.1, -111.58], 'huc-level': 8, 'anchor': (0,0)
     },
-    'Mancos': {
-        'coords': [37.2, -108.7], 'huc-level': 8, 'anchor': (0,0)
+    'Weber': {
+        'coords': [41.1, -111.85], 'huc-level': 6, 'anchor': (0,0)
     },
-    'Montezuma': {
-        'coords': [37.7, -109.28], 'huc-level': 8, 'anchor': (0,0)
-    },
-    'Chinle': {
-        'coords': [36.8, -109.8], 'huc-level': 8, 'anchor': (0,0)
+    'Great Salt Lake': {
+        'coords': [40.77, -112.5], 'huc-level': 4, 'anchor': (0,0)
     },
     
 }
 
 reservoirs = {
-    'Navajo': {
-        'coords': [36.80063, -107.61203], 'region': 'uc', 'anno': '', 'cap': 1701.3, 
-        'id': 920, 'anchor': (0,0), 'pop_dir': 'up',
+    'Willard Bay': {
+        'coords': [41.37738, -112.08339], 'region': 'uc', 'anno': '', 'cap': 222.273, 
+        'id': 925, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1720, 'elev': 1929, 'inflow': 1793, 'release': 1873}
+            {'storage': 1723, 'elev': 1932, 'inflow': 1796, 'release': 1876}
     },
-    'Vallecito': {
-        'coords': [37.37834, -107.57486], 'region': 'uc', 'anno': '', 'cap': 125.442, 
-        'id': 933, 'anchor': (-85,-40), 'pop_dir': 'up',
+    'Jordanelle': {
+        'coords': [40.59833, -111.42304], 'region': 'uc', 'anno': '', 'cap': 311.0, 
+        'id': 964, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1731, 'elev': 1938, 'inflow': 1802, 'release': 1882}
+            {'storage': 1762, 'elev': 1969, 'inflow': 1833, 'release': 1913}
     },
-    'Lemon': {
-        'coords': [37.39538, -107.66269], 'region': 'uc', 'anno': '', 'cap': 39.792, 
-        'id': 934, 'anchor': (0,0), 'pop_dir': 'up',
+    'Deer Creek': {
+        'coords': [40.40837, -111.52908], 'region': 'uc', 'anno': '', 'cap': 150.161, 
+        'id': 953, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1732, 'elev': 1939, 'inflow': 1803, 'release': 1883}
+            {'storage': 1751, 'elev': 1958, 'inflow': 1822, 'release': 1902}
     },
-    'McPhee': {
-        'coords': [37.57588, -108.57307], 'region': 'uc', 'anno': '', 'cap': 381.0, 
-        'id': 958, 'anchor': (0,0), 'pop_dir': 'up',
+    'Causey': {
+        'coords': [41.29828, -111.58591], 'region': 'uc', 'anno': '', 'cap': 7.07, 
+        'id': 938, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1756, 'elev': 1963, 'inflow': 1827, 'release': 1907}
+            {'storage': 1736, 'elev': 1943, 'inflow': 1807, 'release': 1887}
     },
-    'Nighthorse': {
-        'coords': [37.22392, -107.91694], 'region': 'uc', 'anno': '', 'cap': 115.075, 
-        'id': 3083, 'anchor': (0,0), 'pop_dir': 'up',
+    'Lost Creek': {
+        'coords': [41.18318, -111.39905], 'region': 'uc', 'anno': '', 'cap': 22.501, 
+        'id': 942, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 14623, 'elev': 14621, 'inflow': 14617, 'release': 14620}
+            {'storage': 1740, 'elev': 1947, 'inflow': 1811, 'release': 1891}
     },
-    'Jackson': {
-        'coords': [37.40186, -108.27342], 'region': 'uc', 'anno': '', 'cap': 115.075, 
-        'id': 935, 'anchor': (0,0), 'pop_dir': 'up',
+    'Echo': {
+        'coords': [40.96412, -111.43239], 'region': 'uc', 'anno': '', 'cap': 73.94, 
+        'id': 941, 'anchor': (-28,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1733, 'elev': 1940, 'inflow': 1804, 'release': 1884}
+            {'storage': 1739, 'elev': 1946, 'inflow': 1810, 'release': 1890}
+    },
+    'East Canyon': {
+        'coords': [40.92027, -111.60099], 'region': 'uc', 'anno': '', 'cap': 49.510, 
+        'id': 940, 'anchor': (28,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1738, 'elev': 1945, 'inflow': 1809, 'release': 1889}
+    },
+    'Rockport': {
+        'coords': [40.78944, -111.40263], 'region': 'uc', 'anno': '', 'cap': 115.075, 
+        'id': 947, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1745, 'elev': 1952, 'inflow': 1816, 'release': 1896}
+    },
+    'Hyrum': {
+        'coords': [41.62117, -111.86099], 'region': 'uc', 'anno': '', 'cap': 14.734, 
+        'id': 957, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1755, 'elev': 1962, 'inflow': 1826, 'release': 1906}
+    },
+    'Newton': {
+        'coords': [41.8998, -111.97562], 'region': 'uc', 'anno': '', 'cap': 5.374, 
+        'id': 959, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1757, 'elev': 1964, 'inflow': 1828, 'release': 1908}
     },
 }
     
@@ -392,15 +410,14 @@ if __name__ == '__main__':
             json.dump(all_config, j, indent=4, sort_keys=True)
         sys.exit(0)
     
-    config_name = 'uc'
     config = {
         config_name: {
-            'huc_level': uc_huc_level,
-            'huc_filter': uc_huc_filter,
-            'zoom': uc_initial_zoom, 
-            'center': uc_map_center, 
-            'reservoirs': reservoirs_uc, 
-            'regions': regions_uc, 
+            'huc_level': huc_level,
+            'huc_filter': huc_filter,
+            'zoom': initial_zoom, 
+            'center': map_center, 
+            'reservoirs': reservoirs, 
+            'regions': regions, 
             'forecasts': forecasts
         }
     } 
