@@ -9,101 +9,73 @@ Created on Fri Apr  3 08:08:44 2020
 Keep in mind the top left corner of the button is the anchor point
 '''
 
-config_name = 'gb'
-map_center = (41.05, -111.95)
-initial_zoom = 9
-huc_level = 4
-huc_filter = [1601,160201,160202]
+config_name = 'ub'
+map_center = (40.3, -110.15)
+initial_zoom = 10
+huc_level = 6
+huc_filter = [14060003, 14060004, 14060005, 14060010]
 
 regions = {
-    'Bear': {
-        'coords': [41.6, -112.75], 'huc-level': 4, 'anchor': (0,0)
+    'Lower Green': {
+        'coords': [40.4, -110.23], 'huc-level': 6, 'anchor': (0,0)
     },
-    'Upper Bear': {
-        'coords': [41.66, -111.21], 'huc-level': 6, 'anchor': (0,0)
+    'Duchesne': {
+        'coords': [40.42, -110.65], 'huc-level': 8, 'anchor': (0,0)
     },
-    'Lower Bear': {
-        'coords': [41.6, -112.31], 'huc-level': 6, 'anchor': (0,0)
+    'Lower Green-Diamond': {
+        'coords': [40.3, -109.5], 'huc-level': 8, 'anchor': (0,0)
     },
-    'Provo': {
-        'coords': [40.54, -111.75], 'huc-level': 8, 'anchor': (0,0)
+    'Strawberry': {
+        'coords': [40.2, -110.75], 'huc-level': 8, 'anchor': (0,0)
     },
-    'Jordan': {
-        'coords': [40.7, -111.98], 'huc-level': 8, 'anchor': (0,0)
+    'Lower Green-Desolation Canyon': {
+        'coords': [40.1, -110.1], 'huc-level': 8, 'anchor': (0,0)
     },
-    'Spanish Fork': {
-        'coords': [40.1, -111.58], 'huc-level': 8, 'anchor': (0,0)
-    },
-    'Weber': {
-        'coords': [41.1, -111.85], 'huc-level': 6, 'anchor': (0,0)
-    },
-    'Great Salt Lake': {
-        'coords': [40.77, -112.5], 'huc-level': 4, 'anchor': (0,0)
-    },
-    
 }
 
 reservoirs = {
-    'Willard Bay': {
-        'coords': [41.37738, -112.08339], 'region': 'uc', 'anno': '', 'cap': 222.273, 
-        'id': 925, 'anchor': (0,0), 'pop_dir': 'up',
+    'Soldier Creek': {
+        'coords': [40.13564, -111.02659], 'region': 'uc', 'anno': '', 'cap': 1105.91, 
+        'id': 962, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1723, 'elev': 1932, 'inflow': 1796, 'release': 1876}
+            {'storage': 1760, 'elev': 1967, 'inflow': 1831, 'release': 1911}
     },
-    'Jordanelle': {
-        'coords': [40.59833, -111.42304], 'region': 'uc', 'anno': '', 'cap': 311.0, 
-        'id': 964, 'anchor': (0,0), 'pop_dir': 'up',
+    'Starvation': {
+        'coords': [40.19324, -110.44722], 'region': 'uc', 'anno': '', 'cap': 162.279, 
+        'id': 928, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1762, 'elev': 1969, 'inflow': 1833, 'release': 1913}
+            {'storage': 1726, 'elev': 1934, 'inflow': 1798, 'release': 1878}
     },
-    'Deer Creek': {
-        'coords': [40.40837, -111.52908], 'region': 'uc', 'anno': '', 'cap': 150.161, 
-        'id': 953, 'anchor': (0,0), 'pop_dir': 'up',
+    'Steinaker': {
+        'coords': [40.51456, -109.53275], 'region': 'uc', 'anno': '', 'cap': 36.148, 
+        'id': 927, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1751, 'elev': 1958, 'inflow': 1822, 'release': 1902}
+            {'storage': 1725, 'elev': 1933, 'inflow': 1797, 'release': 1877}
     },
-    'Causey': {
-        'coords': [41.29828, -111.58591], 'region': 'uc', 'anno': '', 'cap': 7.07, 
-        'id': 938, 'anchor': (0,0), 'pop_dir': 'up',
+    'Red Fleet': {
+        'coords': [40.57543, -109.42052], 'region': 'uc', 'anno': '', 'cap': 25.7, 
+        'id': 960, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1736, 'elev': 1943, 'inflow': 1807, 'release': 1887}
+            {'storage': 1758, 'elev': 1965, 'inflow': 1829, 'release': 1909}
     },
-    'Lost Creek': {
-        'coords': [41.18318, -111.39905], 'region': 'uc', 'anno': '', 'cap': 22.501, 
-        'id': 942, 'anchor': (0,0), 'pop_dir': 'up',
+    'Moon Lake': {
+        'coords': [40.57445, -110.50665], 'region': 'uc', 'anno': '', 'cap': 37.848, 
+        'id': 930, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1740, 'elev': 1947, 'inflow': 1811, 'release': 1891}
+            {'storage': 1728, 'elev': 1935, 'inflow': 1799, 'release': 1879}
     },
-    'Echo': {
-        'coords': [40.96412, -111.43239], 'region': 'uc', 'anno': '', 'cap': 73.94, 
-        'id': 941, 'anchor': (-28,0), 'pop_dir': 'up',
+    'Upper Stillwater': {
+        'coords': [40.56565, -110.70044], 'region': 'uc', 'anno': '', 'cap': 31.382, 
+        'id': 963, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1739, 'elev': 1946, 'inflow': 1810, 'release': 1890}
+            {'storage': 1761, 'elev': 1968, 'inflow': 1832, 'release': 1912}
     },
-    'East Canyon': {
-        'coords': [40.92027, -111.60099], 'region': 'uc', 'anno': '', 'cap': 49.510, 
-        'id': 940, 'anchor': (28,0), 'pop_dir': 'up',
+    'Currant Creek': {
+        'coords': [40.33841, -111.05821], 'region': 'uc', 'anno': '', 'cap': 15.464, 
+        'id': 952, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1738, 'elev': 1945, 'inflow': 1809, 'release': 1889}
-    },
-    'Rockport': {
-        'coords': [40.78944, -111.40263], 'region': 'uc', 'anno': '', 'cap': 115.075, 
-        'id': 947, 'anchor': (0,0), 'pop_dir': 'up',
-        'sdis': 
-            {'storage': 1745, 'elev': 1952, 'inflow': 1816, 'release': 1896}
-    },
-    'Hyrum': {
-        'coords': [41.62117, -111.86099], 'region': 'uc', 'anno': '', 'cap': 14.734, 
-        'id': 957, 'anchor': (0,0), 'pop_dir': 'up',
-        'sdis': 
-            {'storage': 1755, 'elev': 1962, 'inflow': 1826, 'release': 1906}
-    },
-    'Newton': {
-        'coords': [41.8998, -111.97562], 'region': 'uc', 'anno': '', 'cap': 5.374, 
-        'id': 959, 'anchor': (0,0), 'pop_dir': 'up',
-        'sdis': 
-            {'storage': 1757, 'elev': 1964, 'inflow': 1828, 'release': 1908}
-    },
+            {'storage': 1750, 'elev': 1957, 'inflow': 1821, 'release': 1901}
+    }
 }
 
 gb_config_name = 'gb'

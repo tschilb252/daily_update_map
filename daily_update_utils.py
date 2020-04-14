@@ -16,7 +16,7 @@ from shapely.geometry import Point
 from datetime import datetime
 from requests import get as r_get
 
-# STATIC_URL = 'http://127.0.0.1:8887'
+STATIC_URL = 'http://127.0.0.1:8887'
 STATIC_URL = f'https://www.usbr.gov/uc/water/hydrodata/assets'
 nrcs_url = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 NRCS_CHARTS_URL = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
@@ -344,7 +344,14 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
     style_function = lambda x: style_chropleth(
         x, data_type=data_type, huc_level=huc_level, huc_filter=huc_filter
     )
-       
+    tooltip = folium.features.GeoJsonTooltip(
+        ['Name', f'{data_type}_percent'],
+        aliases=['Basin Name:', f'{layer_name}:']
+    )
+    # tooltip = folium.features.GeoJsonTooltip(
+    #     ['Name', f'{data_type}_percent', f'HUC{huc_level}'],
+    #     aliases=['Basin Name:', f'{layer_name}:', 'ID:']
+    # )
     if use_topo:
         folium.TopoJson(
             topo_json,
@@ -354,9 +361,7 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
             show=show,
             smooth_factor=2.0,
             style_function=style_function,
-            tooltip=folium.features.GeoJsonTooltip(
-                ['Name', f'{data_type}_percent'],
-                aliases=['Basin Name:', f'{layer_name}:'])
+            tooltip=tooltip
         ).add_to(m)
     else:
         json_path = f'{STATIC_URL}/gis/HUC{huc_level}.geojson'
@@ -369,9 +374,7 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
             smooth_factor=2.0,
             style_function=style_function,
             show=show,
-            tooltip=folium.features.GeoJsonTooltip(
-                ['Name', f'{data_type}_percent'],
-                aliases=['Basin Name:', f'{layer_name}:'])
+            tooltip=tooltip
         ).add_to(m)
 
 def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):

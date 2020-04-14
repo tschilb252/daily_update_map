@@ -1,0 +1,223 @@
+{
+    "ub": {
+        "center": [
+            40.3,
+            -110.15
+        ],
+        "forecasts": {},
+        "huc_filter": [
+            14060003,
+            14060004,
+            14060005,
+            14060010
+        ],
+        "huc_level": 6,
+        "regions": {
+            "Duchesne": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.42,
+                    -110.65
+                ],
+                "huc-level": 8
+            },
+            "Lower Green": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.4,
+                    -110.23
+                ],
+                "huc-level": 6
+            },
+            "Lower Green-Desolation Canyon": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.1,
+                    -110.1
+                ],
+                "huc-level": 8
+            },
+            "Lower Green-Diamond": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.3,
+                    -109.5
+                ],
+                "huc-level": 8
+            },
+            "Strawberry": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.2,
+                    -110.75
+                ],
+                "huc-level": 8
+            }
+        },
+        "reservoirs": {
+            "Currant Creek": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 15.464,
+                "coords": [
+                    40.33841,
+                    -111.05821
+                ],
+                "id": 952,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1957,
+                    "inflow": 1821,
+                    "release": 1901,
+                    "storage": 1750
+                }
+            },
+            "Moon Lake": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 37.848,
+                "coords": [
+                    40.57445,
+                    -110.50665
+                ],
+                "id": 930,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1935,
+                    "inflow": 1799,
+                    "release": 1879,
+                    "storage": 1728
+                }
+            },
+            "Red Fleet": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 25.7,
+                "coords": [
+                    40.57543,
+                    -109.42052
+                ],
+                "id": 960,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1965,
+                    "inflow": 1829,
+                    "release": 1909,
+                    "storage": 1758
+                }
+            },
+            "Soldier Creek": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 1105.91,
+                "coords": [
+                    40.13564,
+                    -111.02659
+                ],
+                "id": 962,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1967,
+                    "inflow": 1831,
+                    "release": 1911,
+                    "storage": 1760
+                }
+            },
+            "Starvation": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 162.279,
+                "coords": [
+                    40.19324,
+                    -110.44722
+                ],
+                "id": 928,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1934,
+                    "inflow": 1798,
+                    "release": 1878,
+                    "storage": 1726
+                }
+            },
+            "Steinaker": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 36.148,
+                "coords": [
+                    40.51456,
+                    -109.53275
+                ],
+                "id": 927,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1933,
+                    "inflow": 1797,
+                    "release": 1877,
+                    "storage": 1725
+                }
+            },
+            "Upper Stillwater": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 31.382,
+                "coords": [
+                    40.56565,
+                    -110.70044
+                ],
+                "id": 963,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1968,
+                    "inflow": 1832,
+                    "release": 1912,
+                    "storage": 1761
+                }
+            }
+        },
+        "zoom": 10
+    }
+}
