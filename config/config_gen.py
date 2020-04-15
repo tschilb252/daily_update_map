@@ -428,7 +428,7 @@ gunn_regions = {
 }
 
 config_name = 'rg'
-map_center = (35.2, -106)
+map_center = (35.1, -106)
 initial_zoom = 7
 huc_level = 2
 huc_filter = [1301, 1302, 1303, 1305, 1306, 14080101]
@@ -493,13 +493,13 @@ reservoirs = {
     },
     'Brantley': {
         'coords': [32.5442, -104.3814], 'region': 'uc', 'anno': '', 'cap': 41.87, 
-        'id': 937, 'anchor': (80,-20), 'pop_dir': 'up',
+        'id': 937, 'anchor': (75,10), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1735, 'elev': 1942, 'inflow': 1812, 'release': 1892}
     },
     'Avalon': {
         'coords': [32.4908, -104.2522], 'region': 'uc', 'anno': '', 'cap': 51.418, 
-        'id': 2684, 'anchor': (-35,20), 'pop_dir': 'up',
+        'id': 2684, 'anchor': (-35,-10), 'pop_dir': 'up',
         'sdis': 
             {'storage': 19172, 'elev': 19171, 'inflow': None, 'release': 20821}
     }
