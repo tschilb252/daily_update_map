@@ -16,8 +16,8 @@ from shapely.geometry import Point
 from datetime import datetime
 from requests import get as r_get
 
-STATIC_URL = 'http://127.0.0.1:8887'
-# STATIC_URL = f'https://www.usbr.gov/uc/water/hydrodata/assets'
+# STATIC_URL = 'http://127.0.0.1:8887'
+STATIC_URL = f'https://www.usbr.gov/uc/water/hydrodata/assets'
 nrcs_url = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 NRCS_CHARTS_URL = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 
