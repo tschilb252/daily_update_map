@@ -553,6 +553,154 @@
         },
         "zoom": 9
     },
+    "pb": {
+        "center": [
+            39.03,
+            -110.83
+        ],
+        "forecasts": {},
+        "huc_filter": [
+            14060007,
+            14060009,
+            14070002,
+            14070003
+        ],
+        "huc_level": 6,
+        "regions": {
+            "Fremont": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    38.45,
+                    -111.76
+                ],
+                "huc-level": 8
+            },
+            "Lower Green": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    39.67,
+                    -111.53
+                ],
+                "huc-level": 6
+            },
+            "Muddy": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    38.75,
+                    -111.2
+                ],
+                "huc-level": 8
+            },
+            "Price": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    39.57,
+                    -110.85
+                ],
+                "huc-level": 8
+            },
+            "San Rafael": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    39.06,
+                    -110.9
+                ],
+                "huc-level": 8
+            },
+            "Upper Colorado-Dirty Devil": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    38.72,
+                    -111.86
+                ],
+                "huc-level": 6
+            }
+        },
+        "reservoirs": {
+            "Huntington North": {
+                "anchor": [
+                    15,
+                    0
+                ],
+                "anno": "",
+                "cap": 1105.91,
+                "coords": [
+                    39.38458,
+                    -111.09082
+                ],
+                "id": 956,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1961,
+                    "inflow": 1825,
+                    "release": 1905,
+                    "storage": 1754
+                }
+            },
+            "Joes Valley": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 61.59,
+                "coords": [
+                    39.2901,
+                    -111.27888
+                ],
+                "id": 932,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1937,
+                    "inflow": 1801,
+                    "release": 1881,
+                    "storage": 1730
+                }
+            },
+            "Scofield": {
+                "anchor": [
+                    -15,
+                    0
+                ],
+                "anno": "",
+                "cap": 65.8,
+                "coords": [
+                    39.77656,
+                    -111.05074
+                ],
+                "id": 931,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1936,
+                    "inflow": 1800,
+                    "release": 1880,
+                    "storage": 1729
+                }
+            }
+        },
+        "zoom": 9
+    },
     "rg": {
         "center": [
             35.3,

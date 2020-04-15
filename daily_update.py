@@ -13,7 +13,7 @@ from os import path, makedirs
 from requests import get as r_get
 import folium
 import pandas as pd
-from folium.plugins import FloatImage, MousePosition
+from folium.plugins import FloatImage, MousePosition, MiniMap
 from folium.features import DivIcon
 # import geopandas as gpd
 # from shapely.geometry import Point
@@ -175,7 +175,8 @@ def get_embed(href):
 
 def add_region_markers(basin_map, regions, nrcs_url=nrcs_url, map_date=None):
     huc_levels = {v['huc-level']:k for k, v in regions.items()}
-    lowest_huc = min(huc_levels, key=huc_levels.get)
+    lowest_huc = min(huc_levels.keys())
+
     for region, region_meta in regions.items():
         print(f'    Adding {region} to the map...')
         huc_level = region_meta['huc-level']
@@ -498,7 +499,9 @@ if __name__ == '__main__':
         huc_filter = map_config.get('huc_filter', [''])
         if type(huc_filter) == list:
             huc_filter = tuple(str(i) for i in huc_filter)
-
+        elif type(huc_filter) == str or type(huc_filter) == int:
+            huc_filter = tuple(str(huc_filter))
+            
         reservoirs = map_config.get('reservoirs', reservoirs)
         regions = map_config.get('regions', regions)
         forecasts = map_config.get('forecasts', forecasts)
@@ -510,19 +513,24 @@ if __name__ == '__main__':
         )
         
         huc_levels = ['2', '6', '8']
-        huc_levels[:] = [i for i in huc_levels if int(i) >= int(map_huc_level)]
+        
         for huc_level in huc_levels:
-            print(f'    Adding HUC{huc_level} boundary and SWE/PREC layers...')
-            show_prec = True if get_season() =='summer' and huc_level == '8' else False
-            show_swe = True if not show_prec and huc_level == '8' else False
+            print(f'    Adding HUC{huc_level} boundary...')
             
             add_huc_layer(
                 basin_map, 
                 level=int(huc_level), 
                 show=True, 
                 embed=False, 
-                huc_filter=huc_filter
+                huc_filter=tuple(set(i[:int(huc_level)] for i in huc_filter))
             )
+        
+        huc_levels[:] = [i for i in huc_levels if int(i) >= int(map_huc_level)]
+        for huc_level in huc_levels:
+            print(f'    Adding HUC{huc_level} SWE/PREC layers...')
+            show_prec = True if get_season() =='summer' and huc_level == '8' else False
+            show_swe = True if not show_prec and huc_level == '8' else False
+            
             for data_type in ['swe', 'prec']:
                 show_dict = {'swe': show_swe, 'prec': show_prec}
                 show = show_dict[data_type]
@@ -560,6 +568,7 @@ if __name__ == '__main__':
         legend = folium.Element(get_legend())
         basin_map.get_root().html.add_child(legend)
         BrowserPrint().add_to(basin_map)
+        MiniMap().add_to(basin_map)
         basin_map.save(map_path)
         flavicon = (
             f'<link rel="shortcut icon" '

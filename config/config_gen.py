@@ -9,13 +9,61 @@ Created on Fri Apr  3 08:08:44 2020
 Keep in mind the top left corner of the button is the anchor point
 '''
 
-config_name = 'ub'
-map_center = (40.3, -110.15)
-initial_zoom = 10
+config_name = 'pb'
+map_center = (39.03, -110.83)
+initial_zoom = 9
 huc_level = 6
-huc_filter = [14060003, 14060004, 14060005, 14060010]
+huc_filter = [14060007, 14060009, 14070002, 14070003]
 
 regions = {
+    'Lower Green': {
+        'coords': [39.67, -111.53], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Upper Colorado-Dirty Devil': {
+        'coords': [38.72, -111.86], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Price': {
+        'coords': [39.57, -110.85], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'San Rafael': {
+        'coords': [39.06, -110.9], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Muddy': {
+        'coords': [38.75, -111.2], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Fremont': {
+        'coords': [38.45, -111.76], 'huc-level': 8, 'anchor': (0,0)
+    }
+}
+
+reservoirs = {
+    'Huntington North': {
+        'coords': [39.38458, -111.09082], 'region': 'uc', 'anno': '', 'cap': 1105.91, 
+        'id': 956, 'anchor': (15,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1754, 'elev': 1961, 'inflow': 1825, 'release': 1905}
+    },
+    'Joes Valley': {
+        'coords': [39.2901, -111.27888], 'region': 'uc', 'anno': '', 'cap': 61.59, 
+        'id': 932, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1730, 'elev': 1937, 'inflow': 1801, 'release': 1881}
+    },
+    'Scofield': {
+        'coords': [39.77656, -111.05074], 'region': 'uc', 'anno': '', 'cap': 65.8, 
+        'id': 931, 'anchor': (-15,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1729, 'elev': 1936, 'inflow': 1800, 'release': 1880}
+    }
+}
+
+ub_config_name = 'ub'
+ub_map_center = (40.3, -110.15)
+ub_initial_zoom = 10
+ub_huc_level = 6
+ub_huc_filter = [14060003, 14060004, 14060005, 14060010]
+
+ub_regions = {
     'Lower Green': {
         'coords': [40.4, -110.23], 'huc-level': 6, 'anchor': (0,0)
     },
@@ -33,7 +81,7 @@ regions = {
     },
 }
 
-reservoirs = {
+ub_reservoirs = {
     'Soldier Creek': {
         'coords': [40.13564, -111.02659], 'region': 'uc', 'anno': '', 'cap': 1105.91, 
         'id': 962, 'anchor': (0,0), 'pop_dir': 'up',
@@ -77,7 +125,7 @@ reservoirs = {
             {'storage': 1750, 'elev': 1957, 'inflow': 1821, 'release': 1901}
     }
 }
-
+    
 gb_config_name = 'gb'
 gb_map_center = (41.05, -111.95)
 gb_initial_zoom = 9
