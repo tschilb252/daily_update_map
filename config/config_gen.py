@@ -9,14 +9,14 @@ Created on Fri Apr  3 08:08:44 2020
 Keep in mind the top left corner of the button is the anchor point
 '''
 
-config_name = 'pb'
+config_name = 'rc'
 map_center = (39.03, -110.83)
 initial_zoom = 9
 huc_level = 6
 huc_filter = [14060007, 14060009, 14070002, 14070003]
 
 regions = {
-    'Lower Green': {
+    'Upper Rio Grande': {
         'coords': [39.67, -111.53], 'huc-level': 6, 'anchor': (0,0)
     },
     'Upper Colorado-Dirty Devil': {
@@ -37,6 +37,54 @@ regions = {
 }
 
 reservoirs = {
+    'Heron': {
+        'coords': [39.38458, -111.09082], 'region': 'uc', 'anno': '', 'cap': 1105.91, 
+        'id': 956, 'anchor': (0,10), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1754, 'elev': 1961, 'inflow': 1825, 'release': 1905}
+    },
+    'El Vado': {
+        'coords': [39.2901, -111.27888], 'region': 'uc', 'anno': '', 'cap': 61.59, 
+        'id': 932, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1730, 'elev': 1937, 'inflow': 1801, 'release': 1881}
+    },
+    'Abiquiu': {
+        'coords': [39.77656, -111.05074], 'region': 'uc', 'anno': '', 'cap': 65.8, 
+        'id': 931, 'anchor': (0,-10), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1729, 'elev': 1936, 'inflow': 1800, 'release': 1880}
+    }
+}
+
+pb_config_name = 'pb'
+pb_map_center = (39.03, -110.83)
+pb_initial_zoom = 9
+pb_huc_level = 6
+pb_huc_filter = [14060007, 14060009, 14070002, 14070003]
+
+pb_regions = {
+    'Lower Green': {
+        'coords': [39.67, -111.53], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Upper Colorado-Dirty Devil': {
+        'coords': [38.72, -111.86], 'huc-level': 6, 'anchor': (0,0)
+    },
+    'Price': {
+        'coords': [39.57, -110.85], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'San Rafael': {
+        'coords': [39.06, -110.9], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Muddy': {
+        'coords': [38.75, -111.2], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Fremont': {
+        'coords': [38.45, -111.76], 'huc-level': 8, 'anchor': (0,0)
+    }
+}
+
+pb_reservoirs = {
     'Huntington North': {
         'coords': [39.38458, -111.09082], 'region': 'uc', 'anno': '', 'cap': 1105.91, 
         'id': 956, 'anchor': (0,10), 'pop_dir': 'up',
@@ -55,7 +103,7 @@ reservoirs = {
         'sdis': 
             {'storage': 1729, 'elev': 1936, 'inflow': 1800, 'release': 1880}
     }
-}
+}    
 
 ub_config_name = 'ub'
 ub_map_center = (40.3, -110.15)
@@ -379,13 +427,13 @@ gunn_regions = {
    
 }
 
-rg_config_name = 'rg'
-rg_map_center = (35.3, -106)
-rg_initial_zoom = 7
-rg_huc_level = 2
-rg_huc_filter = 13
+config_name = 'rg'
+map_center = (35.2, -106)
+initial_zoom = 7
+huc_level = 2
+huc_filter = [1301, 1302, 1303, 1305, 1306, 14080101]
 
-rg_regions = {
+regions = {
     'Rio Grande': {
         'coords': [35.5, -107], 'huc-level': 2, 'anchor': (0,0)
     },
@@ -393,7 +441,7 @@ rg_regions = {
         'coords': [33.6, -105.3], 'huc-level': 6, 'anchor': (0,0)
     },
     'Rio Grande Headwaters': {
-        'coords': [38.25, -106.65], 'huc-level': 6, 'anchor': (0,0)
+        'coords': [37.9, -106.65], 'huc-level': 6, 'anchor': (0,0)
     },
     'Rio Grande-Elephant Butte': {
         'coords': [34.7, -108.2], 'huc-level': 6, 'anchor': (0,0)
@@ -402,17 +450,59 @@ rg_regions = {
         'coords': [36.9, -106.85], 'huc-level': 6, 'anchor': (0,0)
     },
     'Upper San Juan': {
-        'coords': [37, -108.25], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [37, -108.55], 'huc-level': 8, 'anchor': (0,0)
     },
 }
 
-rg_reservoirs = {
+reservoirs = {
     'Elephant Butte': {
         'coords': [33.15, -107.2], 'region': 'uc', 'anno': '', 'cap': 2010.9, 
-        'id': 1119, 'anchor': (0,0), 'pop_dir': 'left',
+        'id': 1119, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 2684, 'elev': 2685, 'inflow': 2686, 'release': 2688}
     },
+    'Heron': {
+        'coords': [36.6973, -106.6992], 'region': 'uc', 'anno': '', 'cap': 398.938, 
+        'id': 2686, 'anchor': (-60,-30), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 19176, 'elev': 19175, 'inflow': None, 'release': 19609}
+    },
+    'El Vado': {
+        'coords': [36.5948, -106.7366], 'region': 'uc', 'anno': '', 'cap': 184.452, 
+        'id': 2685, 'anchor': (60,-30), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 19548, 'elev': 19547, 'inflow': None, 'release': 19626}
+    },
+    'Abiquiu': {
+        'coords': [39.77656, -111.05074], 'region': 'uc', 'anno': '', 'cap': 558.784, 
+        'id': 2729, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 19127, 'elev': 19126, 'inflow': None, 'release': 20055}
+    },
+    'Caballo': {
+        'coords': [32.89646, -107.29219], 'region': 'uc', 'anno': '', 'cap': 226.672, 
+        'id': 1094, 'anchor': (0,-35), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 2678, 'elev': 2679, 'inflow': 2680, 'release': 2682}
+    },
+    'Sumner': {
+        'coords': [34.62884, -104.3924], 'region': 'uc', 'anno': '', 'cap': 51.418, 
+        'id': 943, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1741, 'elev': 1948, 'inflow': 1812, 'release': 1892}
+    },
+    'Brantley': {
+        'coords': [32.5442, -104.3814], 'region': 'uc', 'anno': '', 'cap': 41.87, 
+        'id': 937, 'anchor': (80,-20), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1735, 'elev': 1942, 'inflow': 1812, 'release': 1892}
+    },
+    'Avalon': {
+        'coords': [32.4908, -104.2522], 'region': 'uc', 'anno': '', 'cap': 51.418, 
+        'id': 2684, 'anchor': (-35,20), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 19172, 'elev': 19171, 'inflow': None, 'release': 20821}
+    }
 }
  
 uc_config_name = 'uc'
@@ -528,7 +618,7 @@ if __name__ == '__main__':
         with open(all_config_file_name, 'w') as j:
             json.dump(all_config, j, indent=4, sort_keys=True)
         sys.exit(0)
-    
+
     config = {
         config_name: {
             'huc_level': huc_level,

@@ -1,11 +1,18 @@
 {
     "rg": {
         "center": [
-            35.3,
+            35.2,
             -106
         ],
-        "huc_filter": [13, 140801],
         "forecasts": {},
+        "huc_filter": [
+            1301,
+            1302,
+            1303,
+            1305,
+            1306,
+            14080101
+        ],
         "huc_level": 2,
         "regions": {
             "Rio Grande": {
@@ -25,7 +32,7 @@
                     0
                 ],
                 "coords": [
-                    38.25,
+                    37.9,
                     -106.65
                 ],
                 "huc-level": 6
@@ -70,12 +77,117 @@
                 ],
                 "coords": [
                     37,
-                    -108.65
+                    -108.55
                 ],
                 "huc-level": 8
             }
         },
         "reservoirs": {
+            "Abiquiu": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 558.784,
+                "coords": [
+                    39.77656,
+                    -111.05074
+                ],
+                "id": 2729,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 19126,
+                    "inflow": null,
+                    "release": 20055,
+                    "storage": 19127
+                }
+            },
+            "Avalon": {
+                "anchor": [
+                    -35,
+                    20
+                ],
+                "anno": "",
+                "cap": 51.418,
+                "coords": [
+                    32.4908,
+                    -104.2522
+                ],
+                "id": 2684,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 19171,
+                    "inflow": null,
+                    "release": 20821,
+                    "storage": 19172
+                }
+            },
+            "Brantley": {
+                "anchor": [
+                    80,
+                    -20
+                ],
+                "anno": "",
+                "cap": 41.87,
+                "coords": [
+                    32.5442,
+                    -104.3814
+                ],
+                "id": 937,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1942,
+                    "inflow": 1812,
+                    "release": 1892,
+                    "storage": 1735
+                }
+            },
+            "Caballo": {
+                "anchor": [
+                    0,
+                    -35
+                ],
+                "anno": "",
+                "cap": 226.672,
+                "coords": [
+                    32.89646,
+                    -107.29219
+                ],
+                "id": 1094,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 2679,
+                    "inflow": 2680,
+                    "release": 2682,
+                    "storage": 2678
+                }
+            },
+            "El Vado": {
+                "anchor": [
+                    60,
+                    -30
+                ],
+                "anno": "",
+                "cap": 184.452,
+                "coords": [
+                    36.5948,
+                    -106.7366
+                ],
+                "id": 2685,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 19547,
+                    "inflow": null,
+                    "release": 19626,
+                    "storage": 19548
+                }
+            },
             "Elephant Butte": {
                 "anchor": [
                     0,
@@ -88,13 +200,55 @@
                     -107.2
                 ],
                 "id": 1119,
-                "pop_dir": "left",
+                "pop_dir": "up",
                 "region": "uc",
                 "sdis": {
                     "elev": 2685,
                     "inflow": 2686,
                     "release": 2688,
                     "storage": 2684
+                }
+            },
+            "Heron": {
+                "anchor": [
+                    -60,
+                    -30
+                ],
+                "anno": "",
+                "cap": 398.938,
+                "coords": [
+                    36.6973,
+                    -106.6992
+                ],
+                "id": 2686,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 19175,
+                    "inflow": null,
+                    "release": 19609,
+                    "storage": 19176
+                }
+            },
+            "Sumner": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 51.418,
+                "coords": [
+                    34.62884,
+                    -104.3924
+                ],
+                "id": 943,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1948,
+                    "inflow": 1812,
+                    "release": 1892,
+                    "storage": 1741
                 }
             }
         },

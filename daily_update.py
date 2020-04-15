@@ -256,12 +256,18 @@ def add_res_markers(basin_map, reservoirs, map_date=None):
                 current_date = current_storage['dt']
                 current_storage = current_storage['data']
                 current_elev = get_uc_data(res_meta['sdis']['elev'], map_date=map_date)['data']
-                current_inflow = get_uc_data(res_meta['sdis']['inflow'], map_date=map_date)['data']
+                if res_meta['sdis']['inflow']:
+                    current_inflow = get_uc_data(res_meta['sdis']['inflow'], map_date=map_date)['data']
+                else:
+                    current_inflow = None
                 current_release = get_uc_data(res_meta['sdis']['release'], map_date=map_date)['data']
             elif res_meta['region'] == 'lc':
                 current_storage = get_lc_data(res_meta['sdis']['storage'], map_date=map_date)['data']
                 current_elev = get_lc_data(res_meta['sdis']['elev'], map_date=map_date)['data']
-                current_inflow = get_lc_data(res_meta['sdis']['inflow'], map_date=map_date)['data']
+                if res_meta['sdis']['inflow']:
+                    current_inflow = get_lc_data(res_meta['sdis']['inflow'], map_date=map_date)['data']
+                else:
+                    current_inflow = None
                 current_release = get_lc_data(res_meta['sdis']['release'], map_date=map_date)['data']
             else:
                 current_storage = None
@@ -287,7 +293,10 @@ def add_res_markers(basin_map, reservoirs, map_date=None):
             url_release = f"{prefix}/{res_meta['id']}/dashboard.html#total_release"
             current_storage = f'{current_storage/1000:,.1f}'
             current_elev = f'{current_elev:,.1f}'
-            current_inflow = f'{current_inflow:,.0f}'
+            if current_inflow:
+                current_inflow = f'{current_inflow:,.0f}'
+            else:
+                current_inflow = 'N/A'
             current_release = f'{current_release:,.0f}'
         else:
             current_storage = 'N/A'
