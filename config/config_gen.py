@@ -39,7 +39,7 @@ regions = {
 reservoirs = {
     'Huntington North': {
         'coords': [39.38458, -111.09082], 'region': 'uc', 'anno': '', 'cap': 1105.91, 
-        'id': 956, 'anchor': (15,0), 'pop_dir': 'up',
+        'id': 956, 'anchor': (0,10), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1754, 'elev': 1961, 'inflow': 1825, 'release': 1905}
     },
@@ -51,7 +51,7 @@ reservoirs = {
     },
     'Scofield': {
         'coords': [39.77656, -111.05074], 'region': 'uc', 'anno': '', 'cap': 65.8, 
-        'id': 931, 'anchor': (-15,0), 'pop_dir': 'up',
+        'id': 931, 'anchor': (0,-10), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1729, 'elev': 1936, 'inflow': 1800, 'release': 1880}
     }
