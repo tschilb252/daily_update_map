@@ -498,9 +498,9 @@ if __name__ == '__main__':
         
         huc_filter = map_config.get('huc_filter', [''])
         if type(huc_filter) == list:
-            huc_filter = tuple(str(i) for i in huc_filter)
+            huc_filter = tuple([str(i) for i in huc_filter])
         elif type(huc_filter) == str or type(huc_filter) == int:
-            huc_filter = tuple(str(huc_filter))
+            huc_filter = tuple([str(huc_filter)])
             
         reservoirs = map_config.get('reservoirs', reservoirs)
         regions = map_config.get('regions', regions)
