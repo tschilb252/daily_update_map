@@ -1,8 +1,8 @@
 {
     "gb": {
         "center": [
-            41.0,
-            -111.95
+            41.05,
+            -112.1
         ],
         "forecasts": {},
         "huc_filter": [
@@ -707,6 +707,7 @@
             -106
         ],
         "forecasts": {},
+        "hrg_level": 2,
         "huc_filter": [
             1301,
             1302,
@@ -715,7 +716,6 @@
             1306,
             14080101
         ],
-        "huc_level": 2,
         "regions": {
             "Rio Grande": {
                 "anchor": [
@@ -1197,8 +1197,8 @@
     },
     "ub": {
         "center": [
-            40.3,
-            -110.15
+            40.2,
+            -110.25
         ],
         "forecasts": {},
         "huc_filter": [
@@ -1237,8 +1237,8 @@
                     0
                 ],
                 "coords": [
-                    40.1,
-                    -110.1
+                    39.86,
+                    -110.5
                 ],
                 "huc-level": 8
             },
@@ -1248,8 +1248,8 @@
                     0
                 ],
                 "coords": [
-                    40.3,
-                    -109.5
+                    40.35,
+                    -109.56
                 ],
                 "huc-level": 8
             },
@@ -1260,7 +1260,7 @@
                 ],
                 "coords": [
                     40.2,
-                    -110.75
+                    -110.815
                 ],
                 "huc-level": 8
             }
@@ -1289,7 +1289,7 @@
             },
             "Moon Lake": {
                 "anchor": [
-                    0,
+                    -30,
                     0
                 ],
                 "anno": "",
@@ -1311,7 +1311,7 @@
             "Red Fleet": {
                 "anchor": [
                     0,
-                    0
+                    12
                 ],
                 "anno": "",
                 "cap": 25.7,
@@ -1331,7 +1331,7 @@
             },
             "Soldier Creek": {
                 "anchor": [
-                    0,
+                    55,
                     0
                 ],
                 "anno": "",
@@ -1374,7 +1374,7 @@
             "Steinaker": {
                 "anchor": [
                     0,
-                    0
+                    -14
                 ],
                 "anno": "",
                 "cap": 36.148,
@@ -1394,7 +1394,7 @@
             },
             "Upper Stillwater": {
                 "anchor": [
-                    0,
+                    30,
                     0
                 ],
                 "anno": "",
@@ -1414,7 +1414,7 @@
                 }
             }
         },
-        "zoom": 10
+        "zoom": 9
     },
     "uc": {
         "center": [
@@ -1549,7 +1549,7 @@
                     -107.337
                 ],
                 "id": 913,
-                "pop_dir": "right",
+                "pop_dir": "up",
                 "region": "uc",
                 "sdis": {
                     "elev": 1923,
@@ -1570,7 +1570,7 @@
                     -107.624
                 ],
                 "id": 915,
-                "pop_dir": "left",
+                "pop_dir": "up",
                 "region": "uc",
                 "sdis": {
                     "elev": 1925,
@@ -1591,7 +1591,7 @@
                     -109.5406
                 ],
                 "id": 917,
-                "pop_dir": "right",
+                "pop_dir": "up",
                 "region": "uc",
                 "sdis": {
                     "elev": 1927,
@@ -1612,7 +1612,7 @@
                     -110.068
                 ],
                 "id": 916,
-                "pop_dir": "left",
+                "pop_dir": "up",
                 "region": "uc",
                 "sdis": {
                     "elev": 1926,

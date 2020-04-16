@@ -132,7 +132,7 @@
                     -107.337
                 ],
                 "id": 913,
-                "pop_dir": "right",
+                "pop_dir": "up",
                 "region": "uc",
                 "sdis": {
                     "elev": 1923,
@@ -153,7 +153,7 @@
                     -107.624
                 ],
                 "id": 915,
-                "pop_dir": "left",
+                "pop_dir": "up",
                 "region": "uc",
                 "sdis": {
                     "elev": 1925,
@@ -174,7 +174,7 @@
                     -109.5406
                 ],
                 "id": 917,
-                "pop_dir": "right",
+                "pop_dir": "up",
                 "region": "uc",
                 "sdis": {
                     "elev": 1927,
@@ -195,7 +195,7 @@
                     -110.068
                 ],
                 "id": 916,
-                "pop_dir": "left",
+                "pop_dir": "up",
                 "region": "uc",
                 "sdis": {
                     "elev": 1926,

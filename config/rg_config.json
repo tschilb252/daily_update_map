@@ -5,6 +5,7 @@
             -106
         ],
         "forecasts": {},
+        "hrg_level": 2,
         "huc_filter": [
             1301,
             1302,
@@ -13,7 +14,6 @@
             1306,
             14080101
         ],
-        "huc_level": 2,
         "regions": {
             "Rio Grande": {
                 "anchor": [

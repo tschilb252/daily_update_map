@@ -181,7 +181,7 @@ pb_config = {
 } 
     
 ub_config_name = 'ub'
-ub_map_center = (40.3, -110.15)
+ub_map_center = (40.2, -110.25)
 ub_initial_zoom = 9
 ub_huc_level = 6
 ub_huc_filter = [14060003, 14060004, 14060005, 14060010]
@@ -194,20 +194,20 @@ ub_regions = {
         'coords': [40.42, -110.65], 'huc-level': 8, 'anchor': (0,0)
     },
     'Lower Green-Diamond': {
-        'coords': [40.3, -109.5], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [40.35, -109.56], 'huc-level': 8, 'anchor': (0,0)
     },
     'Strawberry': {
-        'coords': [40.1, -110.97], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [40.2, -110.815], 'huc-level': 8, 'anchor': (0,0)
     },
     'Lower Green-Desolation Canyon': {
-        'coords': [40.0, -110.3], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [39.86, -110.5], 'huc-level': 8, 'anchor': (0,0)
     },
 }
 
 ub_reservoirs = {
     'Soldier Creek': {
         'coords': [40.13564, -111.02659], 'region': 'uc', 'anno': '', 'cap': 1105.91, 
-        'id': 962, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 962, 'anchor': (55,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1760, 'elev': 1967, 'inflow': 1831, 'release': 1911}
     },
@@ -219,25 +219,25 @@ ub_reservoirs = {
     },
     'Steinaker': {
         'coords': [40.51456, -109.53275], 'region': 'uc', 'anno': '', 'cap': 36.148, 
-        'id': 927, 'anchor': (0,15), 'pop_dir': 'up',
+        'id': 927, 'anchor': (0,-14), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1725, 'elev': 1933, 'inflow': 1797, 'release': 1877}
     },
     'Red Fleet': {
         'coords': [40.57543, -109.42052], 'region': 'uc', 'anno': '', 'cap': 25.7, 
-        'id': 960, 'anchor': (0,-15), 'pop_dir': 'up',
+        'id': 960, 'anchor': (0,12), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1758, 'elev': 1965, 'inflow': 1829, 'release': 1909}
     },
     'Moon Lake': {
         'coords': [40.57445, -110.50665], 'region': 'uc', 'anno': '', 'cap': 37.848, 
-        'id': 930, 'anchor': (30,0), 'pop_dir': 'up',
+        'id': 930, 'anchor': (-30,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1728, 'elev': 1935, 'inflow': 1799, 'release': 1879}
     },
     'Upper Stillwater': {
         'coords': [40.56565, -110.70044], 'region': 'uc', 'anno': '', 'cap': 31.382, 
-        'id': 963, 'anchor': (-30,0), 'pop_dir': 'up',
+        'id': 963, 'anchor': (30,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1761, 'elev': 1968, 'inflow': 1832, 'release': 1912}
     },
@@ -681,19 +681,19 @@ uc_regions = {
 uc_reservoirs = {
     'Fontenelle': {
         'coords': [42.026, -110.068], 'region': 'uc', 'anno': '', 'cap': 344.8, 
-        'id': 916, 'anchor': (0,0), 'pop_dir': 'left',
+        'id': 916, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1717, 'elev': 1926, 'inflow': 1790, 'release': 1870}
     },
     'Flaming Gorge': {
         'coords': [41.0934, -109.5406], 'region': 'uc', 'anno': '', 'cap': 3749,
-        'id': 917, 'anchor': (0,0), 'pop_dir': 'right',
+        'id': 917, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1718, 'elev': 1927, 'inflow': 1791, 'release': 1871}
     },
     'Blue Mesa': {
         'coords': [38.453, -107.337], 'region': 'uc', 'anno': '', 'cap': 829.5,
-        'id': 913, 'anchor': (-110,25), 'pop_dir': 'right',
+        'id': 913, 'anchor': (-110,25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1714, 'elev': 1923, 'inflow': 1787, 'release': 1867}
     },
@@ -705,7 +705,7 @@ uc_reservoirs = {
     },
     'Crystal': {
         'coords': [38.51, -107.624], 'region': 'uc', 'anno': '', 'cap': 17.536,
-        'id': 915, 'anchor': (105,-25), 'pop_dir': 'left',
+        'id': 915, 'anchor': (105,-25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1716, 'elev': 1925, 'inflow': 1844, 'release': 1869}
     },
@@ -734,7 +734,18 @@ uc_config = {
         'forecasts': forecasts
     }
 }
-  
+
+all_configs = {
+    'uc': uc_config,
+    'gunn': gunn_config,
+    'gb': gb_config,
+    'pb': pb_config,
+    'rg': rg_config,
+    'sj': sj_config,
+    'ub': ub_config,
+    'ug': ug_config
+}
+
 if __name__ == '__main__':
 
     import json
@@ -763,29 +774,16 @@ if __name__ == '__main__':
             json.dump(all_config, j, indent=4, sort_keys=True)
         sys.exit(0)
 
-    # config = {
-    #     config_name: {
-    #         'huc_level': huc_level,
-    #         'huc_filter': huc_filter,
-    #         'zoom': initial_zoom, 
-    #         'center': map_center, 
-    #         'reservoirs': reservoirs, 
-    #         'regions': regions, 
-    #         'forecasts': forecasts
-    #     }
-    # } 
-    config_name = 'ug'
-    config = ug_config
-    config_file_name = f'{config_name}_config.json'
-    
-    with open(config_file_name, 'w') as j:
-        json.dump(config, j, indent=4, sort_keys=True)
-    print(f'Created {config_file_name}.')
-    if args.add:
-        all_config_file_name = f'all_config.json'
-        with open(all_config_file_name, 'r') as j:
-            all_config = json.load(j)
-        all_config[config_name] = config[config_name]
-        with open(all_config_file_name, 'w') as j:
-            json.dump(all_config, j, indent=4, sort_keys=True)
-        print(f'added {config_file_name} to all_config.json.')
+    for config_name, config in all_configs.items():
+        config_file_name = f'{config_name}_config.json'
+        with open(config_file_name, 'w') as j:
+            json.dump(config, j, indent=4, sort_keys=True)
+        print(f'Created {config_file_name}.')
+        if args.add:
+            all_config_file_name = f'all_config.json'
+            with open(all_config_file_name, 'r') as j:
+                all_config = json.load(j)
+            all_config[config_name] = config[config_name]
+            with open(all_config_file_name, 'w') as j:
+                json.dump(all_config, j, indent=4, sort_keys=True)
+            print(f'  added {config_file_name} to all_config.json.')

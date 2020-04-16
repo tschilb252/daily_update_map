@@ -4,8 +4,8 @@
             38.5,
             -107.5
         ],
-        "huc_filter": 1402,
         "forecasts": {},
+        "huc_filter": 1402,
         "huc_level": 6,
         "regions": {
             "East-Taylor": {
