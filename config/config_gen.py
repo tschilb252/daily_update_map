@@ -9,53 +9,116 @@ Created on Fri Apr  3 08:08:44 2020
 Keep in mind the top left corner of the button is the anchor point
 '''
 
-config_name = 'rc'
-map_center = (39.03, -110.83)
+forecasts = {}
+
+config_name = 'ug'
+map_center = (41.4, -109.85)
 initial_zoom = 9
-huc_level = 6
-huc_filter = [14060007, 14060009, 14070002, 14070003]
+huc_level = 4
+huc_filter = [1404]
 
 regions = {
-    'Upper Rio Grande': {
-        'coords': [39.67, -111.53], 'huc-level': 6, 'anchor': (0,0)
+    'Upper Green': {
+        'coords': [41.6, -110.1], 'huc-level': 6, 'anchor': (0,0)
     },
-    'Upper Colorado-Dirty Devil': {
-        'coords': [38.72, -111.86], 'huc-level': 6, 'anchor': (0,0)
-    },
-    'Price': {
-        'coords': [39.57, -110.85], 'huc-level': 8, 'anchor': (0,0)
-    },
-    'San Rafael': {
-        'coords': [39.06, -110.9], 'huc-level': 8, 'anchor': (0,0)
-    },
-    'Muddy': {
-        'coords': [38.75, -111.2], 'huc-level': 8, 'anchor': (0,0)
-    },
-    'Fremont': {
-        'coords': [38.45, -111.76], 'huc-level': 8, 'anchor': (0,0)
-    }
+
 }
 
 reservoirs = {
-    'Heron': {
-        'coords': [39.38458, -111.09082], 'region': 'uc', 'anno': '', 'cap': 1105.91, 
-        'id': 956, 'anchor': (0,10), 'pop_dir': 'up',
+    'Flaming Gorge': {
+        'coords': [40.91474, -109.42185], 'region': 'uc', 'anno': '', 'cap': 3749.0, 
+        'id': 917, 'anchor': (0,-15), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1754, 'elev': 1961, 'inflow': 1825, 'release': 1905}
+            {'storage': 1718, 'elev': 1927, 'inflow': 1791, 'release': 1871}
     },
-    'El Vado': {
-        'coords': [39.2901, -111.27888], 'region': 'uc', 'anno': '', 'cap': 61.59, 
-        'id': 932, 'anchor': (0,0), 'pop_dir': 'up',
-        'sdis': 
-            {'storage': 1730, 'elev': 1937, 'inflow': 1801, 'release': 1881}
+
+}
+    
+
+ug_config_name = 'ug'
+ug_map_center = (41.6, -109.85)
+ug_initial_zoom = 9
+ug_huc_level = 4
+ug_huc_filter = [1404, 140500]
+
+ug_regions = {
+    'Upper Green': {
+        'coords': [41.6, -110.1], 'huc-level': 6, 'anchor': (0,0)
     },
-    'Abiquiu': {
-        'coords': [39.77656, -111.05074], 'region': 'uc', 'anno': '', 'cap': 65.8, 
-        'id': 931, 'anchor': (0,-10), 'pop_dir': 'up',
+    'Blacks Fork': {
+        'coords': [41.3, -110.4], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Big Sandy': {
+        'coords': [42.06, -109.64], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'New Fork': {
+        'coords': [42.9, -109.8], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Upper Green-Flaming Gorge Reservoir': {
+        'coords': [41.12, -109.92], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Little Snake': {
+        'coords': [41.05, -108.08], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Upper Yampa': {
+        'coords': [40.53, -107.35], 'huc-level': 8, 'anchor': (0,0)
+    },
+    'Upper White': {
+        'coords': [40.02, -107.85], 'huc-level': 8, 'anchor': (0,0)
+    },
+    
+}
+
+ug_reservoirs = {
+    'Flaming Gorge': {
+        'coords': [40.91474, -109.42185], 'region': 'uc', 'anno': '', 'cap': 3749.0, 
+        'id': 917, 'anchor': (50,30), 'pop_dir': 'up',
         'sdis': 
-            {'storage': 1729, 'elev': 1936, 'inflow': 1800, 'release': 1880}
+            {'storage': 1718, 'elev': 1927, 'inflow': 1791, 'release': 1871}
+    },
+    'Fontenelle': {
+        'coords': [42.02617, -110.06816], 'region': 'uc', 'anno': '', 'cap': 344.8, 
+        'id': 916, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1717, 'elev': 1926, 'inflow': 1790, 'release': 1870}
+    },
+    'Eden': {
+        'coords': [42.21665, -109.37087], 'region': 'uc', 'anno': '', 'cap': 13.164, 
+        'id': 954, 'anchor': (0,-20), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1752, 'elev': 1959, 'inflow': 1823, 'release': 1903}
+    },
+    'Big Sandy': {
+        'coords': [42.24993, -109.42803], 'region': 'uc', 'anno': '', 'cap': 36.688, 
+        'id': 936, 'anchor': (0,20), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1734, 'elev': 1941, 'inflow': 1805, 'release': 1885}
+    },
+    'Meeks Cabin': {
+        'coords': [41.01664, -110.58344], 'region': 'uc', 'anno': '', 'cap': 29.87, 
+        'id': 944, 'anchor': (25,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1742, 'elev': 1949, 'inflow': 1813, 'release': 1893}
+    },
+    'Stateline': {
+        'coords': [40.98291, -110.39038], 'region': 'uc', 'anno': '', 'cap': 13.88, 
+        'id': 949, 'anchor': (-25,0), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 1747, 'elev': 1954, 'inflow': 1818, 'release': 1898}
     }
 }
+
+ug_config = {
+    ug_config_name: {
+        'huc_level': ug_huc_level,
+        'huc_filter': ug_huc_filter,
+        'zoom': ug_initial_zoom, 
+        'center': ug_map_center, 
+        'reservoirs': ug_reservoirs, 
+        'regions': ug_regions, 
+        'forecasts': forecasts
+    }
+}     
 
 pb_config_name = 'pb'
 pb_map_center = (39.03, -110.83)
@@ -105,9 +168,21 @@ pb_reservoirs = {
     }
 }    
 
+pb_config = {
+    pb_config_name: {
+        'huc_level': pb_huc_level,
+        'huc_filter': pb_huc_filter,
+        'zoom': pb_initial_zoom, 
+        'center': pb_map_center, 
+        'reservoirs': pb_reservoirs, 
+        'regions': pb_regions, 
+        'forecasts': forecasts
+    }
+} 
+    
 ub_config_name = 'ub'
 ub_map_center = (40.3, -110.15)
-ub_initial_zoom = 10
+ub_initial_zoom = 9
 ub_huc_level = 6
 ub_huc_filter = [14060003, 14060004, 14060005, 14060010]
 
@@ -122,10 +197,10 @@ ub_regions = {
         'coords': [40.3, -109.5], 'huc-level': 8, 'anchor': (0,0)
     },
     'Strawberry': {
-        'coords': [40.2, -110.75], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [40.1, -110.97], 'huc-level': 8, 'anchor': (0,0)
     },
     'Lower Green-Desolation Canyon': {
-        'coords': [40.1, -110.1], 'huc-level': 8, 'anchor': (0,0)
+        'coords': [40.0, -110.3], 'huc-level': 8, 'anchor': (0,0)
     },
 }
 
@@ -144,25 +219,25 @@ ub_reservoirs = {
     },
     'Steinaker': {
         'coords': [40.51456, -109.53275], 'region': 'uc', 'anno': '', 'cap': 36.148, 
-        'id': 927, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 927, 'anchor': (0,15), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1725, 'elev': 1933, 'inflow': 1797, 'release': 1877}
     },
     'Red Fleet': {
         'coords': [40.57543, -109.42052], 'region': 'uc', 'anno': '', 'cap': 25.7, 
-        'id': 960, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 960, 'anchor': (0,-15), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1758, 'elev': 1965, 'inflow': 1829, 'release': 1909}
     },
     'Moon Lake': {
         'coords': [40.57445, -110.50665], 'region': 'uc', 'anno': '', 'cap': 37.848, 
-        'id': 930, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 930, 'anchor': (30,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1728, 'elev': 1935, 'inflow': 1799, 'release': 1879}
     },
     'Upper Stillwater': {
         'coords': [40.56565, -110.70044], 'region': 'uc', 'anno': '', 'cap': 31.382, 
-        'id': 963, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 963, 'anchor': (-30,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1761, 'elev': 1968, 'inflow': 1832, 'release': 1912}
     },
@@ -173,9 +248,21 @@ ub_reservoirs = {
             {'storage': 1750, 'elev': 1957, 'inflow': 1821, 'release': 1901}
     }
 }
-    
+  
+ub_config = {
+    ub_config_name: {
+        'huc_level': ub_huc_level,
+        'huc_filter': ub_huc_filter,
+        'zoom': ub_initial_zoom, 
+        'center': ub_map_center, 
+        'reservoirs': ub_reservoirs, 
+        'regions': ub_regions, 
+        'forecasts': forecasts
+    }
+} 
+
 gb_config_name = 'gb'
-gb_map_center = (41.05, -111.95)
+gb_map_center = (41.05, -112.1)
 gb_initial_zoom = 9
 gb_huc_level = 4
 gb_huc_filter = [1601,160201,160202]
@@ -270,7 +357,18 @@ gb_reservoirs = {
             {'storage': 1757, 'elev': 1964, 'inflow': 1828, 'release': 1908}
     },
 }    
-    
+ 
+gb_config = {
+    gb_config_name: {
+        'huc_level': gb_huc_level,
+        'huc_filter': gb_huc_filter,
+        'zoom': gb_initial_zoom, 
+        'center': gb_map_center, 
+        'reservoirs': gb_reservoirs, 
+        'regions': gb_regions, 
+        'forecasts': forecasts
+    }
+} 
 
 sj_config_name = 'sj'
 sj_map_center = (37, -108.1)
@@ -351,6 +449,18 @@ sj_reservoirs = {
     },
 }
  
+sj_config = {
+    sj_config_name: {
+        'huc_level': sj_huc_level,
+        'huc_filter': sj_huc_filter,
+        'zoom': sj_initial_zoom, 
+        'center': sj_map_center, 
+        'reservoirs': sj_reservoirs, 
+        'regions': sj_regions, 
+        'forecasts': forecasts
+    }
+} 
+    
 gunn_config_name = 'gunn'
 gunn_map_center = (38.5, -107.5)
 gunn_initial_zoom = 9
@@ -427,13 +537,25 @@ gunn_regions = {
    
 }
 
-config_name = 'rg'
-map_center = (35.1, -106)
-initial_zoom = 7
-huc_level = 2
-huc_filter = [1301, 1302, 1303, 1305, 1306, 14080101]
+gunn_config = {
+    gunn_config_name: {
+        'huc_level': gunn_huc_level,
+        'huc_filter': gunn_huc_filter,
+        'zoom': gunn_initial_zoom, 
+        'center': gunn_map_center, 
+        'reservoirs': gunn_reservoirs, 
+        'regions': gunn_regions, 
+        'forecasts': forecasts
+    }
+} 
 
-regions = {
+rg_config_name = 'rg'
+rg_map_center = (35, -106)
+rg_initial_zoom = 7
+rg_huc_level = 2
+rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 14080101]
+
+rg_regions = {
     'Rio Grande': {
         'coords': [35.5, -107], 'huc-level': 2, 'anchor': (0,0)
     },
@@ -454,7 +576,7 @@ regions = {
     },
 }
 
-reservoirs = {
+rg_reservoirs = {
     'Elephant Butte': {
         'coords': [33.15, -107.2], 'region': 'uc', 'anno': '', 'cap': 2010.9, 
         'id': 1119, 'anchor': (0,0), 'pop_dir': 'up',
@@ -504,7 +626,19 @@ reservoirs = {
             {'storage': 19172, 'elev': 19171, 'inflow': None, 'release': 20821}
     }
 }
- 
+
+rg_config = {
+    rg_config_name: {
+        'hrg_level': rg_huc_level,
+        'huc_filter': rg_huc_filter,
+        'zoom': rg_initial_zoom, 
+        'center': rg_map_center, 
+        'reservoirs': rg_reservoirs, 
+        'regions': rg_regions, 
+        'forecasts': forecasts
+    }
+}    
+
 uc_config_name = 'uc'
 uc_map_center = (39.3, -109.1)
 uc_initial_zoom = 7
@@ -589,7 +723,17 @@ uc_reservoirs = {
     }
 } 
 
-forecasts = {}
+uc_config = {
+    uc_config_name: {
+        'huc_level': uc_huc_level,
+        'huc_filter': uc_huc_filter,
+        'zoom': uc_initial_zoom, 
+        'center': uc_map_center, 
+        'reservoirs': uc_reservoirs, 
+        'regions': uc_regions, 
+        'forecasts': forecasts
+    }
+}
   
 if __name__ == '__main__':
 
@@ -619,18 +763,19 @@ if __name__ == '__main__':
             json.dump(all_config, j, indent=4, sort_keys=True)
         sys.exit(0)
 
-    config = {
-        config_name: {
-            'huc_level': huc_level,
-            'huc_filter': huc_filter,
-            'zoom': initial_zoom, 
-            'center': map_center, 
-            'reservoirs': reservoirs, 
-            'regions': regions, 
-            'forecasts': forecasts
-        }
-    } 
-    
+    # config = {
+    #     config_name: {
+    #         'huc_level': huc_level,
+    #         'huc_filter': huc_filter,
+    #         'zoom': initial_zoom, 
+    #         'center': map_center, 
+    #         'reservoirs': reservoirs, 
+    #         'regions': regions, 
+    #         'forecasts': forecasts
+    #     }
+    # } 
+    config_name = 'ug'
+    config = ug_config
     config_file_name = f'{config_name}_config.json'
     
     with open(config_file_name, 'w') as j:

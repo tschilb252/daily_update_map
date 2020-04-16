@@ -703,7 +703,7 @@
     },
     "rg": {
         "center": [
-            35.1,
+            35,
             -106
         ],
         "forecasts": {},
@@ -1686,5 +1686,236 @@
             }
         },
         "zoom": 7
+    },
+    "ug": {
+        "center": [
+            41.6,
+            -109.85
+        ],
+        "forecasts": {},
+        "huc_filter": [
+            1404,
+            140500
+        ],
+        "huc_level": 4,
+        "regions": {
+            "Big Sandy": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    42.06,
+                    -109.64
+                ],
+                "huc-level": 8
+            },
+            "Blacks Fork": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    41.3,
+                    -110.4
+                ],
+                "huc-level": 8
+            },
+            "Little Snake": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    41.05,
+                    -108.08
+                ],
+                "huc-level": 8
+            },
+            "New Fork": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    42.9,
+                    -109.8
+                ],
+                "huc-level": 8
+            },
+            "Upper Green": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    41.6,
+                    -110.1
+                ],
+                "huc-level": 6
+            },
+            "Upper Green-Flaming Gorge Reservoir": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    41.12,
+                    -109.92
+                ],
+                "huc-level": 8
+            },
+            "Upper White": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.02,
+                    -107.85
+                ],
+                "huc-level": 8
+            },
+            "Upper Yampa": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.53,
+                    -107.35
+                ],
+                "huc-level": 8
+            }
+        },
+        "reservoirs": {
+            "Big Sandy": {
+                "anchor": [
+                    0,
+                    20
+                ],
+                "anno": "",
+                "cap": 36.688,
+                "coords": [
+                    42.24993,
+                    -109.42803
+                ],
+                "id": 936,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1941,
+                    "inflow": 1805,
+                    "release": 1885,
+                    "storage": 1734
+                }
+            },
+            "Eden": {
+                "anchor": [
+                    0,
+                    -20
+                ],
+                "anno": "",
+                "cap": 13.164,
+                "coords": [
+                    42.21665,
+                    -109.37087
+                ],
+                "id": 954,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1959,
+                    "inflow": 1823,
+                    "release": 1903,
+                    "storage": 1752
+                }
+            },
+            "Flaming Gorge": {
+                "anchor": [
+                    50,
+                    30
+                ],
+                "anno": "",
+                "cap": 3749.0,
+                "coords": [
+                    40.91474,
+                    -109.42185
+                ],
+                "id": 917,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1927,
+                    "inflow": 1791,
+                    "release": 1871,
+                    "storage": 1718
+                }
+            },
+            "Fontenelle": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 344.8,
+                "coords": [
+                    42.02617,
+                    -110.06816
+                ],
+                "id": 916,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1926,
+                    "inflow": 1790,
+                    "release": 1870,
+                    "storage": 1717
+                }
+            },
+            "Meeks Cabin": {
+                "anchor": [
+                    25,
+                    0
+                ],
+                "anno": "",
+                "cap": 29.87,
+                "coords": [
+                    41.01664,
+                    -110.58344
+                ],
+                "id": 944,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1949,
+                    "inflow": 1813,
+                    "release": 1893,
+                    "storage": 1742
+                }
+            },
+            "Stateline": {
+                "anchor": [
+                    -25,
+                    0
+                ],
+                "anno": "",
+                "cap": 13.88,
+                "coords": [
+                    40.98291,
+                    -110.39038
+                ],
+                "id": 949,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1954,
+                    "inflow": 1818,
+                    "release": 1898,
+                    "storage": 1747
+                }
+            }
+        },
+        "zoom": 9
     }
 }
