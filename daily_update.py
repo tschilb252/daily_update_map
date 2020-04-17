@@ -40,6 +40,18 @@ folium.folium._default_css = default_css
 
 nrcs_url = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 
+def get_expand_button(title=''):
+    return f'''
+    <div class="buton" style="position: fixed; top: 10px; left: 190px; z-index:9999;">
+      <button type="button" class="btn btn-light btn-lg" role="button">
+        <a class="dropdown-item" href="#" target="_blank">
+          <span><i class="fa fa-external-link"></i>&nbsp {title}
+        </a>
+      </button>
+    </div>
+    '''
+      
+
 def get_legend():
     update_date = dt.now().strftime('%B %d, %Y %H:%M')
     legend_items = f'''
@@ -576,10 +588,14 @@ if __name__ == '__main__':
             all_coords = all_coords + [i['coords'] for i in forecasts.values()]
             all_coords = all_coords + [i['coords'] for i in regions.values()]
             basin_map.fit_bounds(all_coords)
-    
+        
+        print('  Adding legend/plugins...')
         legend = folium.Element(get_legend())
         basin_map.get_root().html.add_child(legend)
         BrowserPrint().add_to(basin_map)
+        map_title = map_config.get('title', '')
+        expand_btn = folium.Element(get_expand_button(map_title))
+        basin_map.get_root().html.add_child(expand_btn)
         MiniMap().add_to(basin_map)
         basin_map.save(map_path)
         flavicon = (

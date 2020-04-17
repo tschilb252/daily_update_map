@@ -11,12 +11,12 @@ Keep in mind the top left corner of the button is the anchor point
 
 forecasts = {}
 
-config_name = 'ug'
+config_name = 'test'
 map_center = (41.4, -109.85)
 initial_zoom = 9
 huc_level = 4
 huc_filter = [1404]
-
+title = 'Test'
 regions = {
     'Upper Green': {
         'coords': [41.6, -110.1], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
@@ -34,12 +34,24 @@ reservoirs = {
 
 }
     
+test_config = {
+    config_name: {
+        'huc_level': huc_level,
+        'huc_filter': huc_filter,
+        'zoom': initial_zoom, 
+        'center': map_center, 
+        'reservoirs': reservoirs, 
+        'regions': regions, 
+        'forecasts': forecasts
+    }
+}
 
 ug_config_name = 'ug'
 ug_map_center = (41.6, -109.7)
 ug_initial_zoom = 9
 ug_huc_level = 4
 ug_huc_filter = [1404, 140500]
+ug_title = 'Upper Green Basin'
 
 ug_regions = {
     'Upper Green': {
@@ -110,6 +122,7 @@ ug_reservoirs = {
 
 ug_config = {
     ug_config_name: {
+        'title': ug_title,
         'huc_level': ug_huc_level,
         'huc_filter': ug_huc_filter,
         'zoom': ug_initial_zoom, 
@@ -125,6 +138,7 @@ pb_map_center = (39.03, -111.05)
 pb_initial_zoom = 9
 pb_huc_level = 6
 pb_huc_filter = [14060007, 14060009, 14070002, 14070003]
+pb_title = 'Price/San Rafael Basins'
 
 pb_regions = {
     'Lower Green': {
@@ -170,6 +184,7 @@ pb_reservoirs = {
 
 pb_config = {
     pb_config_name: {
+        'title': pb_title,
         'huc_level': pb_huc_level,
         'huc_filter': pb_huc_filter,
         'zoom': pb_initial_zoom, 
@@ -185,6 +200,7 @@ ub_map_center = (40.2, -110.3)
 ub_initial_zoom = 9
 ub_huc_level = 6
 ub_huc_filter = [14060003, 14060004, 14060005, 14060010]
+ub_title = 'Uinta Basin'
 
 ub_regions = {
     'Lower Green': {
@@ -251,6 +267,7 @@ ub_reservoirs = {
   
 ub_config = {
     ub_config_name: {
+        'title': ub_title,
         'huc_level': ub_huc_level,
         'huc_filter': ub_huc_filter,
         'zoom': ub_initial_zoom, 
@@ -266,6 +283,7 @@ gb_map_center = (41.05, -111.6)
 gb_initial_zoom = 9
 gb_huc_level = 4
 gb_huc_filter = [1601,160201,160202]
+gb_title = 'Wasatch Front Basins'
 
 gb_regions = {
     'Bear': {
@@ -360,6 +378,7 @@ gb_reservoirs = {
  
 gb_config = {
     gb_config_name: {
+        'title': gb_title,
         'huc_level': gb_huc_level,
         'huc_filter': gb_huc_filter,
         'zoom': gb_initial_zoom, 
@@ -375,6 +394,7 @@ sj_map_center = (37, -108.0)
 sj_initial_zoom = 9
 sj_huc_level = 4
 sj_huc_filter = 1408
+sj_title = 'San Juan Basin'
 
 sj_regions = {
     'San Juan': {
@@ -451,6 +471,7 @@ sj_reservoirs = {
  
 sj_config = {
     sj_config_name: {
+        'title': sj_title,
         'huc_level': sj_huc_level,
         'huc_filter': sj_huc_filter,
         'zoom': sj_initial_zoom, 
@@ -466,6 +487,7 @@ gunn_map_center = (38.5, -107.4)
 gunn_initial_zoom = 9
 gunn_huc_level = 6
 gunn_huc_filter = 1402
+gunn_title = 'Gunnison Basin'
 
 gunn_reservoirs = {
     'Paonia': {
@@ -539,6 +561,7 @@ gunn_regions = {
 
 gunn_config = {
     gunn_config_name: {
+        'title': gunn_title,
         'huc_level': gunn_huc_level,
         'huc_filter': gunn_huc_filter,
         'zoom': gunn_initial_zoom, 
@@ -554,6 +577,7 @@ rg_map_center = (35, -106)
 rg_initial_zoom = 7
 rg_huc_level = 2
 rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 140801, 140801]
+rg_title = 'Rio Grande Basin'
 
 rg_regions = {
     'Rio Grande': {
@@ -629,6 +653,7 @@ rg_reservoirs = {
 
 rg_config = {
     rg_config_name: {
+        'title': rg_title,
         'hrg_level': rg_huc_level,
         'huc_filter': rg_huc_filter,
         'zoom': rg_initial_zoom, 
@@ -644,6 +669,7 @@ uc_map_center = (39.3, -108.6)
 uc_initial_zoom = 7
 uc_huc_level = 2
 uc_huc_filter = 14
+uc_title = 'Upper Colorado Basin'
 
 uc_regions = {
     'Upper Colorado': {
@@ -725,6 +751,7 @@ uc_reservoirs = {
 
 uc_config = {
     uc_config_name: {
+        'title': uc_title,
         'huc_level': uc_huc_level,
         'huc_filter': uc_huc_filter,
         'zoom': uc_initial_zoom, 

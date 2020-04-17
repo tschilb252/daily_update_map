@@ -331,6 +331,7 @@
                 }
             }
         },
+        "title": "Wasatch Front Basins",
         "zoom": 9
     },
     "gunn": {
@@ -583,6 +584,7 @@
                 }
             }
         },
+        "title": "Gunnison Basin",
         "zoom": 9
     },
     "pb": {
@@ -740,6 +742,7 @@
                 }
             }
         },
+        "title": "Price/San Rafael Basins",
         "zoom": 9
     },
     "rg": {
@@ -1010,6 +1013,7 @@
                 }
             }
         },
+        "title": "Rio Grande Basin",
         "zoom": 7
     },
     "sj": {
@@ -1262,6 +1266,7 @@
                 }
             }
         },
+        "title": "San Juan Basin",
         "zoom": 9
     },
     "ub": {
@@ -1495,6 +1500,7 @@
                 }
             }
         },
+        "title": "Uinta Basin",
         "zoom": 9
     },
     "uc": {
@@ -1783,6 +1789,7 @@
                 }
             }
         },
+        "title": "Upper Colorado Basin",
         "zoom": 7
     },
     "ug": {
@@ -2028,6 +2035,7 @@
                 }
             }
         },
+        "title": "Upper Green Basin",
         "zoom": 9
     }
 }
