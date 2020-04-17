@@ -550,10 +550,10 @@ gunn_config = {
 } 
 
 rg_config_name = 'rg'
-rg_map_center = (35, -106)
+rg_map_center = (34.93, -106)
 rg_initial_zoom = 7
 rg_huc_level = 2
-rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 14080101, 14080102]
+rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 140801, 140801]
 
 rg_regions = {
     'Rio Grande': {
@@ -597,7 +597,7 @@ rg_reservoirs = {
     },
     'Abiquiu': {
         'coords': [36.2686, -106.4551], 'region': 'uc', 'anno': '', 'cap': 186.820, 
-        'id': 2729, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 2729, 'anchor': (0,-40), 'pop_dir': 'up',
         'sdis': 
             {'storage': 19127, 'elev': 19126, 'inflow': None, 'release': 20055}
     },
