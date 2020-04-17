@@ -590,7 +590,7 @@ rg_regions = {
         'coords': [37.9, -106.65], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
     },
     'Rio Grande-Elephant Butte': {
-        'coords': [34.7, -108.2], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+        'coords': [34.7, -108.2], 'huc-level': 6, 'alias': 'Middle Rio Grande', 'anchor': (0,0)
     },
     'Upper Rio Grande': {
         'coords': [36.9, -106.85], 'huc-level': 6, 'alias': None, 'anchor': (0,0)

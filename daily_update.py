@@ -43,7 +43,7 @@ nrcs_url = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 def get_expand_button(title=''):
     return f'''
     <div class="buton" style="position: fixed; top: 10px; left: 55px; z-index:9999;">
-      <button type="button" class="btn btn-light btn-lg" role="button" style="opacity: 0.75;">
+      <button type="button" class="btn btn-light btn-lg" role="button" style="opacity: 0.8;">
         <a class="dropdown-item" href="#" target="_blank" style="padding: 0;">
           <span><i class="fa fa-external-link"></i>&nbsp {title}
         </a>
@@ -86,7 +86,7 @@ def get_legend():
       </a>
     '''
     legend_dd = f'''
-    <div class="dropdup" style="position: fixed; top: 60px; left: 55px; z-index:9999; opacity: 0.75;">
+    <div class="dropdup" style="position: fixed; top: 60px; left: 55px; z-index:9999; opacity: 0.8;">
       <button type="button" class="btn btn-warning btn-lg dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Legend
       </button>
