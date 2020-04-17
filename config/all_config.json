@@ -13,6 +13,7 @@
         "huc_level": 4,
         "regions": {
             "Bear": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -24,6 +25,7 @@
                 "huc-level": 4
             },
             "Great Salt Lake": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -35,6 +37,7 @@
                 "huc-level": 4
             },
             "Jordan": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -46,6 +49,7 @@
                 "huc-level": 8
             },
             "Lower Bear": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -57,6 +61,7 @@
                 "huc-level": 6
             },
             "Provo": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -68,6 +73,7 @@
                 "huc-level": 8
             },
             "Spanish Fork": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -79,6 +85,7 @@
                 "huc-level": 8
             },
             "Upper Bear": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -90,6 +97,7 @@
                 "huc-level": 6
             },
             "Weber": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -103,6 +111,7 @@
         },
         "reservoirs": {
             "Causey": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -124,6 +133,7 @@
                 }
             },
             "Deer Creek": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -145,6 +155,7 @@
                 }
             },
             "East Canyon": {
+                "alias": null,
                 "anchor": [
                     28,
                     0
@@ -166,6 +177,7 @@
                 }
             },
             "Echo": {
+                "alias": null,
                 "anchor": [
                     -28,
                     0
@@ -187,6 +199,7 @@
                 }
             },
             "Hyrum": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -208,6 +221,7 @@
                 }
             },
             "Jordanelle": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -229,6 +243,7 @@
                 }
             },
             "Lost Creek": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -250,6 +265,7 @@
                 }
             },
             "Newton": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -271,6 +287,7 @@
                 }
             },
             "Rockport": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -292,6 +309,7 @@
                 }
             },
             "Willard Bay": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -325,6 +343,7 @@
         "huc_level": 6,
         "regions": {
             "East-Taylor": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -336,6 +355,7 @@
                 "huc-level": 8
             },
             "Gunnison": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -347,6 +367,7 @@
                 "huc-level": 4
             },
             "Lower Gunnison": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -358,6 +379,7 @@
                 "huc-level": 8
             },
             "North Fork Gunnison": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -369,6 +391,7 @@
                 "huc-level": 8
             },
             "Pecos Headwaters": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -380,6 +403,7 @@
                 "huc-level": 8
             },
             "Tomichi": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -391,6 +415,7 @@
                 "huc-level": 8
             },
             "Uncompahgre": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -404,6 +429,7 @@
         },
         "reservoirs": {
             "Blue Mesa": {
+                "alias": null,
                 "anchor": [
                     -40,
                     35
@@ -425,6 +451,7 @@
                 }
             },
             "Crystal": {
+                "alias": null,
                 "anchor": [
                     -10,
                     10
@@ -446,6 +473,7 @@
                 }
             },
             "Morrow Point": {
+                "alias": null,
                 "anchor": [
                     -10,
                     -25
@@ -467,6 +495,7 @@
                 }
             },
             "Paonia": {
+                "alias": null,
                 "anchor": [
                     -10,
                     0
@@ -488,6 +517,7 @@
                 }
             },
             "Ridgway": {
+                "alias": null,
                 "anchor": [
                     20,
                     0
@@ -509,6 +539,7 @@
                 }
             },
             "Silver Jack": {
+                "alias": null,
                 "anchor": [
                     -20,
                     0
@@ -530,6 +561,7 @@
                 }
             },
             "Taylor Park": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -568,6 +600,7 @@
         "huc_level": 6,
         "regions": {
             "Fremont": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -579,6 +612,7 @@
                 "huc-level": 8
             },
             "Lower Green": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -590,6 +624,7 @@
                 "huc-level": 6
             },
             "Muddy": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -601,6 +636,7 @@
                 "huc-level": 8
             },
             "Price": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -612,6 +648,7 @@
                 "huc-level": 8
             },
             "San Rafael": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -623,6 +660,7 @@
                 "huc-level": 8
             },
             "Upper Colorado-Dirty Devil": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -636,6 +674,7 @@
         },
         "reservoirs": {
             "Huntington North": {
+                "alias": null,
                 "anchor": [
                     0,
                     10
@@ -657,6 +696,7 @@
                 }
             },
             "Joes Valley": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -678,6 +718,7 @@
                 }
             },
             "Scofield": {
+                "alias": null,
                 "anchor": [
                     0,
                     -10
@@ -719,6 +760,7 @@
         ],
         "regions": {
             "Rio Grande": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -730,6 +772,7 @@
                 "huc-level": 2
             },
             "Rio Grande Headwaters": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -741,6 +784,7 @@
                 "huc-level": 6
             },
             "Rio Grande-Elephant Butte": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -752,6 +796,7 @@
                 "huc-level": 6
             },
             "Upper Pecos": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -763,6 +808,7 @@
                 "huc-level": 6
             },
             "Upper Rio Grande": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -774,6 +820,7 @@
                 "huc-level": 6
             },
             "Upper San Juan": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -787,6 +834,7 @@
         },
         "reservoirs": {
             "Abiquiu": {
+                "alias": null,
                 "anchor": [
                     0,
                     -48
@@ -808,6 +856,7 @@
                 }
             },
             "Avalon": {
+                "alias": null,
                 "anchor": [
                     -35,
                     -10
@@ -829,6 +878,7 @@
                 }
             },
             "Brantley": {
+                "alias": null,
                 "anchor": [
                     75,
                     10
@@ -850,6 +900,7 @@
                 }
             },
             "Caballo": {
+                "alias": null,
                 "anchor": [
                     0,
                     -35
@@ -871,6 +922,7 @@
                 }
             },
             "El Vado": {
+                "alias": null,
                 "anchor": [
                     60,
                     -30
@@ -892,6 +944,7 @@
                 }
             },
             "Elephant Butte": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -913,6 +966,7 @@
                 }
             },
             "Heron": {
+                "alias": null,
                 "anchor": [
                     -60,
                     -30
@@ -934,6 +988,7 @@
                 }
             },
             "Sumner": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -967,6 +1022,7 @@
         "huc_level": 4,
         "regions": {
             "Animas": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -978,6 +1034,7 @@
                 "huc-level": 8
             },
             "Chaco": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -989,6 +1046,7 @@
                 "huc-level": 8
             },
             "Chinle": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1000,6 +1058,7 @@
                 "huc-level": 8
             },
             "Mancos": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1011,6 +1070,7 @@
                 "huc-level": 8
             },
             "Middle San Juan": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1022,6 +1082,7 @@
                 "huc-level": 8
             },
             "Montezuma": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1033,6 +1094,7 @@
                 "huc-level": 8
             },
             "Piedra": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1044,6 +1106,7 @@
                 "huc-level": 8
             },
             "San Juan": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1055,6 +1118,7 @@
                 "huc-level": 4
             },
             "Upper San Juan": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1089,6 +1153,7 @@
                 }
             },
             "Lemon": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1110,6 +1175,7 @@
                 }
             },
             "McPhee": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1131,6 +1197,7 @@
                 }
             },
             "Navajo": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1173,6 +1240,7 @@
                 }
             },
             "Vallecito": {
+                "alias": null,
                 "anchor": [
                     -85,
                     -40
@@ -1211,6 +1279,7 @@
         "huc_level": 6,
         "regions": {
             "Duchesne": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1222,6 +1291,7 @@
                 "huc-level": 8
             },
             "Lower Green": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1233,6 +1303,7 @@
                 "huc-level": 6
             },
             "Lower Green-Desolation Canyon": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1244,6 +1315,7 @@
                 "huc-level": 8
             },
             "Lower Green-Diamond": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1255,6 +1327,7 @@
                 "huc-level": 8
             },
             "Strawberry": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1268,6 +1341,7 @@
         },
         "reservoirs": {
             "Currant Creek": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1289,6 +1363,7 @@
                 }
             },
             "Moon Lake": {
+                "alias": null,
                 "anchor": [
                     -30,
                     0
@@ -1310,6 +1385,7 @@
                 }
             },
             "Red Fleet": {
+                "alias": null,
                 "anchor": [
                     0,
                     12
@@ -1331,6 +1407,7 @@
                 }
             },
             "Soldier Creek": {
+                "alias": null,
                 "anchor": [
                     55,
                     0
@@ -1352,6 +1429,7 @@
                 }
             },
             "Starvation": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1373,6 +1451,7 @@
                 }
             },
             "Steinaker": {
+                "alias": null,
                 "anchor": [
                     0,
                     -14
@@ -1394,6 +1473,7 @@
                 }
             },
             "Upper Stillwater": {
+                "alias": null,
                 "anchor": [
                     30,
                     0
@@ -1427,6 +1507,7 @@
         "huc_level": 2,
         "regions": {
             "Colorado Headwaters": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1438,6 +1519,7 @@
                 "huc-level": 6
             },
             "Gunnison": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1449,6 +1531,7 @@
                 "huc-level": 6
             },
             "Lower Green": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1460,6 +1543,7 @@
                 "huc-level": 6
             },
             "Lower San Juan": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1471,6 +1555,7 @@
                 "huc-level": 6
             },
             "Upper Colorado": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1482,6 +1567,7 @@
                 "huc-level": 2
             },
             "Upper Colorado-Dirty Devil": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1493,6 +1579,7 @@
                 "huc-level": 6
             },
             "Upper Colorado-Dolores": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1504,6 +1591,7 @@
                 "huc-level": 6
             },
             "Upper Green": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1515,6 +1603,7 @@
                 "huc-level": 6
             },
             "Upper San Juan": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1526,6 +1615,7 @@
                 "huc-level": 6
             },
             "White-Yampa": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1539,6 +1629,7 @@
         },
         "reservoirs": {
             "Blue Mesa": {
+                "alias": null,
                 "anchor": [
                     -110,
                     25
@@ -1560,6 +1651,7 @@
                 }
             },
             "Crystal": {
+                "alias": null,
                 "anchor": [
                     105,
                     -25
@@ -1581,6 +1673,7 @@
                 }
             },
             "Flaming Gorge": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1602,6 +1695,7 @@
                 }
             },
             "Fontenelle": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1623,6 +1717,7 @@
                 }
             },
             "Lake Powell": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1644,6 +1739,7 @@
                 }
             },
             "Morrow Point": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1665,6 +1761,7 @@
                 }
             },
             "Navajo": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1701,6 +1798,7 @@
         "huc_level": 4,
         "regions": {
             "Big Sandy": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1712,6 +1810,7 @@
                 "huc-level": 8
             },
             "Blacks Fork": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1723,6 +1822,7 @@
                 "huc-level": 8
             },
             "Little Snake": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1734,6 +1834,7 @@
                 "huc-level": 8
             },
             "New Fork": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1745,6 +1846,7 @@
                 "huc-level": 8
             },
             "Upper Green": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1756,6 +1858,7 @@
                 "huc-level": 6
             },
             "Upper Green-Flaming Gorge Reservoir": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1767,6 +1870,7 @@
                 "huc-level": 8
             },
             "Upper White": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1778,6 +1882,7 @@
                 "huc-level": 8
             },
             "Upper Yampa": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1791,6 +1896,7 @@
         },
         "reservoirs": {
             "Big Sandy": {
+                "alias": null,
                 "anchor": [
                     0,
                     20
@@ -1812,6 +1918,7 @@
                 }
             },
             "Eden": {
+                "alias": null,
                 "anchor": [
                     0,
                     -20
@@ -1833,6 +1940,7 @@
                 }
             },
             "Flaming Gorge": {
+                "alias": null,
                 "anchor": [
                     50,
                     30
@@ -1854,6 +1962,7 @@
                 }
             },
             "Fontenelle": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -1875,6 +1984,7 @@
                 }
             },
             "Meeks Cabin": {
+                "alias": null,
                 "anchor": [
                     25,
                     0
@@ -1896,6 +2006,7 @@
                 }
             },
             "Stateline": {
+                "alias": null,
                 "anchor": [
                     -25,
                     0

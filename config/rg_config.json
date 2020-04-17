@@ -17,6 +17,7 @@
         ],
         "regions": {
             "Rio Grande": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -28,6 +29,7 @@
                 "huc-level": 2
             },
             "Rio Grande Headwaters": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -39,6 +41,7 @@
                 "huc-level": 6
             },
             "Rio Grande-Elephant Butte": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -50,6 +53,7 @@
                 "huc-level": 6
             },
             "Upper Pecos": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -61,6 +65,7 @@
                 "huc-level": 6
             },
             "Upper Rio Grande": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -72,6 +77,7 @@
                 "huc-level": 6
             },
             "Upper San Juan": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -85,6 +91,7 @@
         },
         "reservoirs": {
             "Abiquiu": {
+                "alias": null,
                 "anchor": [
                     0,
                     -48
@@ -106,6 +113,7 @@
                 }
             },
             "Avalon": {
+                "alias": null,
                 "anchor": [
                     -35,
                     -10
@@ -127,6 +135,7 @@
                 }
             },
             "Brantley": {
+                "alias": null,
                 "anchor": [
                     75,
                     10
@@ -148,6 +157,7 @@
                 }
             },
             "Caballo": {
+                "alias": null,
                 "anchor": [
                     0,
                     -35
@@ -169,6 +179,7 @@
                 }
             },
             "El Vado": {
+                "alias": null,
                 "anchor": [
                     60,
                     -30
@@ -190,6 +201,7 @@
                 }
             },
             "Elephant Butte": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -211,6 +223,7 @@
                 }
             },
             "Heron": {
+                "alias": null,
                 "anchor": [
                     -60,
                     -30
@@ -232,6 +245,7 @@
                 }
             },
             "Sumner": {
+                "alias": null,
                 "anchor": [
                     0,
                     0

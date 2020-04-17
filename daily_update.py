@@ -180,6 +180,9 @@ def add_region_markers(basin_map, regions, nrcs_url=nrcs_url, map_date=None):
     for region, region_meta in regions.items():
         print(f'    Adding {region} to the map...')
         huc_level = region_meta['huc-level']
+        region_alias = region
+        if region_meta['alias']:
+            region_alias = region_meta['alias']
         btn_size = 'btn-sm'
         region_suffix = ''
         button_color = 'btn-info'
@@ -219,7 +222,7 @@ def add_region_markers(basin_map, regions, nrcs_url=nrcs_url, map_date=None):
             f'<div class="col">'
             f'<a href="{other_season_url}" target="_blank">'
             f'<button class="btn btn-primary btn-sm btn-block">'
-            f'Go to {region} {other_chart_type} Chart...</button></a></div>'
+            f'Go to {region_alias} {other_chart_type} Chart...</button></a></div>'
             f'<div class="row justify-content-center">{get_embed(seasonal_url)}</div>'
             f'</div></div>'
         )
@@ -227,7 +230,7 @@ def add_region_markers(basin_map, regions, nrcs_url=nrcs_url, map_date=None):
             
         marker_label = f'''
         <button type="button" class="btn {button_color} {btn_size}">
-          <span style="white-space: nowrap;">{region}</span><br>
+          <span style="white-space: nowrap;">{region_alias}</span><br>
           <span style="white-space: nowrap;">
             {prec_percent}% <i class="fa fa-umbrella"></i>
             {swe_percent}% <i class="fa fa-snowflake-o"></i>

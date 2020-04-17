@@ -12,6 +12,7 @@
         "huc_level": 4,
         "regions": {
             "Big Sandy": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -23,6 +24,7 @@
                 "huc-level": 8
             },
             "Blacks Fork": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -34,6 +36,7 @@
                 "huc-level": 8
             },
             "Little Snake": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -45,6 +48,7 @@
                 "huc-level": 8
             },
             "New Fork": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -56,6 +60,7 @@
                 "huc-level": 8
             },
             "Upper Green": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -67,6 +72,7 @@
                 "huc-level": 6
             },
             "Upper Green-Flaming Gorge Reservoir": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -78,6 +84,7 @@
                 "huc-level": 8
             },
             "Upper White": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -89,6 +96,7 @@
                 "huc-level": 8
             },
             "Upper Yampa": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -102,6 +110,7 @@
         },
         "reservoirs": {
             "Big Sandy": {
+                "alias": null,
                 "anchor": [
                     0,
                     20
@@ -123,6 +132,7 @@
                 }
             },
             "Eden": {
+                "alias": null,
                 "anchor": [
                     0,
                     -20
@@ -144,6 +154,7 @@
                 }
             },
             "Flaming Gorge": {
+                "alias": null,
                 "anchor": [
                     50,
                     30
@@ -165,6 +176,7 @@
                 }
             },
             "Fontenelle": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -186,6 +198,7 @@
                 }
             },
             "Meeks Cabin": {
+                "alias": null,
                 "anchor": [
                     25,
                     0
@@ -207,6 +220,7 @@
                 }
             },
             "Stateline": {
+                "alias": null,
                 "anchor": [
                     -25,
                     0

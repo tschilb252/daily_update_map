@@ -9,6 +9,7 @@
         "huc_level": 6,
         "regions": {
             "East-Taylor": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -20,6 +21,7 @@
                 "huc-level": 8
             },
             "Gunnison": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -31,6 +33,7 @@
                 "huc-level": 4
             },
             "Lower Gunnison": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -42,6 +45,7 @@
                 "huc-level": 8
             },
             "North Fork Gunnison": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -53,6 +57,7 @@
                 "huc-level": 8
             },
             "Pecos Headwaters": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -64,6 +69,7 @@
                 "huc-level": 8
             },
             "Tomichi": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -75,6 +81,7 @@
                 "huc-level": 8
             },
             "Uncompahgre": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -88,6 +95,7 @@
         },
         "reservoirs": {
             "Blue Mesa": {
+                "alias": null,
                 "anchor": [
                     -40,
                     35
@@ -109,6 +117,7 @@
                 }
             },
             "Crystal": {
+                "alias": null,
                 "anchor": [
                     -10,
                     10
@@ -130,6 +139,7 @@
                 }
             },
             "Morrow Point": {
+                "alias": null,
                 "anchor": [
                     -10,
                     -25
@@ -151,6 +161,7 @@
                 }
             },
             "Paonia": {
+                "alias": null,
                 "anchor": [
                     -10,
                     0
@@ -172,6 +183,7 @@
                 }
             },
             "Ridgway": {
+                "alias": null,
                 "anchor": [
                     20,
                     0
@@ -193,6 +205,7 @@
                 }
             },
             "Silver Jack": {
+                "alias": null,
                 "anchor": [
                     -20,
                     0
@@ -214,6 +227,7 @@
                 }
             },
             "Taylor Park": {
+                "alias": null,
                 "anchor": [
                     0,
                     0

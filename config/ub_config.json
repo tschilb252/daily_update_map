@@ -14,6 +14,7 @@
         "huc_level": 6,
         "regions": {
             "Duchesne": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -25,6 +26,7 @@
                 "huc-level": 8
             },
             "Lower Green": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -36,6 +38,7 @@
                 "huc-level": 6
             },
             "Lower Green-Desolation Canyon": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -47,6 +50,7 @@
                 "huc-level": 8
             },
             "Lower Green-Diamond": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -58,6 +62,7 @@
                 "huc-level": 8
             },
             "Strawberry": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -71,6 +76,7 @@
         },
         "reservoirs": {
             "Currant Creek": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -92,6 +98,7 @@
                 }
             },
             "Moon Lake": {
+                "alias": null,
                 "anchor": [
                     -30,
                     0
@@ -113,6 +120,7 @@
                 }
             },
             "Red Fleet": {
+                "alias": null,
                 "anchor": [
                     0,
                     12
@@ -134,6 +142,7 @@
                 }
             },
             "Soldier Creek": {
+                "alias": null,
                 "anchor": [
                     55,
                     0
@@ -155,6 +164,7 @@
                 }
             },
             "Starvation": {
+                "alias": null,
                 "anchor": [
                     0,
                     0
@@ -176,6 +186,7 @@
                 }
             },
             "Steinaker": {
+                "alias": null,
                 "anchor": [
                     0,
                     -14
@@ -197,6 +208,7 @@
                 }
             },
             "Upper Stillwater": {
+                "alias": null,
                 "anchor": [
                     30,
                     0
