@@ -181,7 +181,7 @@ pb_config = {
 } 
     
 ub_config_name = 'ub'
-ub_map_center = (40.2, -110.25)
+ub_map_center = (40.2, -110.3)
 ub_initial_zoom = 9
 ub_huc_level = 6
 ub_huc_filter = [14060003, 14060004, 14060005, 14060010]
@@ -553,7 +553,7 @@ rg_config_name = 'rg'
 rg_map_center = (35, -106)
 rg_initial_zoom = 7
 rg_huc_level = 2
-rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 14080101]
+rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 14080101, 14080102]
 
 rg_regions = {
     'Rio Grande': {
@@ -578,49 +578,49 @@ rg_regions = {
 
 rg_reservoirs = {
     'Elephant Butte': {
-        'coords': [33.15, -107.2], 'region': 'uc', 'anno': '', 'cap': 2010.9, 
+        'coords': [33.15, -107.2], 'region': 'uc', 'anno': '', 'cap': 2010.900, 
         'id': 1119, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 2684, 'elev': 2685, 'inflow': 2686, 'release': 2688}
     },
     'Heron': {
-        'coords': [36.6973, -106.6992], 'region': 'uc', 'anno': '', 'cap': 398.938, 
+        'coords': [36.6973, -106.6992], 'region': 'uc', 'anno': '', 'cap': 401.662, 
         'id': 2686, 'anchor': (-60,-30), 'pop_dir': 'up',
         'sdis': 
             {'storage': 19176, 'elev': 19175, 'inflow': None, 'release': 19609}
     },
     'El Vado': {
-        'coords': [36.5948, -106.7366], 'region': 'uc', 'anno': '', 'cap': 184.452, 
+        'coords': [36.5948, -106.7366], 'region': 'uc', 'anno': '', 'cap': 114.202, 
         'id': 2685, 'anchor': (60,-30), 'pop_dir': 'up',
         'sdis': 
             {'storage': 19548, 'elev': 19547, 'inflow': None, 'release': 19626}
     },
     'Abiquiu': {
-        'coords': [39.77656, -111.05074], 'region': 'uc', 'anno': '', 'cap': 558.784, 
+        'coords': [36.2686, -106.4551], 'region': 'uc', 'anno': '', 'cap': 186.820, 
         'id': 2729, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 19127, 'elev': 19126, 'inflow': None, 'release': 20055}
     },
     'Caballo': {
-        'coords': [32.89646, -107.29219], 'region': 'uc', 'anno': '', 'cap': 226.672, 
+        'coords': [32.89646, -107.29219], 'region': 'uc', 'anno': '', 'cap': 224.464, 
         'id': 1094, 'anchor': (0,-35), 'pop_dir': 'up',
         'sdis': 
             {'storage': 2678, 'elev': 2679, 'inflow': 2680, 'release': 2682}
     },
     'Sumner': {
-        'coords': [34.62884, -104.3924], 'region': 'uc', 'anno': '', 'cap': 51.418, 
+        'coords': [34.62884, -104.3924], 'region': 'uc', 'anno': '', 'cap': 35.917, 
         'id': 943, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1741, 'elev': 1948, 'inflow': 1812, 'release': 1892}
     },
     'Brantley': {
-        'coords': [32.5442, -104.3814], 'region': 'uc', 'anno': '', 'cap': 41.87, 
+        'coords': [32.5442, -104.3814], 'region': 'uc', 'anno': '', 'cap': 42.602, 
         'id': 937, 'anchor': (75,10), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1735, 'elev': 1942, 'inflow': 1812, 'release': 1892}
     },
     'Avalon': {
-        'coords': [32.4908, -104.2522], 'region': 'uc', 'anno': '', 'cap': 51.418, 
+        'coords': [32.4908, -104.2522], 'region': 'uc', 'anno': '', 'cap': 4.466, 
         'id': 2684, 'anchor': (-35,-10), 'pop_dir': 'up',
         'sdis': 
             {'storage': 19172, 'elev': 19171, 'inflow': None, 'release': 20821}
