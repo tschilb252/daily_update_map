@@ -2,7 +2,7 @@
     "gb": {
         "center": [
             41.05,
-            -112.1
+            -111.6
         ],
         "forecasts": {},
         "huc_filter": [
@@ -336,7 +336,7 @@
     "gunn": {
         "center": [
             38.5,
-            -107.5
+            -107.4
         ],
         "forecasts": {},
         "huc_filter": 1402,
@@ -588,7 +588,7 @@
     "pb": {
         "center": [
             39.03,
-            -110.83
+            -111.05
         ],
         "forecasts": {},
         "huc_filter": [
@@ -944,7 +944,7 @@
                 }
             },
             "Elephant Butte": {
-                "alias": null,
+                "alias": "Middle Rio Grande",
                 "anchor": [
                     0,
                     0
@@ -1015,7 +1015,7 @@
     "sj": {
         "center": [
             37,
-            -108.1
+            -108.0
         ],
         "forecasts": {},
         "huc_filter": 1408,
@@ -1500,7 +1500,7 @@
     "uc": {
         "center": [
             39.3,
-            -109.1
+            -108.6
         ],
         "forecasts": {},
         "huc_filter": 14,
@@ -1788,7 +1788,7 @@
     "ug": {
         "center": [
             41.6,
-            -109.85
+            -109.7
         ],
         "forecasts": {},
         "huc_filter": [

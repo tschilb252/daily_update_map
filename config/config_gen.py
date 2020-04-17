@@ -36,7 +36,7 @@ reservoirs = {
     
 
 ug_config_name = 'ug'
-ug_map_center = (41.6, -109.85)
+ug_map_center = (41.6, -109.7)
 ug_initial_zoom = 9
 ug_huc_level = 4
 ug_huc_filter = [1404, 140500]
@@ -121,7 +121,7 @@ ug_config = {
 }     
 
 pb_config_name = 'pb'
-pb_map_center = (39.03, -110.83)
+pb_map_center = (39.03, -111.05)
 pb_initial_zoom = 9
 pb_huc_level = 6
 pb_huc_filter = [14060007, 14060009, 14070002, 14070003]
@@ -262,7 +262,7 @@ ub_config = {
 } 
 
 gb_config_name = 'gb'
-gb_map_center = (41.05, -112.1)
+gb_map_center = (41.05, -111.6)
 gb_initial_zoom = 9
 gb_huc_level = 4
 gb_huc_filter = [1601,160201,160202]
@@ -371,7 +371,7 @@ gb_config = {
 } 
 
 sj_config_name = 'sj'
-sj_map_center = (37, -108.1)
+sj_map_center = (37, -108.0)
 sj_initial_zoom = 9
 sj_huc_level = 4
 sj_huc_filter = 1408
@@ -462,7 +462,7 @@ sj_config = {
 } 
     
 gunn_config_name = 'gunn'
-gunn_map_center = (38.5, -107.5)
+gunn_map_center = (38.5, -107.4)
 gunn_initial_zoom = 9
 gunn_huc_level = 6
 gunn_huc_filter = 1402
@@ -579,7 +579,7 @@ rg_regions = {
 rg_reservoirs = {
     'Elephant Butte': {
         'coords': [33.15, -107.2], 'region': 'uc', 'anno': '', 'cap': 2010.900, 
-        'id': 1119, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 1119, 'alias': 'Middle Rio Grande', 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 2684, 'elev': 2685, 'inflow': 2686, 'release': 2688}
     },
@@ -640,7 +640,7 @@ rg_config = {
 }    
 
 uc_config_name = 'uc'
-uc_map_center = (39.3, -109.1)
+uc_map_center = (39.3, -108.6)
 uc_initial_zoom = 7
 uc_huc_level = 2
 uc_huc_filter = 14
