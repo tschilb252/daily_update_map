@@ -787,7 +787,7 @@
                 "huc-level": 6
             },
             "Rio Grande-Elephant Butte": {
-                "alias": null,
+                "alias": "Middle Rio Grande",
                 "anchor": [
                     0,
                     0
@@ -1505,7 +1505,7 @@
     },
     "uc": {
         "center": [
-            39.3,
+            39.6,
             -108.6
         ],
         "forecasts": {},

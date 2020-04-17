@@ -665,7 +665,7 @@ rg_config = {
 }    
 
 uc_config_name = 'uc'
-uc_map_center = (39.3, -108.6)
+uc_map_center = (39.6, -108.6)
 uc_initial_zoom = 7
 uc_huc_level = 2
 uc_huc_filter = 14
