@@ -751,17 +751,28 @@
             -106
         ],
         "forecasts": {},
-        "hrg_level": 2,
         "huc_filter": [
             1301,
             1302,
             1303,
             1305,
             1306,
-            140801,
             140801
         ],
+        "huc_level": 2,
         "regions": {
+            "Pecos Headwaters": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    35.6,
+                    -104.5
+                ],
+                "huc-level": 8
+            },
             "Rio Grande": {
                 "alias": null,
                 "anchor": [
@@ -769,8 +780,8 @@
                     0
                 ],
                 "coords": [
-                    35.35,
-                    -107
+                    34.7,
+                    -106.5
                 ],
                 "huc-level": 2
             },
@@ -795,18 +806,6 @@
                 "coords": [
                     34.7,
                     -108.2
-                ],
-                "huc-level": 6
-            },
-            "Upper Pecos": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    33.6,
-                    -105.3
                 ],
                 "huc-level": 6
             },
@@ -947,7 +946,7 @@
                 }
             },
             "Elephant Butte": {
-                "alias": "Middle Rio Grande",
+                "alias": null,
                 "anchor": [
                     0,
                     0

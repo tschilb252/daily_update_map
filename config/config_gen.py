@@ -576,15 +576,15 @@ rg_config_name = 'rg'
 rg_map_center = (35, -106)
 rg_initial_zoom = 7
 rg_huc_level = 2
-rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 140801, 140801]
+rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 140801]
 rg_title = 'Rio Grande Basin'
 
 rg_regions = {
     'Rio Grande': {
-        'coords': [35.35, -107], 'huc-level': 2, 'alias': None, 'anchor': (0,0)
+        'coords': [34.7, -106.5], 'huc-level': 2, 'alias': None, 'anchor': (0,0)
     },
-    'Upper Pecos': {
-        'coords': [33.6, -105.3], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    'Pecos Headwaters': {
+        'coords': [35.6, -104.5], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
     },
     'Rio Grande Headwaters': {
         'coords': [37.9, -106.65], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
@@ -603,7 +603,7 @@ rg_regions = {
 rg_reservoirs = {
     'Elephant Butte': {
         'coords': [33.15, -107.2], 'region': 'uc', 'anno': '', 'cap': 2010.900, 
-        'id': 1119, 'alias': 'Middle Rio Grande', 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 1119, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 2684, 'elev': 2685, 'inflow': 2686, 'release': 2688}
     },
@@ -654,7 +654,7 @@ rg_reservoirs = {
 rg_config = {
     rg_config_name: {
         'title': rg_title,
-        'hrg_level': rg_huc_level,
+        'huc_level': rg_huc_level,
         'huc_filter': rg_huc_filter,
         'zoom': rg_initial_zoom, 
         'center': rg_map_center, 
