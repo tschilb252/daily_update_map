@@ -536,7 +536,7 @@ if __name__ == '__main__':
             control_scale=True
         )
         
-        huc_levels = ['2', '6', '8']
+        huc_levels = ['2', '4', '6', '8']
         
         for huc_level in huc_levels:
             print(f'    Adding HUC{huc_level} boundary...')
