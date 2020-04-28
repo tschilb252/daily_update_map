@@ -576,7 +576,7 @@ rg_config_name = 'rg'
 rg_map_center = (35, -106)
 rg_initial_zoom = 7
 rg_huc_level = 2
-rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 140801]
+rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 14080101]
 rg_title = 'Rio Grande Basin'
 
 rg_regions = {
