@@ -522,7 +522,7 @@ gunn_reservoirs = {
     },
     'Morrow Point': {
         'coords': [38.45191, -107.53791], 'region': 'uc', 'anno': '', 'cap': 117.025, 
-        'id': 914, 'alias': None, 'anchor': (-10,-25), 'pop_dir': 'up',
+        'id': 914, 'alias': None, 'anchor': (10,-25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1715, 'elev': 1924, 'inflow': 1788, 'release': 1868}
     },
@@ -648,7 +648,13 @@ rg_reservoirs = {
         'id': 2684, 'alias': None, 'anchor': (-35,-10), 'pop_dir': 'up',
         'sdis': 
             {'storage': 19172, 'elev': 19171, 'inflow': None, 'release': 20821}
-    }
+    },
+    'Santa Rosa': {
+        'coords': [35.0443, -107.6663], 'region': 'uc', 'anno': '', 'cap': 101.083, 
+        'id': 2730, 'alias': None, 'anchor': (0,25), 'pop_dir': 'up',
+        'sdis': 
+            {'storage': 19164, 'elev': 19165, 'inflow': 20826, 'release': 20578}
+    },   
 }
 
 rg_config = {
@@ -719,19 +725,19 @@ uc_reservoirs = {
     },
     'Blue Mesa': {
         'coords': [38.453, -107.337], 'region': 'uc', 'anno': '', 'cap': 829.5,
-        'id': 913, 'alias': None, 'anchor': (-110,25), 'pop_dir': 'up',
+        'id': 913, 'alias': None, 'anchor': (-115,25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1714, 'elev': 1923, 'inflow': 1787, 'release': 1867}
     },
     'Morrow Point': {
         'coords': [38.452, -107.538], 'region': 'uc', 'anno': '', 'cap': 117.25,
-        'id': 914, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 914, 'alias': None, 'anchor': (-15,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1715, 'elev': 1924, 'inflow': 1843, 'release': 1868}
     },
     'Crystal': {
         'coords': [38.51, -107.624], 'region': 'uc', 'anno': '', 'cap': 17.536,
-        'id': 915, 'alias': None, 'anchor': (105,-25), 'pop_dir': 'up',
+        'id': 915, 'alias': None, 'anchor': (115,-25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1716, 'elev': 1925, 'inflow': 1844, 'release': 1869}
     },

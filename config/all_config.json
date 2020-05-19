@@ -476,7 +476,7 @@
             "Morrow Point": {
                 "alias": null,
                 "anchor": [
-                    -10,
+                    10,
                     -25
                 ],
                 "anno": "",
@@ -757,7 +757,7 @@
             1303,
             1305,
             1306,
-            140801
+            14080101
         ],
         "huc_level": 2,
         "regions": {
@@ -987,6 +987,28 @@
                     "inflow": null,
                     "release": 19609,
                     "storage": 19176
+                }
+            },
+            "Santa Rosa": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    25
+                ],
+                "anno": "",
+                "cap": 101.083,
+                "coords": [
+                    35.0443,
+                    -107.6663
+                ],
+                "id": 2730,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 19165,
+                    "inflow": 20826,
+                    "release": 20578,
+                    "storage": 19164
                 }
             },
             "Sumner": {
@@ -1636,7 +1658,7 @@
             "Blue Mesa": {
                 "alias": null,
                 "anchor": [
-                    -110,
+                    -115,
                     25
                 ],
                 "anno": "",
@@ -1658,7 +1680,7 @@
             "Crystal": {
                 "alias": null,
                 "anchor": [
-                    105,
+                    115,
                     -25
                 ],
                 "anno": "",
@@ -1746,7 +1768,7 @@
             "Morrow Point": {
                 "alias": null,
                 "anchor": [
-                    0,
+                    -15,
                     0
                 ],
                 "anno": "",

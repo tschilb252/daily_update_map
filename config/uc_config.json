@@ -133,7 +133,7 @@
             "Blue Mesa": {
                 "alias": null,
                 "anchor": [
-                    -110,
+                    -115,
                     25
                 ],
                 "anno": "",
@@ -155,7 +155,7 @@
             "Crystal": {
                 "alias": null,
                 "anchor": [
-                    105,
+                    115,
                     -25
                 ],
                 "anno": "",
@@ -243,7 +243,7 @@
             "Morrow Point": {
                 "alias": null,
                 "anchor": [
-                    0,
+                    -15,
                     0
                 ],
                 "anno": "",
