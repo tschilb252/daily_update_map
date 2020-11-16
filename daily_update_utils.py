@@ -42,7 +42,7 @@ def get_bor_seal(orient='default', grey=False):
         color = 'grey'
     seal_dict = {
         'default': f'BofR-horiz-{color}.png',
-        'shield': f'BofR-shield-cmyk.png',
+        'shield': 'BofR-shield-cmyk.png',
         'vert': f'BofR-vert-{color}.png',
         'horz': f'BofR-horiz-{color}.png'
         }
@@ -230,9 +230,9 @@ def get_season():
     curr_month = datetime.now().month
     if curr_month > 3 and curr_month < 6:
         return 'spring'
-    if curr_month > 5 and curr_month < 12:
+    if curr_month > 5 and curr_month < 11:
         return 'summer'
-    if curr_month > 11:
+    if curr_month > 10:
         return 'fall'
     return 'winter'
 
@@ -246,7 +246,7 @@ def get_huc_nrcs_stats(huc_level='6', try_all=False):
     if not set(index_pg_codes) == set([200]):
         print(
             index_pg_urls, 
-            f'  Could not download index file, trying all basins...'
+            '  Could not download index file, trying all basins...'
         )
         try_all = True
         index_page_strs = ['' for i in index_pg_resps]
