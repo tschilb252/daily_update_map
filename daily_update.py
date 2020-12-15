@@ -548,7 +548,6 @@ if __name__ == '__main__':
             )
             if huc_layer:
                 huc_layer.add_to(basin_map)
-                
         huc_levels[:] = [i for i in huc_levels if int(i) >= int(map_huc_level)]
         for huc_level in huc_levels:
             print(f'    Adding HUC{huc_level} SWE/PREC layers...')
@@ -566,7 +565,6 @@ if __name__ == '__main__':
                 )
                 if chropleth:
                     chropleth.add_to(basin_map)
-            
         print('    Adding tilesets, legend, and controls...')
         add_optional_tilesets(basin_map)
         folium.LayerControl('topleft', collapsed=True).add_to(basin_map)
