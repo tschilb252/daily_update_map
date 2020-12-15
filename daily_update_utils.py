@@ -295,7 +295,7 @@ def get_nrcs_basin_stat(basin_name, huc_level='2', data_type='wteq'):
         stat = 'N/A'
     return stat
 
-def add_huc_layer(huc_map, level=2, huc_geojson_path=None, embed=False, 
+def add_huc_layer(level=2, huc_geojson_path=None, embed=False, 
                   show=True, huc_filter=''):
     try:
         if type(huc_filter) == int:
@@ -314,17 +314,19 @@ def add_huc_layer(huc_map, level=2, huc_geojson_path=None, embed=False,
             huc_style = lambda x: {
                 'fillColor': '#ffffff00', 'color': '#1f1f1faa', 'weight': weight
             }
-        folium.GeoJson(
+        geojson = folium.GeoJson(
             huc_geojson_path,
             name=f'HUC {level}',
             embed=embed,
             style_function=huc_style,
             show=show
-        ).add_to(huc_map)
+        )
+        return geojson
     except Exception as err:
         print(f'Could not add HUC {level} layer to map! - {err}')
-        
-def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6', 
+        return None
+    
+def add_huc_chropleth(data_type='swe', show=False, huc_level='6', 
                       gis_path='gis', huc_filter='', use_topo=False):
     
     huc_str = f'HUC{huc_level}'
@@ -350,30 +352,36 @@ def add_huc_chropleth(m, data_type='swe', show=False, huc_level='6',
     #     ['Name', f'{data_type}_percent', f'HUC{huc_level}'],
     #     aliases=['Basin Name:', f'{layer_name}:', 'ID:']
     # )
-    if use_topo:
-        folium.TopoJson(
-            topo_json,
-            f'objects.{huc_str}',
-            name=layer_name,
-            overlay=True,
-            show=show,
-            smooth_factor=2.0,
-            style_function=style_function,
-            tooltip=tooltip
-        ).add_to(m)
-    else:
-        json_path = f'{STATIC_URL}/gis/HUC{huc_level}.geojson'
-        folium.GeoJson(
-            json_path,
-            name=layer_name,
-            embed=False,
-            overlay=True,
-            control=True,
-            smooth_factor=2.0,
-            style_function=style_function,
-            show=show,
-            tooltip=tooltip
-        ).add_to(m)
+    try:
+        if use_topo:
+            topo_json = folium.TopoJson(
+                topo_json,
+                f'objects.{huc_str}',
+                name=layer_name,
+                overlay=True,
+                show=show,
+                smooth_factor=2.0,
+                style_function=style_function,
+                tooltip=tooltip
+            )
+            return topo_json
+        else:
+            json_path = f'{STATIC_URL}/gis/HUC{huc_level}.geojson'
+            geo_json = folium.GeoJson(
+                json_path,
+                name=layer_name,
+                embed=False,
+                overlay=True,
+                control=True,
+                smooth_factor=2.0,
+                style_function=style_function,
+                show=show,
+                tooltip=tooltip
+            )
+            return geo_json
+    except Exception as err:
+        print(f'Could not add HUC {data_type} chropleth layer to map! - {err}')
+        return None
 
 def style_chropleth(feature, data_type='swe', huc_level='2', huc_filter=''):
     colormap = get_colormap()

@@ -466,7 +466,7 @@ if __name__ == '__main__':
             print(f'Could not parse {args.date}, using current date instead. - {err}')    
     
     this_dir = path.dirname(path.realpath(__file__))
-    config_dir = path.join(this_dir, 'config')
+    config_dir = path.join(this_dir, 'new_config')
     if args.config.lower() == 'all':
         config_path = path.join(config_dir, 'all_config.json')
     else:
@@ -511,7 +511,7 @@ if __name__ == '__main__':
         
         print(f'Creating map for config item: {map_name}_status.html')
         
-        print(f'  Adding layers and controls...')
+        print('  Adding layers and controls...')
         map_center = map_config.get('center', (40, 106))
         map_zoom = map_config.get('zoom', 6)
         map_huc_level = map_config.get('huc_level', 2)
@@ -540,14 +540,15 @@ if __name__ == '__main__':
         for huc_level in huc_levels:
             print(f'    Adding HUC{huc_level} boundary...')
             
-            add_huc_layer(
-                basin_map, 
+            huc_layer = add_huc_layer(
                 level=int(huc_level), 
                 show=True, 
                 embed=False, 
                 huc_filter=tuple(set(i[:int(huc_level)] for i in huc_filter))
             )
-        
+            if huc_layer:
+                huc_layer.add_to(basin_map)
+                
         huc_levels[:] = [i for i in huc_levels if int(i) >= int(map_huc_level)]
         for huc_level in huc_levels:
             print(f'    Adding HUC{huc_level} SWE/PREC layers...')
@@ -557,15 +558,16 @@ if __name__ == '__main__':
             for data_type in ['swe', 'prec']:
                 show_dict = {'swe': show_swe, 'prec': show_prec}
                 show = show_dict[data_type]
-                add_huc_chropleth(
-                    basin_map, 
+                chropleth = add_huc_chropleth(
                     data_type=data_type, 
                     show=show_dict[data_type], 
                     huc_level=huc_level, 
                     huc_filter=huc_filter
                 )
+                if chropleth:
+                    chropleth.add_to(basin_map)
             
-        print(f'    Adding tilesets, legend, and controls...')
+        print('    Adding tilesets, legend, and controls...')
         add_optional_tilesets(basin_map)
         folium.LayerControl('topleft', collapsed=True).add_to(basin_map)
         FloatImage(
