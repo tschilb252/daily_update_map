@@ -538,19 +538,22 @@ if __name__ == '__main__':
         huc_levels = ['2', '4', '6', '8']
         
         for huc_level in huc_levels:
+            huc_filter = tuple(set(i[:int(huc_level)] for i in huc_filter))
             print(f'    Adding HUC{huc_level} boundary...')
             
             huc_layer = add_huc_layer(
                 level=int(huc_level), 
                 show=True, 
                 embed=False, 
-                huc_filter=tuple(set(i[:int(huc_level)] for i in huc_filter))
+                huc_filter=huc_filter
             )
             if huc_layer:
                 huc_layer.add_to(basin_map)
+                
         huc_levels[:] = [i for i in huc_levels if int(i) >= int(map_huc_level)]
         for huc_level in huc_levels:
             print(f'    Adding HUC{huc_level} SWE/PREC layers...')
+            huc_filter = tuple(set(i[:int(huc_level)] for i in huc_filter))
             show_prec = True if get_season() =='summer' and huc_level == '8' else False
             show_swe = True if not show_prec and huc_level == '8' else False
             
@@ -565,6 +568,7 @@ if __name__ == '__main__':
                 )
                 if chropleth:
                     chropleth.add_to(basin_map)
+                    
         print('    Adding tilesets, legend, and controls...')
         add_optional_tilesets(basin_map)
         folium.LayerControl('topleft', collapsed=True).add_to(basin_map)

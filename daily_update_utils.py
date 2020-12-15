@@ -319,7 +319,8 @@ def add_huc_layer(level=2, huc_geojson_path=None, embed=False,
             name=f'HUC {level}',
             embed=embed,
             style_function=huc_style,
-            show=show
+            show=show,
+            smooth_factor=3.0
         )
         return geojson
     except Exception as err:
@@ -360,7 +361,7 @@ def add_huc_chropleth(data_type='swe', show=False, huc_level='6',
                 name=layer_name,
                 overlay=True,
                 show=show,
-                smooth_factor=2.0,
+                smooth_factor=3.0,
                 style_function=style_function,
                 tooltip=tooltip
             )
@@ -373,7 +374,7 @@ def add_huc_chropleth(data_type='swe', show=False, huc_level='6',
                 embed=False,
                 overlay=True,
                 control=True,
-                smooth_factor=2.0,
+                smooth_factor=3.0,
                 style_function=style_function,
                 show=show,
                 tooltip=tooltip
