@@ -466,7 +466,7 @@ if __name__ == '__main__':
             print(f'Could not parse {args.date}, using current date instead. - {err}')    
     
     this_dir = path.dirname(path.realpath(__file__))
-    config_dir = path.join(this_dir, 'new_config')
+    config_dir = path.join(this_dir, 'config')
     if args.config.lower() == 'all':
         config_path = path.join(config_dir, 'all_config.json')
     else:
