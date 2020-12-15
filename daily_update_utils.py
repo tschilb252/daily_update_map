@@ -16,10 +16,8 @@ from shapely.geometry import Point
 from datetime import datetime
 from requests import get as r_get
 
-# STATIC_URL = 'http://127.0.0.1:8887'
 STATIC_URL = f'https://www.usbr.gov/uc/water/hydrodata/assets'
-nrcs_url = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
-NRCS_CHARTS_URL = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
+NRCS_CHARTS_URL = 'https://www.nrcs.usda.gov/Internet/WCIS/AWS_PLOTS/basinCharts/POR'
 
 def get_plotly_js():
     return f'{STATIC_URL}/plotly.js'
@@ -230,9 +228,9 @@ def get_season():
     curr_month = datetime.now().month
     if curr_month > 3 and curr_month < 6:
         return 'spring'
-    if curr_month > 5 and curr_month < 11:
+    if curr_month > 5 and curr_month < 10:
         return 'summer'
-    if curr_month > 10:
+    if curr_month > 9:
         return 'fall'
     return 'winter'
 

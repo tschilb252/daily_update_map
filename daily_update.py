@@ -24,6 +24,7 @@ from daily_update_utils import get_favicon, get_bor_seal
 from daily_update_utils import get_bor_js, get_bor_css
 from daily_update_utils import get_default_js, get_default_css
 from daily_update_utils import get_huc_nrcs_stats, add_huc_chropleth, get_colormap
+from daily_update_utils import NRCS_CHARTS_URL
 from config.config_gen import forecasts, reservoirs, regions
 from browser_print import BrowserPrint
 
@@ -37,8 +38,6 @@ folium.folium._default_js = default_js
 folium.folium._default_css = default_css
 # folium.folium._default_js = bor_js
 # folium.folium._default_css = bor_css
-
-nrcs_url = 'https://www.nrcs.usda.gov/Internet/WCIS/basinCharts/POR'
 
 def get_expand_button(title=''):
     return f'''
@@ -185,7 +184,7 @@ def get_embed(href):
     )   
     return embed
 
-def add_region_markers(basin_map, regions, nrcs_url=nrcs_url, map_date=None):
+def add_region_markers(basin_map, regions, nrcs_url=NRCS_CHARTS_URL, map_date=None):
     huc_levels = {v['huc-level']:k for k, v in regions.items()}
     lowest_huc = min(huc_levels.keys())
 
