@@ -548,7 +548,9 @@ if __name__ == '__main__':
                 huc_filter=huc_filter
             )
             if huc_layer:
+                print('              returned object')
                 huc_layer.add_to(basin_map)
+                print('              added to map')
                 
         huc_levels[:] = [i for i in huc_levels if int(i) >= int(map_huc_level)]
         for huc_level in huc_levels:
@@ -567,7 +569,9 @@ if __name__ == '__main__':
                     huc_filter=huc_filter
                 )
                 if chropleth:
+                    print('              returned object')
                     chropleth.add_to(basin_map)
+                    print('              added to map')
                     
         print('    Adding tilesets, legend, and controls...')
         add_optional_tilesets(basin_map)

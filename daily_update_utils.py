@@ -302,7 +302,7 @@ def add_huc_layer(level=2, huc_geojson_path=None, embed=False,
             huc_filter = str(huc_filter)
         weight = -0.25 * float(level) + 2.5
         if not huc_geojson_path:
-            huc_geojson_path = f'{STATIC_URL}/gis/HUC{level}.geojson'
+            huc_geojson_path = f'{STATIC_URL}/gis/HUC{level}.geojson?={datetime.now():%H%M%S}'
         else:
             embed = True
         if huc_filter:
@@ -367,7 +367,7 @@ def add_huc_chropleth(data_type='swe', show=False, huc_level='6',
             )
             return topo_json
         else:
-            json_path = f'{STATIC_URL}/gis/HUC{huc_level}.geojson'
+            json_path = f'{STATIC_URL}/gis/HUC{huc_level}.geojson?={datetime.now():%H%M%S}'
             geo_json = folium.GeoJson(
                 json_path,
                 name=layer_name,
