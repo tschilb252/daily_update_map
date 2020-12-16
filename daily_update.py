@@ -197,8 +197,6 @@ def add_region_markers(basin_map, regions, nrcs_url=NRCS_CHARTS_URL, map_date=No
         btn_size = 'btn-sm'
         region_suffix = ''
         button_color = 'btn-info'
-        if huc_level == 2:
-            region_suffix = ' Region'
         if huc_level == lowest_huc:
             btn_size = 'btn-md'
             button_color = 'btn-primary'
