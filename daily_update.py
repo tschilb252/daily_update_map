@@ -23,7 +23,7 @@ from daily_update_utils import add_optional_tilesets, add_huc_layer
 from daily_update_utils import get_favicon, get_bor_seal
 from daily_update_utils import get_bor_js, get_bor_css
 from daily_update_utils import get_default_js, get_default_css
-from daily_update_utils import get_huc_nrcs_stats, add_huc_chropleth, get_colormap
+from daily_update_utils import add_huc_chropleth, get_colormap
 from daily_update_utils import NRCS_CHARTS_URL
 from config.config_gen import forecasts, reservoirs, regions
 from browser_print import BrowserPrint
@@ -450,7 +450,7 @@ if __name__ == '__main__':
     parser.add_argument("-o", "--output", help="set output folder")
     parser.add_argument("-n", "--name", help="use alternate name *.html, only works for configs with one entry")
     parser.add_argument("-m", "--makedir", help="create output folder if it doesn't exist", action='store_true')
-    parser.add_argument("-g", "--gis", help="update local gis files with current NRCS data, or pass path for alt gis folder.", const=True, nargs='?')
+    parser.add_argument("-g", "--gis", help="pass path for alt gis folder.")
     
     args = parser.parse_args()
 
@@ -497,9 +497,6 @@ if __name__ == '__main__':
     if path.isdir(str(args.gis)):
         print(f'Using alt gis dir: {args.gis}\n')
         gis_dir = args.gis
-    if args.gis == True:
-        for huc_level in ['2', '6', '8']:
-            get_huc_nrcs_stats(huc_level)
         
     for map_name, map_config in config.items():
         if args.name:
@@ -522,7 +519,7 @@ if __name__ == '__main__':
             huc_filter = tuple([str(i) for i in huc_filter])
         elif type(huc_filter) == str or type(huc_filter) == int:
             huc_filter = tuple([str(huc_filter)])
-            
+        
         reservoirs = map_config.get('reservoirs', reservoirs)
         regions = map_config.get('regions', regions)
         forecasts = map_config.get('forecasts', forecasts)
@@ -536,7 +533,7 @@ if __name__ == '__main__':
         huc_levels = ['2', '4', '6', '8']
         
         for huc_level in huc_levels:
-            huc_filter = tuple(set(i[:int(huc_level)] for i in huc_filter))
+            # huc_filter = tuple(set(i[:len(huc_level)] for i in huc_filter))
             print(f'    Adding HUC{huc_level} boundary...')
             
             huc_layer = add_huc_layer(
@@ -546,14 +543,12 @@ if __name__ == '__main__':
                 huc_filter=huc_filter
             )
             if huc_layer:
-                print('              returned object')
                 huc_layer.add_to(basin_map)
-                print('              added to map')
                 
         huc_levels[:] = [i for i in huc_levels if int(i) >= int(map_huc_level)]
         for huc_level in huc_levels:
             print(f'    Adding HUC{huc_level} SWE/PREC layers...')
-            huc_filter = tuple(set(i[:int(huc_level)] for i in huc_filter))
+            # huc_filter = tuple(set(i[:len(huc_level)] for i in huc_filter))
             show_prec = True if get_season() =='summer' and huc_level == '8' else False
             show_swe = True if not show_prec and huc_level == '8' else False
             
@@ -567,9 +562,7 @@ if __name__ == '__main__':
                     huc_filter=huc_filter
                 )
                 if chropleth:
-                    print('              returned object')
                     chropleth.add_to(basin_map)
-                    print('              added to map')
                     
         print('    Adding tilesets, legend, and controls...')
         add_optional_tilesets(basin_map)

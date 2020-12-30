@@ -234,93 +234,37 @@ def get_season():
         return 'fall'
     return 'winter'
 
-def get_huc_nrcs_stats(huc_level='6', try_all=False):
-    print(f'  Getting NRCS stats for HUC{huc_level}...')
-    data_types = ['prec', 'wteq']
-    index_pg_urls = [f'{NRCS_CHARTS_URL}/{i.upper()}/assocHUC{huc_level}' 
-                     for i in data_types]
-    index_pg_resps = [r_get(i) for i in index_pg_urls]
-    index_pg_codes = [i.status_code for i in index_pg_resps]
-    if not set(index_pg_codes) == set([200]):
-        print(
-            index_pg_urls, 
-            '  Could not download index file, trying all basins...'
-        )
-        try_all = True
-        index_page_strs = ['' for i in index_pg_resps]
-    else:
-        index_page_strs = [i.text for i in index_pg_resps]
-    topo_json_path = f'./gis/HUC{huc_level}.topojson'
-    with open(topo_json_path, 'r') as tj:
-        topo_json = json.load(tj)
-    huc_str = f'HUC{huc_level}'
-    attrs = topo_json['objects'][huc_str]['geometries']
-    for attr in attrs:
-        props = attr['properties']
-        huc_name = props['Name']
-        file_name = f'href="{huc_name.replace(" ", "%20")}.html"'
-        if not try_all and file_name in index_page_strs[0]:
-            print(f'  Getting NRCS PREC stats for {huc_name}...')
-            props['prec_percent'] = get_nrcs_basin_stat(
-                huc_name, huc_level=huc_level, data_type='prec'
-            )
-        else:
-            props['prec_percent'] = "N/A"
-        if not try_all and file_name in index_page_strs[1]:
-            print(f'  Getting NRCS WTEQ stats for {huc_name}...')
-            props['swe_percent'] = get_nrcs_basin_stat(
-                huc_name, huc_level=huc_level, data_type='wteq'
-            )
-        else:
-            props['swe_percent'] = "N/A"
-    topo_json['objects'][huc_str]['geometries'] = attrs
-    with open(topo_json_path, 'w') as tj:
-        json.dump(topo_json, tj)
+def add_huc_layer(level=2, gis_path='gis', embed=False, show=True, huc_filter=''):
     
-def get_nrcs_basin_stat(basin_name, huc_level='2', data_type='wteq'):
-    stat_type_dict = {'wteq': 'Median', 'prec': 'Average'}
-    url = f'{NRCS_CHARTS_URL}/{data_type.upper()}/assocHUC{huc_level}/{basin_name}.html'
+    huc_str = f'HUC{level}'
+    huc_geojson_path = path.join(gis_path, f'{huc_str}.geojson')
+    with open(huc_geojson_path, 'r') as gj:
+                huc_geojson = json.load(gj)
     try:
-        response = r_get(url)
-        if not response.status_code == 200:
-            print(f'      Skipping {basin_name} {data_type.upper()}, NRCS does not publish stats.')
-            return 'N/A'
-        html_txt = response.text
-        stat_type = stat_type_dict.get(data_type, 'Median')
-        regex = f"(?<=% of {stat_type} - )(.*)(?=%<br>%)"
-        swe_re = re.search(regex, html_txt, re.MULTILINE)
-        stat = html_txt[swe_re.start():swe_re.end()]
-    except Exception as err:
-        print(f'      Error gathering data for {basin_name} - {err}')
-        stat = 'N/A'
-    return stat
-
-def add_huc_layer(level=2, huc_geojson_path=None, embed=False, 
-                  show=True, huc_filter=''):
-    try:
+        weight = -0.25 * float(level) + 2.5
         if type(huc_filter) == int:
             huc_filter = str(huc_filter)
-        weight = -0.25 * float(level) + 2.5
-        if not huc_geojson_path:
-            huc_geojson_path = f'{STATIC_URL}/gis/HUC{level}.geojson?={datetime.now():%H%M%S}'
-        else:
-            embed = True
+ 
         if huc_filter:
-           huc_style = lambda x: {
+            huc_style = lambda x: {
             'fillColor': '#ffffff00', 'color': '#1f1f1faa', 
-            'weight': weight if x['properties'][f'HUC{level}'].startswith(huc_filter) else 0
-        } 
+            'weight': weight if x['properties'][huc_str].startswith(huc_filter) else 0
+            }
+            features = [
+                i for i in huc_geojson['features'] if 
+                i['properties'][huc_str].startswith(huc_filter)
+            ]
+            huc_geojson['features'] = features 
         else:
             huc_style = lambda x: {
                 'fillColor': '#ffffff00', 'color': '#1f1f1faa', 'weight': weight
             }
         geojson = folium.GeoJson(
-            huc_geojson_path,
+            huc_geojson,
             name=f'HUC {level}',
-            embed=embed,
             style_function=huc_style,
             show=show,
-            smooth_factor=3.0
+            smooth_factor=1
         )
         return geojson
     except Exception as err:
@@ -342,6 +286,16 @@ def add_huc_chropleth(data_type='swe', show=False, huc_level='6',
             topo_json = filter_topo_json(
                 topo_json, huc_level=huc_level, filter_str=huc_filter
             )
+    else:
+        geo_json_path = path.join(gis_path, f'{huc_str}.geojson')
+        with open(geo_json_path, 'r') as gj:
+            geo_json = json.load(gj)
+        if huc_filter:
+            features = [
+                i for i in geo_json['features'] if 
+                i['properties'][huc_str].startswith(huc_filter)
+            ]
+            geo_json['features'] = features 
     style_function = lambda x: style_chropleth(
         x, data_type=data_type, huc_level=huc_level, huc_filter=huc_filter
     )
@@ -361,15 +315,14 @@ def add_huc_chropleth(data_type='swe', show=False, huc_level='6',
                 name=layer_name,
                 overlay=True,
                 show=show,
-                smooth_factor=3.0,
+                smooth_factor=1,
                 style_function=style_function,
                 tooltip=tooltip
             )
             return topo_json
         else:
-            json_path = f'{STATIC_URL}/gis/HUC{huc_level}.geojson?={datetime.now():%H%M%S}'
             geo_json = folium.GeoJson(
-                json_path,
+                geo_json,
                 name=layer_name,
                 embed=False,
                 overlay=True,
