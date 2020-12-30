@@ -538,6 +538,7 @@ if __name__ == '__main__':
             
             huc_layer = add_huc_layer(
                 level=int(huc_level), 
+                gis_path=gis_dir,
                 show=True, 
                 embed=False, 
                 huc_filter=huc_filter
@@ -556,6 +557,7 @@ if __name__ == '__main__':
                 show_dict = {'swe': show_swe, 'prec': show_prec}
                 show = show_dict[data_type]
                 chropleth = add_huc_chropleth(
+                    gis_path=gis_dir,
                     data_type=data_type, 
                     show=show_dict[data_type], 
                     huc_level=huc_level, 
