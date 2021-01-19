@@ -89,7 +89,7 @@ ug_reservoirs = {
             {'storage': 1718, 'elev': 1927, 'inflow': 1791, 'release': 1871}
     },
     'Fontenelle': {
-        'coords': [42.02617, -110.06816], 'region': 'uc', 'anno': '', 'cap': 344.8, 
+        'coords': [42.02617, -110.06816], 'region': 'uc', 'anno': '', 'cap': 333.956, 
         'id': 916, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1717, 'elev': 1926, 'inflow': 1790, 'release': 1870}
@@ -515,7 +515,7 @@ gunn_reservoirs = {
             {'storage': 1746, 'elev': 1953, 'inflow': 1817, 'release': 1897}
     },
     'Blue Mesa': {
-        'coords': [38.45305, -107.33677], 'region': 'uc', 'anno': '', 'cap': 829.5, 
+        'coords': [38.45305, -107.33677], 'region': 'uc', 'anno': '', 'cap': 827.94, 
         'id': 913, 'alias': None, 'anchor': (-40,35), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1714, 'elev': 1923, 'inflow': 1787, 'release': 1867}
@@ -712,7 +712,7 @@ uc_regions = {
 
 uc_reservoirs = {
     'Fontenelle': {
-        'coords': [42.026, -110.068], 'region': 'uc', 'anno': '', 'cap': 344.8, 
+        'coords': [42.026, -110.068], 'region': 'uc', 'anno': '', 'cap': 333.956, 
         'id': 916, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1717, 'elev': 1926, 'inflow': 1790, 'release': 1870}
@@ -724,7 +724,7 @@ uc_reservoirs = {
             {'storage': 1718, 'elev': 1927, 'inflow': 1791, 'release': 1871}
     },
     'Blue Mesa': {
-        'coords': [38.453, -107.337], 'region': 'uc', 'anno': '', 'cap': 829.5,
+        'coords': [38.453, -107.337], 'region': 'uc', 'anno': '', 'cap': 827.94,
         'id': 913, 'alias': None, 'anchor': (-115,25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1714, 'elev': 1923, 'inflow': 1787, 'release': 1867}

@@ -1,255 +1,255 @@
 {
-  "sj": {
-    "center": [
-      37,
-      -108.0
-    ],
-    "forecasts": {},
-    "huc_filter": 1408,
-    "huc_level": 4,
-    "regions": {
-      "14080101_Upper_San_Juan": {
-        "alias": "Upper San Juan",
-        "anchor": [
-          0,
-          0
+    "sj": {
+        "center": [
+            37,
+            -108.0
         ],
-        "coords": [
-          37,
-          -107
-        ],
-        "huc-level": 8
-      },
-      "14080102_Piedra": {
-        "alias": "Piedra",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          37.53,
-          -107.34
-        ],
-        "huc-level": 8
-      },
-      "14080104_Animas": {
-        "alias": "Animas",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          37.65,
-          -107.8
-        ],
-        "huc-level": 8
-      },
-      "14080105_Middle_San_Juan": {
-        "alias": "Middle San Juan",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          36.9,
-          -109
-        ],
-        "huc-level": 8
-      },
-      "14080106_Chaco": {
-        "alias": "Chaco",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          36.45,
-          -108.84
-        ],
-        "huc-level": 8
-      },
-      "14080107_Mancos": {
-        "alias": "Mancos",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          37.2,
-          -108.7
-        ],
-        "huc-level": 8
-      },
-      "14080203_Montezuma": {
-        "alias": "Montezuma",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          37.7,
-          -109.28
-        ],
-        "huc-level": 8
-      },
-      "14080204_Chinle": {
-        "alias": "Chinle",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          36.8,
-          -109.8
-        ],
-        "huc-level": 8
-      },
-      "1408_San_Juan": {
-        "alias": "San Juan",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          37,
-          -108.26
-        ],
-        "huc-level": 4
-      }
-    },
-    "reservoirs": {
-      "Jackson": {
-        "anchor": [
-          0,
-          0
-        ],
-        "anno": "",
-        "cap": 115.075,
-        "coords": [
-          37.40186,
-          -108.27342
-        ],
-        "id": 935,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1940,
-          "inflow": 1804,
-          "release": 1884,
-          "storage": 1733
-        }
-      },
-      "Lemon": {
-        "alias": null,
-        "anchor": [
-          0,
-          0
-        ],
-        "anno": "",
-        "cap": 39.792,
-        "coords": [
-          37.39538,
-          -107.66269
-        ],
-        "id": 934,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1939,
-          "inflow": 1803,
-          "release": 1883,
-          "storage": 1732
-        }
-      },
-      "McPhee": {
-        "alias": null,
-        "anchor": [
-          0,
-          0
-        ],
-        "anno": "",
-        "cap": 381.0,
-        "coords": [
-          37.57588,
-          -108.57307
-        ],
-        "id": 958,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1963,
-          "inflow": 1827,
-          "release": 1907,
-          "storage": 1756
-        }
-      },
-      "Navajo": {
-        "alias": null,
-        "anchor": [
-          0,
-          0
-        ],
-        "anno": "",
-        "cap": 1701.3,
-        "coords": [
-          36.80063,
-          -107.61203
-        ],
-        "id": 920,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1929,
-          "inflow": 1793,
-          "release": 1873,
-          "storage": 1720
-        }
-      },
-      "Nighthorse": {
-        "anchor": [
-          0,
-          0
-        ],
-        "anno": "",
-        "cap": 115.075,
-        "coords": [
-          37.22392,
-          -107.91694
-        ],
-        "id": 3083,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 14621,
-          "inflow": 14617,
-          "release": 14620,
-          "storage": 14623
-        }
-      },
-      "Vallecito": {
-        "alias": null,
-        "anchor": [
-          -85,
-          -40
-        ],
-        "anno": "",
-        "cap": 125.442,
-        "coords": [
-          37.37834,
-          -107.57486
-        ],
-        "id": 933,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1938,
-          "inflow": 1802,
-          "release": 1882,
-          "storage": 1731
-        }
-      }
-    },
-    "title": "San Juan Basin",
-    "zoom": 9
-  }
+        "forecasts": {},
+        "huc_filter": 1408,
+        "huc_level": 4,
+        "regions": {
+            "Animas": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    37.65,
+                    -107.8
+                ],
+                "huc-level": 8
+            },
+            "Chaco": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    36.45,
+                    -108.84
+                ],
+                "huc-level": 8
+            },
+            "Chinle": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    36.8,
+                    -109.8
+                ],
+                "huc-level": 8
+            },
+            "Mancos": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    37.2,
+                    -108.7
+                ],
+                "huc-level": 8
+            },
+            "Middle San Juan": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    36.9,
+                    -109
+                ],
+                "huc-level": 8
+            },
+            "Montezuma": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    37.7,
+                    -109.28
+                ],
+                "huc-level": 8
+            },
+            "Piedra": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    37.53,
+                    -107.34
+                ],
+                "huc-level": 8
+            },
+            "San Juan": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    37,
+                    -108.26
+                ],
+                "huc-level": 4
+            },
+            "Upper San Juan": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    37,
+                    -107
+                ],
+                "huc-level": 8
+            }
+        },
+        "reservoirs": {
+            "Jackson": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 115.075,
+                "coords": [
+                    37.40186,
+                    -108.27342
+                ],
+                "id": 935,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1940,
+                    "inflow": 1804,
+                    "release": 1884,
+                    "storage": 1733
+                }
+            },
+            "Lemon": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 39.792,
+                "coords": [
+                    37.39538,
+                    -107.66269
+                ],
+                "id": 934,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1939,
+                    "inflow": 1803,
+                    "release": 1883,
+                    "storage": 1732
+                }
+            },
+            "McPhee": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 381.0,
+                "coords": [
+                    37.57588,
+                    -108.57307
+                ],
+                "id": 958,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1963,
+                    "inflow": 1827,
+                    "release": 1907,
+                    "storage": 1756
+                }
+            },
+            "Navajo": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 1701.3,
+                "coords": [
+                    36.80063,
+                    -107.61203
+                ],
+                "id": 920,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1929,
+                    "inflow": 1793,
+                    "release": 1873,
+                    "storage": 1720
+                }
+            },
+            "Nighthorse": {
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 115.075,
+                "coords": [
+                    37.22392,
+                    -107.91694
+                ],
+                "id": 3083,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 14621,
+                    "inflow": 14617,
+                    "release": 14620,
+                    "storage": 14623
+                }
+            },
+            "Vallecito": {
+                "alias": null,
+                "anchor": [
+                    -85,
+                    -40
+                ],
+                "anno": "",
+                "cap": 125.442,
+                "coords": [
+                    37.37834,
+                    -107.57486
+                ],
+                "id": 933,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1938,
+                    "inflow": 1802,
+                    "release": 1882,
+                    "storage": 1731
+                }
+            }
+        },
+        "title": "San Juan Basin",
+        "zoom": 9
+    }
 }
