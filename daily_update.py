@@ -548,7 +548,7 @@ if __name__ == '__main__':
 
         for huc_level in huc_levels:
             print(f'    Adding HUC{huc_level} SWE/PREC layers...')
-            huc_filter = tuple(set(i[:len(huc_level)] for i in huc_filter))
+            # huc_filter = tuple(set(i[:len(huc_level)] for i in huc_filter))
             show_prec = True if get_season() =='summer' and huc_level == '8' else False
             show_swe = True if not show_prec and huc_level == '8' else False
             
