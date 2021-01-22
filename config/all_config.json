@@ -1,2062 +1,2062 @@
 {
-    "gb": {
-        "center": [
-            41.05,
-            -111.6
+  "gb": {
+    "center": [
+      41.05,
+      -111.6
+    ],
+    "forecasts": {},
+    "huc_filter": [
+      1601,
+      160201,
+      160202
+    ],
+    "huc_level": 4,
+    "regions": {
+      "160101_Upper_Bear": {
+        "alias": "Upper Bear",
+        "anchor": [
+          0,
+          0
         ],
-        "forecasts": {},
-        "huc_filter": [
-            1601,
-            160201,
-            160202
+        "coords": [
+          41.66,
+          -111.21
         ],
-        "huc_level": 4,
-        "regions": {
-            "Bear": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    41.6,
-                    -112.75
-                ],
-                "huc-level": 4
-            },
-            "Great Salt Lake": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.77,
-                    -112.5
-                ],
-                "huc-level": 4
-            },
-            "Jordan": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.7,
-                    -111.98
-                ],
-                "huc-level": 8
-            },
-            "Lower Bear": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    41.6,
-                    -112.31
-                ],
-                "huc-level": 6
-            },
-            "Provo": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.54,
-                    -111.75
-                ],
-                "huc-level": 8
-            },
-            "Spanish Fork": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.1,
-                    -111.58
-                ],
-                "huc-level": 8
-            },
-            "Upper Bear": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    41.66,
-                    -111.21
-                ],
-                "huc-level": 6
-            },
-            "Weber": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    41.1,
-                    -111.85
-                ],
-                "huc-level": 6
-            }
-        },
-        "reservoirs": {
-            "Causey": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 7.07,
-                "coords": [
-                    41.29828,
-                    -111.58591
-                ],
-                "id": 938,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1943,
-                    "inflow": 1807,
-                    "release": 1887,
-                    "storage": 1736
-                }
-            },
-            "Deer Creek": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 150.161,
-                "coords": [
-                    40.40837,
-                    -111.52908
-                ],
-                "id": 953,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1958,
-                    "inflow": 1822,
-                    "release": 1902,
-                    "storage": 1751
-                }
-            },
-            "East Canyon": {
-                "alias": null,
-                "anchor": [
-                    28,
-                    0
-                ],
-                "anno": "",
-                "cap": 49.51,
-                "coords": [
-                    40.92027,
-                    -111.60099
-                ],
-                "id": 940,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1945,
-                    "inflow": 1809,
-                    "release": 1889,
-                    "storage": 1738
-                }
-            },
-            "Echo": {
-                "alias": null,
-                "anchor": [
-                    -28,
-                    0
-                ],
-                "anno": "",
-                "cap": 73.94,
-                "coords": [
-                    40.96412,
-                    -111.43239
-                ],
-                "id": 941,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1946,
-                    "inflow": 1810,
-                    "release": 1890,
-                    "storage": 1739
-                }
-            },
-            "Hyrum": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 14.734,
-                "coords": [
-                    41.62117,
-                    -111.86099
-                ],
-                "id": 957,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1962,
-                    "inflow": 1826,
-                    "release": 1906,
-                    "storage": 1755
-                }
-            },
-            "Jordanelle": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 311.0,
-                "coords": [
-                    40.59833,
-                    -111.42304
-                ],
-                "id": 964,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1969,
-                    "inflow": 1833,
-                    "release": 1913,
-                    "storage": 1762
-                }
-            },
-            "Lost Creek": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 22.501,
-                "coords": [
-                    41.18318,
-                    -111.39905
-                ],
-                "id": 942,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1947,
-                    "inflow": 1811,
-                    "release": 1891,
-                    "storage": 1740
-                }
-            },
-            "Newton": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 5.374,
-                "coords": [
-                    41.8998,
-                    -111.97562
-                ],
-                "id": 959,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1964,
-                    "inflow": 1828,
-                    "release": 1908,
-                    "storage": 1757
-                }
-            },
-            "Rockport": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 115.075,
-                "coords": [
-                    40.78944,
-                    -111.40263
-                ],
-                "id": 947,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1952,
-                    "inflow": 1816,
-                    "release": 1896,
-                    "storage": 1745
-                }
-            },
-            "Willard Bay": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 222.273,
-                "coords": [
-                    41.37738,
-                    -112.08339
-                ],
-                "id": 925,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1932,
-                    "inflow": 1796,
-                    "release": 1876,
-                    "storage": 1723
-                }
-            }
-        },
-        "title": "Wasatch Front Basins",
-        "zoom": 9
+        "huc-level": 6
+      },
+      "160102_Lower_Bear": {
+        "alias": "Lower Bear",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          41.6,
+          -112.31
+        ],
+        "huc-level": 6
+      },
+      "160201_Weber": {
+        "alias": "Weber",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          41.1,
+          -111.85
+        ],
+        "huc-level": 6
+      },
+      "16020202_Spanish_Fork": {
+        "alias": "Spanish Fork",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.1,
+          -111.58
+        ],
+        "huc-level": 8
+      },
+      "16020203_Provo": {
+        "alias": "Provo",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.54,
+          -111.75
+        ],
+        "huc-level": 8
+      },
+      "1601_Bear": {
+        "alias": "Bear",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          41.6,
+          -112.75
+        ],
+        "huc-level": 4
+      },
+      "1602_Great_Salt_Lake": {
+        "alias": "Great Salt Lake",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.77,
+          -112.5
+        ],
+        "huc-level": 4
+      },
+      "16020204_Jordan": {
+        "alias": "Jordan",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.7,
+          -111.98
+        ],
+        "huc-level": 8
+      }
     },
-    "gunn": {
-        "center": [
-            38.5,
-            -107.4
+    "reservoirs": {
+      "Causey": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
         ],
-        "forecasts": {},
-        "huc_filter": 1402,
-        "huc_level": 6,
-        "regions": {
-            "East-Taylor": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    39,
-                    -106.9
-                ],
-                "huc-level": 8
-            },
-            "Gunnison": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    38.7,
-                    -107.6
-                ],
-                "huc-level": 4
-            },
-            "Lower Gunnison": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    38.7,
-                    -108.5
-                ],
-                "huc-level": 8
-            },
-            "North Fork Gunnison": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    39.04,
-                    -107.74
-                ],
-                "huc-level": 8
-            },
-            "Pecos Headwaters": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    33,
-                    -105
-                ],
-                "huc-level": 8
-            },
-            "Tomichi": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    38.5,
-                    -106.7
-                ],
-                "huc-level": 8
-            },
-            "Uncompahgre": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    38.5,
-                    -108.1
-                ],
-                "huc-level": 8
-            }
-        },
-        "reservoirs": {
-            "Blue Mesa": {
-                "alias": null,
-                "anchor": [
-                    -40,
-                    35
-                ],
-                "anno": "",
-                "cap": 827.94,
-                "coords": [
-                    38.45305,
-                    -107.33677
-                ],
-                "id": 913,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1923,
-                    "inflow": 1787,
-                    "release": 1867,
-                    "storage": 1714
-                }
-            },
-            "Crystal": {
-                "alias": null,
-                "anchor": [
-                    -10,
-                    10
-                ],
-                "anno": "",
-                "cap": 17.536,
-                "coords": [
-                    38.51046,
-                    -107.62374
-                ],
-                "id": 915,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1925,
-                    "inflow": 1789,
-                    "release": 1869,
-                    "storage": 1716
-                }
-            },
-            "Morrow Point": {
-                "alias": null,
-                "anchor": [
-                    10,
-                    -25
-                ],
-                "anno": "",
-                "cap": 117.025,
-                "coords": [
-                    38.45191,
-                    -107.53791
-                ],
-                "id": 914,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1924,
-                    "inflow": 1788,
-                    "release": 1868,
-                    "storage": 1715
-                }
-            },
-            "Paonia": {
-                "alias": null,
-                "anchor": [
-                    -10,
-                    0
-                ],
-                "anno": "",
-                "cap": 15.522,
-                "coords": [
-                    38.94919,
-                    -107.34347
-                ],
-                "id": 945,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1950,
-                    "inflow": 1814,
-                    "release": 1894,
-                    "storage": 1743
-                }
-            },
-            "Ridgway": {
-                "alias": null,
-                "anchor": [
-                    20,
-                    0
-                ],
-                "anno": "",
-                "cap": 82.98,
-                "coords": [
-                    38.23636,
-                    -107.75914
-                ],
-                "id": 912,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1922,
-                    "inflow": 1786,
-                    "release": 1860,
-                    "storage": 1713
-                }
-            },
-            "Silver Jack": {
-                "alias": null,
-                "anchor": [
-                    -20,
-                    0
-                ],
-                "anno": "",
-                "cap": 13.0,
-                "coords": [
-                    38.22692,
-                    -107.54041
-                ],
-                "id": 939,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1944,
-                    "inflow": 1808,
-                    "release": 1888,
-                    "storage": 1737
-                }
-            },
-            "Taylor Park": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 106.21,
-                "coords": [
-                    38.81844,
-                    -106.60592
-                ],
-                "id": 948,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1953,
-                    "inflow": 1817,
-                    "release": 1897,
-                    "storage": 1746
-                }
-            }
-        },
-        "title": "Gunnison Basin",
-        "zoom": 9
+        "anno": "",
+        "cap": 7.07,
+        "coords": [
+          41.29828,
+          -111.58591
+        ],
+        "id": 938,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1943,
+          "inflow": 1807,
+          "release": 1887,
+          "storage": 1736
+        }
+      },
+      "Deer Creek": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 150.161,
+        "coords": [
+          40.40837,
+          -111.52908
+        ],
+        "id": 953,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1958,
+          "inflow": 1822,
+          "release": 1902,
+          "storage": 1751
+        }
+      },
+      "East Canyon": {
+        "alias": null,
+        "anchor": [
+          28,
+          0
+        ],
+        "anno": "",
+        "cap": 49.51,
+        "coords": [
+          40.92027,
+          -111.60099
+        ],
+        "id": 940,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1945,
+          "inflow": 1809,
+          "release": 1889,
+          "storage": 1738
+        }
+      },
+      "Echo": {
+        "alias": null,
+        "anchor": [
+          -28,
+          0
+        ],
+        "anno": "",
+        "cap": 73.94,
+        "coords": [
+          40.96412,
+          -111.43239
+        ],
+        "id": 941,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1946,
+          "inflow": 1810,
+          "release": 1890,
+          "storage": 1739
+        }
+      },
+      "Hyrum": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 14.734,
+        "coords": [
+          41.62117,
+          -111.86099
+        ],
+        "id": 957,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1962,
+          "inflow": 1826,
+          "release": 1906,
+          "storage": 1755
+        }
+      },
+      "Jordanelle": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 311.0,
+        "coords": [
+          40.59833,
+          -111.42304
+        ],
+        "id": 964,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1969,
+          "inflow": 1833,
+          "release": 1913,
+          "storage": 1762
+        }
+      },
+      "Lost Creek": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 22.501,
+        "coords": [
+          41.18318,
+          -111.39905
+        ],
+        "id": 942,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1947,
+          "inflow": 1811,
+          "release": 1891,
+          "storage": 1740
+        }
+      },
+      "Newton": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 5.374,
+        "coords": [
+          41.8998,
+          -111.97562
+        ],
+        "id": 959,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1964,
+          "inflow": 1828,
+          "release": 1908,
+          "storage": 1757
+        }
+      },
+      "Rockport": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 115.075,
+        "coords": [
+          40.78944,
+          -111.40263
+        ],
+        "id": 947,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1952,
+          "inflow": 1816,
+          "release": 1896,
+          "storage": 1745
+        }
+      },
+      "Willard Bay": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 222.273,
+        "coords": [
+          41.37738,
+          -112.08339
+        ],
+        "id": 925,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1932,
+          "inflow": 1796,
+          "release": 1876,
+          "storage": 1723
+        }
+      }
     },
-    "pb": {
-        "center": [
-            39.03,
-            -111.05
+    "title": "Wasatch Front Basins",
+    "zoom": 9
+  },
+  "gunn": {
+    "center": [
+      38.5,
+      -107.4
+    ],
+    "forecasts": {},
+    "huc_filter": 1402,
+    "huc_level": 6,
+    "regions": {
+      "13060001_Pecos_Headwaters": {
+        "alias": "Pecos Headwaters",
+        "anchor": [
+          0,
+          0
         ],
-        "forecasts": {},
-        "huc_filter": [
-            14060007,
-            14060009,
-            14070002,
-            14070003
+        "coords": [
+          33,
+          -105
         ],
-        "huc_level": 6,
-        "regions": {
-            "Fremont": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    38.45,
-                    -111.76
-                ],
-                "huc-level": 8
-            },
-            "Lower Green": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    39.67,
-                    -111.53
-                ],
-                "huc-level": 6
-            },
-            "Muddy": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    38.75,
-                    -111.2
-                ],
-                "huc-level": 8
-            },
-            "Price": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    39.57,
-                    -110.85
-                ],
-                "huc-level": 8
-            },
-            "San Rafael": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    39.06,
-                    -110.9
-                ],
-                "huc-level": 8
-            },
-            "Upper Colorado-Dirty Devil": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    38.72,
-                    -111.86
-                ],
-                "huc-level": 6
-            }
-        },
-        "reservoirs": {
-            "Huntington North": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    10
-                ],
-                "anno": "",
-                "cap": 1105.91,
-                "coords": [
-                    39.38458,
-                    -111.09082
-                ],
-                "id": 956,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1961,
-                    "inflow": 1825,
-                    "release": 1905,
-                    "storage": 1754
-                }
-            },
-            "Joes Valley": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 61.59,
-                "coords": [
-                    39.2901,
-                    -111.27888
-                ],
-                "id": 932,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1937,
-                    "inflow": 1801,
-                    "release": 1881,
-                    "storage": 1730
-                }
-            },
-            "Scofield": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    -10
-                ],
-                "anno": "",
-                "cap": 65.8,
-                "coords": [
-                    39.77656,
-                    -111.05074
-                ],
-                "id": 931,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1936,
-                    "inflow": 1800,
-                    "release": 1880,
-                    "storage": 1729
-                }
-            }
-        },
-        "title": "Price/San Rafael Basins",
-        "zoom": 9
+        "huc-level": 8
+      },
+      "14020001_East-Taylor": {
+        "alias": "East-Taylor",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          39,
+          -106.9
+        ],
+        "huc-level": 8
+      },
+      "14020003_Tomichi": {
+        "alias": "Tomichi",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          38.5,
+          -106.7
+        ],
+        "huc-level": 8
+      },
+      "14020004_North_Fork_Gunnison": {
+        "alias": "North Fork Gunnison",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          39.04,
+          -107.74
+        ],
+        "huc-level": 8
+      },
+      "14020005_Lower_Gunnison": {
+        "alias": "Lower Gunnison",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          38.7,
+          -108.5
+        ],
+        "huc-level": 8
+      },
+      "14020006_Uncompahgre": {
+        "alias": "Uncompahgre",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          38.5,
+          -108.1
+        ],
+        "huc-level": 8
+      },
+      "1402_Gunnisonn": {
+        "alias": "Gunnison",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          38.7,
+          -107.6
+        ],
+        "huc-level": 4
+      }
     },
-    "rg": {
-        "center": [
-            35,
-            -106
+    "reservoirs": {
+      "Blue Mesa": {
+        "alias": null,
+        "anchor": [
+          -40,
+          35
         ],
-        "forecasts": {},
-        "huc_filter": [
-            1301,
-            1302,
-            1303,
-            1305,
-            1306,
-            14080101
+        "anno": "",
+        "cap": 827.94,
+        "coords": [
+          38.45305,
+          -107.33677
         ],
-        "huc_level": 2,
-        "regions": {
-            "Pecos Headwaters": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    35.6,
-                    -104.5
-                ],
-                "huc-level": 8
-            },
-            "Rio Grande": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    34.7,
-                    -106.5
-                ],
-                "huc-level": 2
-            },
-            "Rio Grande Headwaters": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37.9,
-                    -106.65
-                ],
-                "huc-level": 6
-            },
-            "Rio Grande-Elephant Butte": {
-                "alias": "Middle Rio Grande",
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    34.7,
-                    -108.2
-                ],
-                "huc-level": 6
-            },
-            "Upper Rio Grande": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    36.9,
-                    -106.85
-                ],
-                "huc-level": 6
-            },
-            "Upper San Juan": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37,
-                    -108.55
-                ],
-                "huc-level": 8
-            }
-        },
-        "reservoirs": {
-            "Abiquiu": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    -48
-                ],
-                "anno": "",
-                "cap": 186.82,
-                "coords": [
-                    36.2686,
-                    -106.4551
-                ],
-                "id": 2729,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19126,
-                    "inflow": null,
-                    "release": 20055,
-                    "storage": 19127
-                }
-            },
-            "Avalon": {
-                "alias": null,
-                "anchor": [
-                    -35,
-                    -10
-                ],
-                "anno": "",
-                "cap": 4.466,
-                "coords": [
-                    32.4908,
-                    -104.2522
-                ],
-                "id": 2684,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19171,
-                    "inflow": null,
-                    "release": 20821,
-                    "storage": 19172
-                }
-            },
-            "Brantley": {
-                "alias": null,
-                "anchor": [
-                    75,
-                    10
-                ],
-                "anno": "",
-                "cap": 42.602,
-                "coords": [
-                    32.5442,
-                    -104.3814
-                ],
-                "id": 937,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1942,
-                    "inflow": 1812,
-                    "release": 1892,
-                    "storage": 1735
-                }
-            },
-            "Caballo": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    -35
-                ],
-                "anno": "",
-                "cap": 224.464,
-                "coords": [
-                    32.89646,
-                    -107.29219
-                ],
-                "id": 1094,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 2679,
-                    "inflow": 2680,
-                    "release": 2682,
-                    "storage": 2678
-                }
-            },
-            "El Vado": {
-                "alias": null,
-                "anchor": [
-                    60,
-                    -30
-                ],
-                "anno": "",
-                "cap": 114.202,
-                "coords": [
-                    36.5948,
-                    -106.7366
-                ],
-                "id": 2685,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19547,
-                    "inflow": null,
-                    "release": 19626,
-                    "storage": 19548
-                }
-            },
-            "Elephant Butte": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 2010.9,
-                "coords": [
-                    33.15,
-                    -107.2
-                ],
-                "id": 1119,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 2685,
-                    "inflow": 2686,
-                    "release": 2688,
-                    "storage": 2684
-                }
-            },
-            "Heron": {
-                "alias": null,
-                "anchor": [
-                    -60,
-                    -30
-                ],
-                "anno": "",
-                "cap": 401.662,
-                "coords": [
-                    36.6973,
-                    -106.6992
-                ],
-                "id": 2686,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19175,
-                    "inflow": null,
-                    "release": 19609,
-                    "storage": 19176
-                }
-            },
-            "Santa Rosa": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    25
-                ],
-                "anno": "",
-                "cap": 101.083,
-                "coords": [
-                    35.0443,
-                    -107.6663
-                ],
-                "id": 2730,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19165,
-                    "inflow": 20826,
-                    "release": 20578,
-                    "storage": 19164
-                }
-            },
-            "Sumner": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 35.917,
-                "coords": [
-                    34.62884,
-                    -104.3924
-                ],
-                "id": 943,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1948,
-                    "inflow": 1812,
-                    "release": 1892,
-                    "storage": 1741
-                }
-            }
-        },
-        "title": "Rio Grande Basin",
-        "zoom": 7
+        "id": 913,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1923,
+          "inflow": 1787,
+          "release": 1867,
+          "storage": 1714
+        }
+      },
+      "Crystal": {
+        "alias": null,
+        "anchor": [
+          -10,
+          10
+        ],
+        "anno": "",
+        "cap": 17.536,
+        "coords": [
+          38.51046,
+          -107.62374
+        ],
+        "id": 915,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1925,
+          "inflow": 1789,
+          "release": 1869,
+          "storage": 1716
+        }
+      },
+      "Morrow Point": {
+        "alias": null,
+        "anchor": [
+          10,
+          -25
+        ],
+        "anno": "",
+        "cap": 117.025,
+        "coords": [
+          38.45191,
+          -107.53791
+        ],
+        "id": 914,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1924,
+          "inflow": 1788,
+          "release": 1868,
+          "storage": 1715
+        }
+      },
+      "Paonia": {
+        "alias": null,
+        "anchor": [
+          -10,
+          0
+        ],
+        "anno": "",
+        "cap": 15.522,
+        "coords": [
+          38.94919,
+          -107.34347
+        ],
+        "id": 945,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1950,
+          "inflow": 1814,
+          "release": 1894,
+          "storage": 1743
+        }
+      },
+      "Ridgway": {
+        "alias": null,
+        "anchor": [
+          20,
+          0
+        ],
+        "anno": "",
+        "cap": 82.98,
+        "coords": [
+          38.23636,
+          -107.75914
+        ],
+        "id": 912,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1922,
+          "inflow": 1786,
+          "release": 1860,
+          "storage": 1713
+        }
+      },
+      "Silver Jack": {
+        "alias": null,
+        "anchor": [
+          -20,
+          0
+        ],
+        "anno": "",
+        "cap": 13.0,
+        "coords": [
+          38.22692,
+          -107.54041
+        ],
+        "id": 939,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1944,
+          "inflow": 1808,
+          "release": 1888,
+          "storage": 1737
+        }
+      },
+      "Taylor Park": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 106.21,
+        "coords": [
+          38.81844,
+          -106.60592
+        ],
+        "id": 948,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1953,
+          "inflow": 1817,
+          "release": 1897,
+          "storage": 1746
+        }
+      }
     },
-    "sj": {
-        "center": [
-            37,
-            -108.0
+    "title": "Gunnison Basin",
+    "zoom": 9
+  },
+  "pb": {
+    "center": [
+      39.03,
+      -111.05
+    ],
+    "forecasts": {},
+    "huc_filter": [
+      14060007,
+      14060009,
+      14070002,
+      14070003
+    ],
+    "huc_level": 6,
+    "regions": {
+      "14060007_Price": {
+        "alias": "Price",
+        "anchor": [
+          0,
+          0
         ],
-        "forecasts": {},
-        "huc_filter": 1408,
-        "huc_level": 4,
-        "regions": {
-            "Animas": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37.65,
-                    -107.8
-                ],
-                "huc-level": 8
-            },
-            "Chaco": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    36.45,
-                    -108.84
-                ],
-                "huc-level": 8
-            },
-            "Chinle": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    36.8,
-                    -109.8
-                ],
-                "huc-level": 8
-            },
-            "Mancos": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37.2,
-                    -108.7
-                ],
-                "huc-level": 8
-            },
-            "Middle San Juan": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    36.9,
-                    -109
-                ],
-                "huc-level": 8
-            },
-            "Montezuma": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37.7,
-                    -109.28
-                ],
-                "huc-level": 8
-            },
-            "Piedra": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37.53,
-                    -107.34
-                ],
-                "huc-level": 8
-            },
-            "San Juan": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37,
-                    -108.26
-                ],
-                "huc-level": 4
-            },
-            "Upper San Juan": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37,
-                    -107
-                ],
-                "huc-level": 8
-            }
-        },
-        "reservoirs": {
-            "Jackson": {
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 115.075,
-                "coords": [
-                    37.40186,
-                    -108.27342
-                ],
-                "id": 935,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1940,
-                    "inflow": 1804,
-                    "release": 1884,
-                    "storage": 1733
-                }
-            },
-            "Lemon": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 39.792,
-                "coords": [
-                    37.39538,
-                    -107.66269
-                ],
-                "id": 934,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1939,
-                    "inflow": 1803,
-                    "release": 1883,
-                    "storage": 1732
-                }
-            },
-            "McPhee": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 381.0,
-                "coords": [
-                    37.57588,
-                    -108.57307
-                ],
-                "id": 958,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1963,
-                    "inflow": 1827,
-                    "release": 1907,
-                    "storage": 1756
-                }
-            },
-            "Navajo": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 1701.3,
-                "coords": [
-                    36.80063,
-                    -107.61203
-                ],
-                "id": 920,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1929,
-                    "inflow": 1793,
-                    "release": 1873,
-                    "storage": 1720
-                }
-            },
-            "Nighthorse": {
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 115.075,
-                "coords": [
-                    37.22392,
-                    -107.91694
-                ],
-                "id": 3083,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 14621,
-                    "inflow": 14617,
-                    "release": 14620,
-                    "storage": 14623
-                }
-            },
-            "Vallecito": {
-                "alias": null,
-                "anchor": [
-                    -85,
-                    -40
-                ],
-                "anno": "",
-                "cap": 125.442,
-                "coords": [
-                    37.37834,
-                    -107.57486
-                ],
-                "id": 933,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1938,
-                    "inflow": 1802,
-                    "release": 1882,
-                    "storage": 1731
-                }
-            }
-        },
-        "title": "San Juan Basin",
-        "zoom": 9
+        "coords": [
+          39.57,
+          -110.85
+        ],
+        "huc-level": 8
+      },
+      "14060009_San_Rafael": {
+        "alias": "San Rafael",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          39.06,
+          -110.9
+        ],
+        "huc-level": 8
+      },
+      "140600_Lower_Green": {
+        "alias": "Lower Green",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          39.67,
+          -111.53
+        ],
+        "huc-level": 6
+      },
+      "14070002_Muddy": {
+        "alias": "Muddy",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          38.75,
+          -111.2
+        ],
+        "huc-level": 8
+      },
+      "14070003_Fremont": {
+        "alias": "Fremont",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          38.45,
+          -111.76
+        ],
+        "huc-level": 8
+      },
+      "140700_Upper_Colorado-Dirty_Devil": {
+        "alias": "Upper Colorado-Dirty Devil",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          38.72,
+          -111.86
+        ],
+        "huc-level": 6
+      }
     },
-    "ub": {
-        "center": [
-            40.2,
-            -110.3
+    "reservoirs": {
+      "Huntington North": {
+        "alias": null,
+        "anchor": [
+          0,
+          10
         ],
-        "forecasts": {},
-        "huc_filter": [
-            14060003,
-            14060004,
-            14060005,
-            14060010
+        "anno": "",
+        "cap": 1105.91,
+        "coords": [
+          39.38458,
+          -111.09082
         ],
-        "huc_level": 6,
-        "regions": {
-            "Duchesne": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.42,
-                    -110.65
-                ],
-                "huc-level": 8
-            },
-            "Lower Green": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.4,
-                    -110.23
-                ],
-                "huc-level": 6
-            },
-            "Lower Green-Desolation Canyon": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    39.86,
-                    -110.5
-                ],
-                "huc-level": 8
-            },
-            "Lower Green-Diamond": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.35,
-                    -109.56
-                ],
-                "huc-level": 8
-            },
-            "Strawberry": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.2,
-                    -110.815
-                ],
-                "huc-level": 8
-            }
-        },
-        "reservoirs": {
-            "Currant Creek": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 15.464,
-                "coords": [
-                    40.33841,
-                    -111.05821
-                ],
-                "id": 952,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1957,
-                    "inflow": 1821,
-                    "release": 1901,
-                    "storage": 1750
-                }
-            },
-            "Moon Lake": {
-                "alias": null,
-                "anchor": [
-                    -30,
-                    0
-                ],
-                "anno": "",
-                "cap": 37.848,
-                "coords": [
-                    40.57445,
-                    -110.50665
-                ],
-                "id": 930,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1935,
-                    "inflow": 1799,
-                    "release": 1879,
-                    "storage": 1728
-                }
-            },
-            "Red Fleet": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    12
-                ],
-                "anno": "",
-                "cap": 25.7,
-                "coords": [
-                    40.57543,
-                    -109.42052
-                ],
-                "id": 960,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1965,
-                    "inflow": 1829,
-                    "release": 1909,
-                    "storage": 1758
-                }
-            },
-            "Soldier Creek": {
-                "alias": null,
-                "anchor": [
-                    55,
-                    0
-                ],
-                "anno": "",
-                "cap": 1105.91,
-                "coords": [
-                    40.13564,
-                    -111.02659
-                ],
-                "id": 962,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1967,
-                    "inflow": 1831,
-                    "release": 1911,
-                    "storage": 1760
-                }
-            },
-            "Starvation": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 162.279,
-                "coords": [
-                    40.19324,
-                    -110.44722
-                ],
-                "id": 928,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1934,
-                    "inflow": 1798,
-                    "release": 1878,
-                    "storage": 1726
-                }
-            },
-            "Steinaker": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    -14
-                ],
-                "anno": "",
-                "cap": 36.148,
-                "coords": [
-                    40.51456,
-                    -109.53275
-                ],
-                "id": 927,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1933,
-                    "inflow": 1797,
-                    "release": 1877,
-                    "storage": 1725
-                }
-            },
-            "Upper Stillwater": {
-                "alias": null,
-                "anchor": [
-                    30,
-                    0
-                ],
-                "anno": "",
-                "cap": 31.382,
-                "coords": [
-                    40.56565,
-                    -110.70044
-                ],
-                "id": 963,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1968,
-                    "inflow": 1832,
-                    "release": 1912,
-                    "storage": 1761
-                }
-            }
-        },
-        "title": "Uinta Basin",
-        "zoom": 9
+        "id": 956,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1961,
+          "inflow": 1825,
+          "release": 1905,
+          "storage": 1754
+        }
+      },
+      "Joes Valley": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 61.59,
+        "coords": [
+          39.2901,
+          -111.27888
+        ],
+        "id": 932,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1937,
+          "inflow": 1801,
+          "release": 1881,
+          "storage": 1730
+        }
+      },
+      "Scofield": {
+        "alias": null,
+        "anchor": [
+          0,
+          -10
+        ],
+        "anno": "",
+        "cap": 65.8,
+        "coords": [
+          39.77656,
+          -111.05074
+        ],
+        "id": 931,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1936,
+          "inflow": 1800,
+          "release": 1880,
+          "storage": 1729
+        }
+      }
     },
-    "uc": {
-        "center": [
-            39.6,
-            -108.6
+    "title": "Price/San Rafael Basins",
+    "zoom": 9
+  },
+  "rg": {
+    "center": [
+      35,
+      -106
+    ],
+    "forecasts": {},
+    "huc_filter": [
+      1301,
+      1302,
+      1303,
+      1305,
+      1306,
+      14080101
+    ],
+    "huc_level": 2,
+    "regions": {
+      "130100_Rio_Grande_Headwaters": {
+        "alias": "Rio Grande Headwaters",
+        "anchor": [
+          0,
+          0
         ],
-        "forecasts": {},
-        "huc_filter": 14,
-        "huc_level": 2,
-        "regions": {
-            "Colorado Headwaters": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40,
-                    -107.1
-                ],
-                "huc-level": 6
-            },
-            "Gunnison": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    39.0,
-                    -108.3
-                ],
-                "huc-level": 6
-            },
-            "Lower Green": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.5,
-                    -110.8
-                ],
-                "huc-level": 6
-            },
-            "Lower San Juan": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37.7,
-                    -110.2
-                ],
-                "huc-level": 6
-            },
-            "Upper Colorado": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    39.8,
-                    -110.7
-                ],
-                "huc-level": 2
-            },
-            "Upper Colorado-Dirty Devil": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    38.2,
-                    -112.25
-                ],
-                "huc-level": 6
-            },
-            "Upper Colorado-Dolores": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37.7,
-                    -108.2
-                ],
-                "huc-level": 6
-            },
-            "Upper Green": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    42.9,
-                    -110.5
-                ],
-                "huc-level": 6
-            },
-            "Upper San Juan": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    36.3,
-                    -108.5
-                ],
-                "huc-level": 6
-            },
-            "White-Yampa": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.9,
-                    -107.9
-                ],
-                "huc-level": 6
-            }
-        },
-        "reservoirs": {
-            "Blue Mesa": {
-                "alias": null,
-                "anchor": [
-                    -115,
-                    25
-                ],
-                "anno": "",
-                "cap": 827.94,
-                "coords": [
-                    38.453,
-                    -107.337
-                ],
-                "id": 913,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1923,
-                    "inflow": 1787,
-                    "release": 1867,
-                    "storage": 1714
-                }
-            },
-            "Crystal": {
-                "alias": null,
-                "anchor": [
-                    115,
-                    -25
-                ],
-                "anno": "",
-                "cap": 17.536,
-                "coords": [
-                    38.51,
-                    -107.624
-                ],
-                "id": 915,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1925,
-                    "inflow": 1844,
-                    "release": 1869,
-                    "storage": 1716
-                }
-            },
-            "Flaming Gorge": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 3749,
-                "coords": [
-                    41.0934,
-                    -109.5406
-                ],
-                "id": 917,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1927,
-                    "inflow": 1791,
-                    "release": 1871,
-                    "storage": 1718
-                }
-            },
-            "Fontenelle": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 333.956,
-                "coords": [
-                    42.026,
-                    -110.068
-                ],
-                "id": 916,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1926,
-                    "inflow": 1790,
-                    "release": 1870,
-                    "storage": 1717
-                }
-            },
-            "Lake Powell": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 24322,
-                "coords": [
-                    37.0688,
-                    -111.2439
-                ],
-                "id": 919,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1928,
-                    "inflow": 1792,
-                    "release": 1872,
-                    "storage": 1719
-                }
-            },
-            "Morrow Point": {
-                "alias": null,
-                "anchor": [
-                    -15,
-                    0
-                ],
-                "anno": "",
-                "cap": 117.25,
-                "coords": [
-                    38.452,
-                    -107.538
-                ],
-                "id": 914,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1924,
-                    "inflow": 1843,
-                    "release": 1868,
-                    "storage": 1715
-                }
-            },
-            "Navajo": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 1696,
-                "coords": [
-                    36.801,
-                    -107.612
-                ],
-                "id": 920,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1929,
-                    "inflow": 1793,
-                    "release": 1873,
-                    "storage": 1720
-                }
-            }
-        },
-        "title": "Upper Colorado Basin",
-        "zoom": 7
+        "coords": [
+          37.9,
+          -106.65
+        ],
+        "huc-level": 6
+      },
+      "130201_Upper_Rio_Grande": {
+        "alias": "Upper Rio Grande",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          36.9,
+          -106.85
+        ],
+        "huc-level": 6
+      },
+      "130202_Rio_Grande-Elephant_Butte": {
+        "alias": "Middle Rio Grande",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          34.7,
+          -108.2
+        ],
+        "huc-level": 6
+      },
+      "13060001_Pecos_Headwaters": {
+        "alias": "Pecos Headwaters",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          35.6,
+          -104.5
+        ],
+        "huc-level": 8
+      },
+      "13_Rio_Grande_Region": {
+        "alias": "Rio Grande",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          34.7,
+          -106.5
+        ],
+        "huc-level": 2
+      },
+      "14080101_Upper_San_Juan": {
+        "alias": "Upper San Juan",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37,
+          -108.55
+        ],
+        "huc-level": 8
+      }
     },
-    "ug": {
-        "center": [
-            41.6,
-            -109.7
+    "reservoirs": {
+      "Abiquiu": {
+        "alias": null,
+        "anchor": [
+          0,
+          -48
         ],
-        "forecasts": {},
-        "huc_filter": [
-            1404,
-            140500
+        "anno": "",
+        "cap": 186.82,
+        "coords": [
+          36.2686,
+          -106.4551
         ],
-        "huc_level": 4,
-        "regions": {
-            "Big Sandy": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    42.06,
-                    -109.64
-                ],
-                "huc-level": 8
-            },
-            "Blacks Fork": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    41.3,
-                    -110.4
-                ],
-                "huc-level": 8
-            },
-            "Little Snake": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    41.05,
-                    -108.08
-                ],
-                "huc-level": 8
-            },
-            "New Fork": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    42.9,
-                    -109.8
-                ],
-                "huc-level": 8
-            },
-            "Upper Green": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    41.6,
-                    -110.1
-                ],
-                "huc-level": 6
-            },
-            "Upper Green-Flaming Gorge Reservoir": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    41.12,
-                    -109.92
-                ],
-                "huc-level": 8
-            },
-            "Upper White": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.02,
-                    -107.85
-                ],
-                "huc-level": 8
-            },
-            "Upper Yampa": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    40.53,
-                    -107.35
-                ],
-                "huc-level": 8
-            }
-        },
-        "reservoirs": {
-            "Big Sandy": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    20
-                ],
-                "anno": "",
-                "cap": 36.688,
-                "coords": [
-                    42.24993,
-                    -109.42803
-                ],
-                "id": 936,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1941,
-                    "inflow": 1805,
-                    "release": 1885,
-                    "storage": 1734
-                }
-            },
-            "Eden": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    -20
-                ],
-                "anno": "",
-                "cap": 13.164,
-                "coords": [
-                    42.21665,
-                    -109.37087
-                ],
-                "id": 954,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1959,
-                    "inflow": 1823,
-                    "release": 1903,
-                    "storage": 1752
-                }
-            },
-            "Flaming Gorge": {
-                "alias": null,
-                "anchor": [
-                    50,
-                    30
-                ],
-                "anno": "",
-                "cap": 3749.0,
-                "coords": [
-                    40.91474,
-                    -109.42185
-                ],
-                "id": 917,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1927,
-                    "inflow": 1791,
-                    "release": 1871,
-                    "storage": 1718
-                }
-            },
-            "Fontenelle": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 333.956,
-                "coords": [
-                    42.02617,
-                    -110.06816
-                ],
-                "id": 916,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1926,
-                    "inflow": 1790,
-                    "release": 1870,
-                    "storage": 1717
-                }
-            },
-            "Meeks Cabin": {
-                "alias": null,
-                "anchor": [
-                    25,
-                    0
-                ],
-                "anno": "",
-                "cap": 29.87,
-                "coords": [
-                    41.01664,
-                    -110.58344
-                ],
-                "id": 944,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1949,
-                    "inflow": 1813,
-                    "release": 1893,
-                    "storage": 1742
-                }
-            },
-            "Stateline": {
-                "alias": null,
-                "anchor": [
-                    -25,
-                    0
-                ],
-                "anno": "",
-                "cap": 13.88,
-                "coords": [
-                    40.98291,
-                    -110.39038
-                ],
-                "id": 949,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1954,
-                    "inflow": 1818,
-                    "release": 1898,
-                    "storage": 1747
-                }
-            }
-        },
-        "title": "Upper Green Basin",
-        "zoom": 9
-    }
+        "id": 2729,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19126,
+          "inflow": null,
+          "release": 20055,
+          "storage": 19127
+        }
+      },
+      "Avalon": {
+        "alias": null,
+        "anchor": [
+          -35,
+          -10
+        ],
+        "anno": "",
+        "cap": 4.466,
+        "coords": [
+          32.4908,
+          -104.2522
+        ],
+        "id": 2684,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19171,
+          "inflow": null,
+          "release": 20821,
+          "storage": 19172
+        }
+      },
+      "Brantley": {
+        "alias": null,
+        "anchor": [
+          75,
+          10
+        ],
+        "anno": "",
+        "cap": 42.602,
+        "coords": [
+          32.5442,
+          -104.3814
+        ],
+        "id": 937,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1942,
+          "inflow": 1812,
+          "release": 1892,
+          "storage": 1735
+        }
+      },
+      "Caballo": {
+        "alias": null,
+        "anchor": [
+          0,
+          -35
+        ],
+        "anno": "",
+        "cap": 224.464,
+        "coords": [
+          32.89646,
+          -107.29219
+        ],
+        "id": 1094,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 2679,
+          "inflow": 2680,
+          "release": 2682,
+          "storage": 2678
+        }
+      },
+      "El Vado": {
+        "alias": null,
+        "anchor": [
+          60,
+          -30
+        ],
+        "anno": "",
+        "cap": 114.202,
+        "coords": [
+          36.5948,
+          -106.7366
+        ],
+        "id": 2685,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19547,
+          "inflow": null,
+          "release": 19626,
+          "storage": 19548
+        }
+      },
+      "Elephant Butte": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 2010.9,
+        "coords": [
+          33.15,
+          -107.2
+        ],
+        "id": 1119,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 2685,
+          "inflow": 2686,
+          "release": 2688,
+          "storage": 2684
+        }
+      },
+      "Heron": {
+        "alias": null,
+        "anchor": [
+          -60,
+          -30
+        ],
+        "anno": "",
+        "cap": 401.662,
+        "coords": [
+          36.6973,
+          -106.6992
+        ],
+        "id": 2686,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19175,
+          "inflow": null,
+          "release": 19609,
+          "storage": 19176
+        }
+      },
+      "Santa Rosa": {
+        "alias": null,
+        "anchor": [
+          0,
+          25
+        ],
+        "anno": "",
+        "cap": 101.083,
+        "coords": [
+          35.0443,
+          -107.6663
+        ],
+        "id": 2730,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19165,
+          "inflow": 20826,
+          "release": 20578,
+          "storage": 19164
+        }
+      },
+      "Sumner": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 35.917,
+        "coords": [
+          34.62884,
+          -104.3924
+        ],
+        "id": 943,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1948,
+          "inflow": 1812,
+          "release": 1892,
+          "storage": 1741
+        }
+      }
+    },
+    "title": "Rio Grande Basin",
+    "zoom": 7
+  },
+  "sj": {
+    "center": [
+      37,
+      -108.0
+    ],
+    "forecasts": {},
+    "huc_filter": 1408,
+    "huc_level": 4,
+    "regions": {
+      "14080101_Upper_San_Juan": {
+        "alias": "Upper San Juan",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37,
+          -107
+        ],
+        "huc-level": 8
+      },
+      "14080102_Piedra": {
+        "alias": "Piedra",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37.53,
+          -107.34
+        ],
+        "huc-level": 8
+      },
+      "14080104_Animas": {
+        "alias": "Animas",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37.65,
+          -107.8
+        ],
+        "huc-level": 8
+      },
+      "14080105_Middle_San_Juan": {
+        "alias": "Middle San Juan",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          36.9,
+          -109
+        ],
+        "huc-level": 8
+      },
+      "14080106_Chaco": {
+        "alias": "Chaco",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          36.45,
+          -108.84
+        ],
+        "huc-level": 8
+      },
+      "14080107_Mancos": {
+        "alias": "Mancos",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37.2,
+          -108.7
+        ],
+        "huc-level": 8
+      },
+      "14080203_Montezuma": {
+        "alias": "Montezuma",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37.7,
+          -109.28
+        ],
+        "huc-level": 8
+      },
+      "14080204_Chinle": {
+        "alias": "Chinle",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          36.8,
+          -109.8
+        ],
+        "huc-level": 8
+      },
+      "1408_San_Juan": {
+        "alias": "San Juan",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37,
+          -108.26
+        ],
+        "huc-level": 4
+      }
+    },
+    "reservoirs": {
+      "Jackson": {
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 115.075,
+        "coords": [
+          37.40186,
+          -108.27342
+        ],
+        "id": 935,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1940,
+          "inflow": 1804,
+          "release": 1884,
+          "storage": 1733
+        }
+      },
+      "Lemon": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 39.792,
+        "coords": [
+          37.39538,
+          -107.66269
+        ],
+        "id": 934,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1939,
+          "inflow": 1803,
+          "release": 1883,
+          "storage": 1732
+        }
+      },
+      "McPhee": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 381.0,
+        "coords": [
+          37.57588,
+          -108.57307
+        ],
+        "id": 958,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1963,
+          "inflow": 1827,
+          "release": 1907,
+          "storage": 1756
+        }
+      },
+      "Navajo": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 1701.3,
+        "coords": [
+          36.80063,
+          -107.61203
+        ],
+        "id": 920,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1929,
+          "inflow": 1793,
+          "release": 1873,
+          "storage": 1720
+        }
+      },
+      "Nighthorse": {
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 115.075,
+        "coords": [
+          37.22392,
+          -107.91694
+        ],
+        "id": 3083,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 14621,
+          "inflow": 14617,
+          "release": 14620,
+          "storage": 14623
+        }
+      },
+      "Vallecito": {
+        "alias": null,
+        "anchor": [
+          -85,
+          -40
+        ],
+        "anno": "",
+        "cap": 125.442,
+        "coords": [
+          37.37834,
+          -107.57486
+        ],
+        "id": 933,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1938,
+          "inflow": 1802,
+          "release": 1882,
+          "storage": 1731
+        }
+      }
+    },
+    "title": "San Juan Basin",
+    "zoom": 9
+  },
+  "ub": {
+    "center": [
+      40.2,
+      -110.3
+    ],
+    "forecasts": {},
+    "huc_filter": [
+      14060003,
+      14060004,
+      14060005,
+      14060010
+    ],
+    "huc_level": 6,
+    "regions": {
+      "14060003_Duchesne": {
+        "alias": "Duchesne",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.42,
+          -110.65
+        ],
+        "huc-level": 8
+      },
+      "14060004_Strawberry": {
+        "alias": "Strawberry",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.2,
+          -110.815
+        ],
+        "huc-level": 8
+      },
+      "14060005_Lower_Green-Desolation_Canyon": {
+        "alias": "Lower Green-Desolation Canyon",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          39.86,
+          -110.5
+        ],
+        "huc-level": 8
+      },
+      "14060010_Lower_Green-Diamond": {
+        "alias": "Lower Green-Diamond",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.35,
+          -109.56
+        ],
+        "huc-level": 8
+      },
+      "140600_Lower_Green": {
+        "alias": "Lower Green",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.4,
+          -110.23
+        ],
+        "huc-level": 6
+      }
+    },
+    "reservoirs": {
+      "Currant Creek": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 15.464,
+        "coords": [
+          40.33841,
+          -111.05821
+        ],
+        "id": 952,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1957,
+          "inflow": 1821,
+          "release": 1901,
+          "storage": 1750
+        }
+      },
+      "Moon Lake": {
+        "alias": null,
+        "anchor": [
+          -30,
+          0
+        ],
+        "anno": "",
+        "cap": 37.848,
+        "coords": [
+          40.57445,
+          -110.50665
+        ],
+        "id": 930,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1935,
+          "inflow": 1799,
+          "release": 1879,
+          "storage": 1728
+        }
+      },
+      "Red Fleet": {
+        "alias": null,
+        "anchor": [
+          0,
+          12
+        ],
+        "anno": "",
+        "cap": 25.7,
+        "coords": [
+          40.57543,
+          -109.42052
+        ],
+        "id": 960,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1965,
+          "inflow": 1829,
+          "release": 1909,
+          "storage": 1758
+        }
+      },
+      "Soldier Creek": {
+        "alias": null,
+        "anchor": [
+          55,
+          0
+        ],
+        "anno": "",
+        "cap": 1105.91,
+        "coords": [
+          40.13564,
+          -111.02659
+        ],
+        "id": 962,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1967,
+          "inflow": 1831,
+          "release": 1911,
+          "storage": 1760
+        }
+      },
+      "Starvation": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 162.279,
+        "coords": [
+          40.19324,
+          -110.44722
+        ],
+        "id": 928,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1934,
+          "inflow": 1798,
+          "release": 1878,
+          "storage": 1726
+        }
+      },
+      "Steinaker": {
+        "alias": null,
+        "anchor": [
+          0,
+          -14
+        ],
+        "anno": "",
+        "cap": 36.148,
+        "coords": [
+          40.51456,
+          -109.53275
+        ],
+        "id": 927,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1933,
+          "inflow": 1797,
+          "release": 1877,
+          "storage": 1725
+        }
+      },
+      "Upper Stillwater": {
+        "alias": null,
+        "anchor": [
+          30,
+          0
+        ],
+        "anno": "",
+        "cap": 31.382,
+        "coords": [
+          40.56565,
+          -110.70044
+        ],
+        "id": 963,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1968,
+          "inflow": 1832,
+          "release": 1912,
+          "storage": 1761
+        }
+      }
+    },
+    "title": "Uinta Basin",
+    "zoom": 9
+  },
+  "uc": {
+    "center": [
+      39.6,
+      -108.6
+    ],
+    "forecasts": {},
+    "huc_filter": 14,
+    "huc_level": 2,
+    "regions": {
+      "140100_Colorado_Headwaters": {
+        "alias": "Colorado Headwaters",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40,
+          -107.1
+        ],
+        "huc-level": 6
+      },
+      "140200_Gunnison": {
+        "alias": "Gunnison",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          39.0,
+          -108.3
+        ],
+        "huc-level": 6
+      },
+      "140300_Upper_Colorado-Dolores": {
+        "alias": "Upper Colorado-Dolores",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37.7,
+          -108.2
+        ],
+        "huc-level": 6
+      },
+      "140401_Upper_Green": {
+        "alias": "Upper Green",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          42.9,
+          -110.5
+        ],
+        "huc-level": 6
+      },
+      "140500_White-Yampa": {
+        "alias": "White-Yampa",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.9,
+          -107.9
+        ],
+        "huc-level": 6
+      },
+      "140600_Lower_Green": {
+        "alias": "Lower Green",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.5,
+          -110.8
+        ],
+        "huc-level": 6
+      },
+      "140700_Upper_Colorado-Dirty_Devil": {
+        "alias": "Upper Colorado-Dirty Devil",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          38.2,
+          -112.25
+        ],
+        "huc-level": 6
+      },
+      "140801_Upper_San_Juan": {
+        "alias": "Upper San Juan",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          36.3,
+          -108.5
+        ],
+        "huc-level": 6
+      },
+      "140802_Lower_San_Juan": {
+        "alias": "Lower San Juan",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37.7,
+          -110.2
+        ],
+        "huc-level": 6
+      },
+      "14_Upper_Colorado_Region": {
+        "alias": "Upper Colorado",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          39.8,
+          -110.7
+        ],
+        "huc-level": 2
+      }
+    },
+    "reservoirs": {
+      "Blue Mesa": {
+        "alias": null,
+        "anchor": [
+          -115,
+          25
+        ],
+        "anno": "",
+        "cap": 827.94,
+        "coords": [
+          38.453,
+          -107.337
+        ],
+        "id": 913,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1923,
+          "inflow": 1787,
+          "release": 1867,
+          "storage": 1714
+        }
+      },
+      "Crystal": {
+        "alias": null,
+        "anchor": [
+          115,
+          -25
+        ],
+        "anno": "",
+        "cap": 17.536,
+        "coords": [
+          38.51,
+          -107.624
+        ],
+        "id": 915,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1925,
+          "inflow": 1844,
+          "release": 1869,
+          "storage": 1716
+        }
+      },
+      "Flaming Gorge": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 3749,
+        "coords": [
+          41.0934,
+          -109.5406
+        ],
+        "id": 917,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1927,
+          "inflow": 1791,
+          "release": 1871,
+          "storage": 1718
+        }
+      },
+      "Fontenelle": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 333.956,
+        "coords": [
+          42.026,
+          -110.068
+        ],
+        "id": 916,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1926,
+          "inflow": 1790,
+          "release": 1870,
+          "storage": 1717
+        }
+      },
+      "Lake Powell": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 24322,
+        "coords": [
+          37.0688,
+          -111.2439
+        ],
+        "id": 919,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1928,
+          "inflow": 1792,
+          "release": 1872,
+          "storage": 1719
+        }
+      },
+      "Morrow Point": {
+        "alias": null,
+        "anchor": [
+          -15,
+          0
+        ],
+        "anno": "",
+        "cap": 117.25,
+        "coords": [
+          38.452,
+          -107.538
+        ],
+        "id": 914,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1924,
+          "inflow": 1843,
+          "release": 1868,
+          "storage": 1715
+        }
+      },
+      "Navajo": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 1696,
+        "coords": [
+          36.801,
+          -107.612
+        ],
+        "id": 920,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1929,
+          "inflow": 1793,
+          "release": 1873,
+          "storage": 1720
+        }
+      }
+    },
+    "title": "Upper Colorado Basin",
+    "zoom": 7
+  },
+  "ug": {
+    "center": [
+      41.6,
+      -109.7
+    ],
+    "forecasts": {},
+    "huc_filter": [
+      1404,
+      140500
+    ],
+    "huc_level": 4,
+    "regions": {
+      "14040102_New_Fork": {
+        "alias": "New Fork",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          42.9,
+          -109.8
+        ],
+        "huc-level": 8
+      },
+      "14040104_Big_Sandy": {
+        "alias": "Big Sandy",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          42.06,
+          -109.64
+        ],
+        "huc-level": 8
+      },
+      "14040106_Upper_Green-Flaming_Gorge_Reservoir": {
+        "alias": "Upper Green-Flaming Gorge Reservoir",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          41.12,
+          -109.92
+        ],
+        "huc-level": 8
+      },
+      "14040107_Blacks_Fork": {
+        "alias": "Blacks Fork",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          41.3,
+          -110.4
+        ],
+        "huc-level": 8
+      },
+      "140401_Upper_Green": {
+        "alias": "Upper Green",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          41.6,
+          -110.1
+        ],
+        "huc-level": 6
+      },
+      "14050001_Upper_Yampa": {
+        "alias": "Upper Yampa",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.53,
+          -107.35
+        ],
+        "huc-level": 8
+      },
+      "14050003_Little_Snake": {
+        "alias": "Little Snake",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          41.05,
+          -108.08
+        ],
+        "huc-level": 8
+      },
+      "14050005_Upper_White": {
+        "alias": "Upper White",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          40.02,
+          -107.85
+        ],
+        "huc-level": 8
+      }
+    },
+    "reservoirs": {
+      "Big Sandy": {
+        "alias": null,
+        "anchor": [
+          0,
+          20
+        ],
+        "anno": "",
+        "cap": 36.688,
+        "coords": [
+          42.24993,
+          -109.42803
+        ],
+        "id": 936,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1941,
+          "inflow": 1805,
+          "release": 1885,
+          "storage": 1734
+        }
+      },
+      "Eden": {
+        "alias": null,
+        "anchor": [
+          0,
+          -20
+        ],
+        "anno": "",
+        "cap": 13.164,
+        "coords": [
+          42.21665,
+          -109.37087
+        ],
+        "id": 954,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1959,
+          "inflow": 1823,
+          "release": 1903,
+          "storage": 1752
+        }
+      },
+      "Flaming Gorge": {
+        "alias": null,
+        "anchor": [
+          50,
+          30
+        ],
+        "anno": "",
+        "cap": 3749.0,
+        "coords": [
+          40.91474,
+          -109.42185
+        ],
+        "id": 917,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1927,
+          "inflow": 1791,
+          "release": 1871,
+          "storage": 1718
+        }
+      },
+      "Fontenelle": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 333.956,
+        "coords": [
+          42.02617,
+          -110.06816
+        ],
+        "id": 916,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1926,
+          "inflow": 1790,
+          "release": 1870,
+          "storage": 1717
+        }
+      },
+      "Meeks Cabin": {
+        "alias": null,
+        "anchor": [
+          25,
+          0
+        ],
+        "anno": "",
+        "cap": 29.87,
+        "coords": [
+          41.01664,
+          -110.58344
+        ],
+        "id": 944,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1949,
+          "inflow": 1813,
+          "release": 1893,
+          "storage": 1742
+        }
+      },
+      "Stateline": {
+        "alias": null,
+        "anchor": [
+          -25,
+          0
+        ],
+        "anno": "",
+        "cap": 13.88,
+        "coords": [
+          40.98291,
+          -110.39038
+        ],
+        "id": 949,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1954,
+          "inflow": 1818,
+          "release": 1898,
+          "storage": 1747
+        }
+      }
+    },
+    "title": "Upper Green Basin",
+    "zoom": 9
+  }
 }

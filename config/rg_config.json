@@ -1,294 +1,294 @@
 {
-    "rg": {
-        "center": [
-            35,
-            -106
+  "rg": {
+    "center": [
+      35,
+      -106
+    ],
+    "forecasts": {},
+    "huc_filter": [
+      1301,
+      1302,
+      1303,
+      1305,
+      1306,
+      14080101
+    ],
+    "huc_level": 2,
+    "regions": {
+      "130100_Rio_Grande_Headwaters": {
+        "alias": "Rio Grande Headwaters",
+        "anchor": [
+          0,
+          0
         ],
-        "forecasts": {},
-        "huc_filter": [
-            1301,
-            1302,
-            1303,
-            1305,
-            1306,
-            14080101
+        "coords": [
+          37.9,
+          -106.65
         ],
-        "huc_level": 2,
-        "regions": {
-            "Pecos Headwaters": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    35.6,
-                    -104.5
-                ],
-                "huc-level": 8
-            },
-            "Rio Grande": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    34.7,
-                    -106.5
-                ],
-                "huc-level": 2
-            },
-            "Rio Grande Headwaters": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37.9,
-                    -106.65
-                ],
-                "huc-level": 6
-            },
-            "Rio Grande-Elephant Butte": {
-                "alias": "Middle Rio Grande",
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    34.7,
-                    -108.2
-                ],
-                "huc-level": 6
-            },
-            "Upper Rio Grande": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    36.9,
-                    -106.85
-                ],
-                "huc-level": 6
-            },
-            "Upper San Juan": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "coords": [
-                    37,
-                    -108.55
-                ],
-                "huc-level": 8
-            }
-        },
-        "reservoirs": {
-            "Abiquiu": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    -48
-                ],
-                "anno": "",
-                "cap": 186.82,
-                "coords": [
-                    36.2686,
-                    -106.4551
-                ],
-                "id": 2729,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19126,
-                    "inflow": null,
-                    "release": 20055,
-                    "storage": 19127
-                }
-            },
-            "Avalon": {
-                "alias": null,
-                "anchor": [
-                    -35,
-                    -10
-                ],
-                "anno": "",
-                "cap": 4.466,
-                "coords": [
-                    32.4908,
-                    -104.2522
-                ],
-                "id": 2684,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19171,
-                    "inflow": null,
-                    "release": 20821,
-                    "storage": 19172
-                }
-            },
-            "Brantley": {
-                "alias": null,
-                "anchor": [
-                    75,
-                    10
-                ],
-                "anno": "",
-                "cap": 42.602,
-                "coords": [
-                    32.5442,
-                    -104.3814
-                ],
-                "id": 937,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1942,
-                    "inflow": 1812,
-                    "release": 1892,
-                    "storage": 1735
-                }
-            },
-            "Caballo": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    -35
-                ],
-                "anno": "",
-                "cap": 224.464,
-                "coords": [
-                    32.89646,
-                    -107.29219
-                ],
-                "id": 1094,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 2679,
-                    "inflow": 2680,
-                    "release": 2682,
-                    "storage": 2678
-                }
-            },
-            "El Vado": {
-                "alias": null,
-                "anchor": [
-                    60,
-                    -30
-                ],
-                "anno": "",
-                "cap": 114.202,
-                "coords": [
-                    36.5948,
-                    -106.7366
-                ],
-                "id": 2685,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19547,
-                    "inflow": null,
-                    "release": 19626,
-                    "storage": 19548
-                }
-            },
-            "Elephant Butte": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 2010.9,
-                "coords": [
-                    33.15,
-                    -107.2
-                ],
-                "id": 1119,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 2685,
-                    "inflow": 2686,
-                    "release": 2688,
-                    "storage": 2684
-                }
-            },
-            "Heron": {
-                "alias": null,
-                "anchor": [
-                    -60,
-                    -30
-                ],
-                "anno": "",
-                "cap": 401.662,
-                "coords": [
-                    36.6973,
-                    -106.6992
-                ],
-                "id": 2686,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19175,
-                    "inflow": null,
-                    "release": 19609,
-                    "storage": 19176
-                }
-            },
-            "Santa Rosa": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    25
-                ],
-                "anno": "",
-                "cap": 101.083,
-                "coords": [
-                    35.0443,
-                    -107.6663
-                ],
-                "id": 2730,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 19165,
-                    "inflow": 20826,
-                    "release": 20578,
-                    "storage": 19164
-                }
-            },
-            "Sumner": {
-                "alias": null,
-                "anchor": [
-                    0,
-                    0
-                ],
-                "anno": "",
-                "cap": 35.917,
-                "coords": [
-                    34.62884,
-                    -104.3924
-                ],
-                "id": 943,
-                "pop_dir": "up",
-                "region": "uc",
-                "sdis": {
-                    "elev": 1948,
-                    "inflow": 1812,
-                    "release": 1892,
-                    "storage": 1741
-                }
-            }
-        },
-        "title": "Rio Grande Basin",
-        "zoom": 7
-    }
+        "huc-level": 6
+      },
+      "130201_Upper_Rio_Grande": {
+        "alias": "Upper Rio Grande",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          36.9,
+          -106.85
+        ],
+        "huc-level": 6
+      },
+      "130202_Rio_Grande-Elephant_Butte": {
+        "alias": "Middle Rio Grande",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          34.7,
+          -108.2
+        ],
+        "huc-level": 6
+      },
+      "13060001_Pecos_Headwaters": {
+        "alias": "Pecos Headwaters",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          35.6,
+          -104.5
+        ],
+        "huc-level": 8
+      },
+      "13_Rio_Grande_Region": {
+        "alias": "Rio Grande",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          34.7,
+          -106.5
+        ],
+        "huc-level": 2
+      },
+      "14080101_Upper_San_Juan": {
+        "alias": "Upper San Juan",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          37,
+          -108.55
+        ],
+        "huc-level": 8
+      }
+    },
+    "reservoirs": {
+      "Abiquiu": {
+        "alias": null,
+        "anchor": [
+          0,
+          -48
+        ],
+        "anno": "",
+        "cap": 186.82,
+        "coords": [
+          36.2686,
+          -106.4551
+        ],
+        "id": 2729,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19126,
+          "inflow": null,
+          "release": 20055,
+          "storage": 19127
+        }
+      },
+      "Avalon": {
+        "alias": null,
+        "anchor": [
+          -35,
+          -10
+        ],
+        "anno": "",
+        "cap": 4.466,
+        "coords": [
+          32.4908,
+          -104.2522
+        ],
+        "id": 2684,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19171,
+          "inflow": null,
+          "release": 20821,
+          "storage": 19172
+        }
+      },
+      "Brantley": {
+        "alias": null,
+        "anchor": [
+          75,
+          10
+        ],
+        "anno": "",
+        "cap": 42.602,
+        "coords": [
+          32.5442,
+          -104.3814
+        ],
+        "id": 937,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1942,
+          "inflow": 1812,
+          "release": 1892,
+          "storage": 1735
+        }
+      },
+      "Caballo": {
+        "alias": null,
+        "anchor": [
+          0,
+          -35
+        ],
+        "anno": "",
+        "cap": 224.464,
+        "coords": [
+          32.89646,
+          -107.29219
+        ],
+        "id": 1094,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 2679,
+          "inflow": 2680,
+          "release": 2682,
+          "storage": 2678
+        }
+      },
+      "El Vado": {
+        "alias": null,
+        "anchor": [
+          60,
+          -30
+        ],
+        "anno": "",
+        "cap": 114.202,
+        "coords": [
+          36.5948,
+          -106.7366
+        ],
+        "id": 2685,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19547,
+          "inflow": null,
+          "release": 19626,
+          "storage": 19548
+        }
+      },
+      "Elephant Butte": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 2010.9,
+        "coords": [
+          33.15,
+          -107.2
+        ],
+        "id": 1119,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 2685,
+          "inflow": 2686,
+          "release": 2688,
+          "storage": 2684
+        }
+      },
+      "Heron": {
+        "alias": null,
+        "anchor": [
+          -60,
+          -30
+        ],
+        "anno": "",
+        "cap": 401.662,
+        "coords": [
+          36.6973,
+          -106.6992
+        ],
+        "id": 2686,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19175,
+          "inflow": null,
+          "release": 19609,
+          "storage": 19176
+        }
+      },
+      "Santa Rosa": {
+        "alias": null,
+        "anchor": [
+          0,
+          25
+        ],
+        "anno": "",
+        "cap": 101.083,
+        "coords": [
+          35.0443,
+          -107.6663
+        ],
+        "id": 2730,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 19165,
+          "inflow": 20826,
+          "release": 20578,
+          "storage": 19164
+        }
+      },
+      "Sumner": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 35.917,
+        "coords": [
+          34.62884,
+          -104.3924
+        ],
+        "id": 943,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1948,
+          "inflow": 1812,
+          "release": 1892,
+          "storage": 1741
+        }
+      }
+    },
+    "title": "Rio Grande Basin",
+    "zoom": 7
+  }
 }

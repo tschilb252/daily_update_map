@@ -200,7 +200,9 @@ def add_region_markers(basin_map, regions, nrcs_url=NRCS_CHARTS_URL, map_date=No
         if huc_level == lowest_huc:
             btn_size = 'btn-md'
             button_color = 'btn-primary'
+        nrcs_region_id = f''
         swe_url = f'{nrcs_url}/WTEQ/assocHUC{huc_level}/{region}{region_suffix}.html'
+        print(region_meta)
         prec_url = f'{nrcs_url}/PREC/assocHUC{huc_level}/{region}{region_suffix}.html'
         try:
             swe_txt = r_get(swe_url).text
@@ -579,7 +581,7 @@ if __name__ == '__main__':
         # print('  Adding Regional Forecast markers...')
         # add_frcst_markers(basin_map, forecasts, map_date=map_date)
         print('  Adding Reservoir markers...')
-        add_res_markers(basin_map, reservoirs, map_date=map_date)
+        #add_res_markers(basin_map, reservoirs, map_date=map_date)
         print('  Adding PREC/SWE markers...')
         add_region_markers(basin_map, regions, map_date=map_date)
         
