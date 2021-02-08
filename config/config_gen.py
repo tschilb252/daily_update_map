@@ -795,6 +795,12 @@ if __name__ == '__main__':
     if args.version:
         print('region_status.py v1.0')
         
+        
+
+    print('THIS FILE NEEDS TO BE UPDATED TO DEAL WITH NEW NRCS NAMING CONVENTION DO NOT USE')
+    sys.exit(0)
+    
+    
     this_dir = path.dirname(path.realpath(__file__))
     
     if args.remove:
