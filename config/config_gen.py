@@ -7,6 +7,7 @@ Created on Fri Apr  3 08:08:44 2020
 
 '''
 Keep in mind the top left corner of the button is the anchor point
+positive offsets move buttons to the left and upwards
 '''
 
 forecasts = {}
