@@ -21,23 +21,18 @@ from folium.features import DivIcon
 from daily_update_utils import get_season
 from daily_update_utils import add_optional_tilesets, add_huc_layer
 from daily_update_utils import get_favicon, get_bor_seal
-from daily_update_utils import get_bor_js, get_bor_css
+from daily_update_utils import get_bor_js
 from daily_update_utils import get_default_js, get_default_css
 from daily_update_utils import add_huc_chropleth, get_colormap
 from daily_update_utils import NRCS_CHARTS_URL
 from config.config_gen import forecasts, reservoirs, regions
 from browser_print import BrowserPrint
 
-bor_js = get_bor_js()
-bor_css = get_bor_css()
-
 default_js = get_default_js()
 default_css = get_default_css()
 
-folium.folium._default_js = default_js
-folium.folium._default_css = default_css
-# folium.folium._default_js = bor_js
-# folium.folium._default_css = bor_css
+folium.folium.Map.default_js = default_js
+folium.folium.Map.default_css = default_css
 
 def get_expand_button(title=''):
     return f'''
