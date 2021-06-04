@@ -639,7 +639,7 @@ rg_reservoirs = {
     },
     'Sumner': {
         'coords': [34.62884, -104.3924], 'region': 'uc', 'anno': '', 'cap': 35.917, 
-        'id': 943, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
+        'id': 943, 'alias': None, 'anchor': (0,-5), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1741, 'elev': 1948, 'inflow': 1812, 'release': 1892}
     },
@@ -656,8 +656,8 @@ rg_reservoirs = {
             {'storage': 19172, 'elev': 19171, 'inflow': None, 'release': 20821}
     },
     'Santa Rosa': {
-        'coords': [35.0443, -107.6663], 'region': 'uc', 'anno': '', 'cap': 101.083, 
-        'id': 2730, 'alias': None, 'anchor': (0,25), 'pop_dir': 'up',
+        'coords': [35.0443, -104.6663], 'region': 'uc', 'anno': '', 'cap': 101.083, 
+        'id': 2730, 'alias': None, 'anchor': (0,5), 'pop_dir': 'up',
         'sdis': 
             {'storage': 19164, 'elev': 19165, 'inflow': 20826, 'release': 20578}
     },   
