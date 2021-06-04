@@ -1,236 +1,236 @@
 {
-  "ub": {
-    "center": [
-      40.2,
-      -110.3
-    ],
-    "forecasts": {},
-    "huc_filter": [
-      14060003,
-      14060004,
-      14060005,
-      14060010
-    ],
-    "huc_level": 6,
-    "regions": {
-      "14060003_Duchesne": {
-        "alias": "Duchesne",
-        "anchor": [
-          0,
-          0
+    "ub": {
+        "center": [
+            40.2,
+            -110.3
         ],
-        "coords": [
-          40.42,
-          -110.65
+        "forecasts": {},
+        "huc_filter": [
+            14060003,
+            14060004,
+            14060005,
+            14060010
         ],
-        "huc-level": 8
-      },
-      "14060004_Strawberry": {
-        "alias": "Strawberry",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          40.2,
-          -110.815
-        ],
-        "huc-level": 8
-      },
-      "14060005_Lower_Green-Desolation_Canyon": {
-        "alias": "Lower Green-Desolation Canyon",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          39.86,
-          -110.5
-        ],
-        "huc-level": 8
-      },
-      "14060010_Lower_Green-Diamond": {
-        "alias": "Lower Green-Diamond",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          40.35,
-          -109.56
-        ],
-        "huc-level": 8
-      },
-      "140600_Lower_Green": {
-        "alias": "Lower Green",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          40.4,
-          -110.23
-        ],
-        "huc-level": 6
-      }
-    },
-    "reservoirs": {
-      "Currant Creek": {
-        "alias": null,
-        "anchor": [
-          0,
-          0
-        ],
-        "anno": "",
-        "cap": 15.464,
-        "coords": [
-          40.33841,
-          -111.05821
-        ],
-        "id": 952,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1957,
-          "inflow": 1821,
-          "release": 1901,
-          "storage": 1750
-        }
-      },
-      "Moon Lake": {
-        "alias": null,
-        "anchor": [
-          -30,
-          0
-        ],
-        "anno": "",
-        "cap": 37.848,
-        "coords": [
-          40.57445,
-          -110.50665
-        ],
-        "id": 930,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1935,
-          "inflow": 1799,
-          "release": 1879,
-          "storage": 1728
-        }
-      },
-      "Red Fleet": {
-        "alias": null,
-        "anchor": [
-          0,
-          12
-        ],
-        "anno": "",
-        "cap": 25.7,
-        "coords": [
-          40.57543,
-          -109.42052
-        ],
-        "id": 960,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1965,
-          "inflow": 1829,
-          "release": 1909,
-          "storage": 1758
-        }
-      },
-      "Soldier Creek": {
-        "alias": null,
-        "anchor": [
-          55,
-          0
-        ],
-        "anno": "",
-        "cap": 1105.91,
-        "coords": [
-          40.13564,
-          -111.02659
-        ],
-        "id": 962,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1967,
-          "inflow": 1831,
-          "release": 1911,
-          "storage": 1760
-        }
-      },
-      "Starvation": {
-        "alias": null,
-        "anchor": [
-          0,
-          0
-        ],
-        "anno": "",
-        "cap": 162.279,
-        "coords": [
-          40.19324,
-          -110.44722
-        ],
-        "id": 928,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1934,
-          "inflow": 1798,
-          "release": 1878,
-          "storage": 1726
-        }
-      },
-      "Steinaker": {
-        "alias": null,
-        "anchor": [
-          0,
-          -14
-        ],
-        "anno": "",
-        "cap": 36.148,
-        "coords": [
-          40.51456,
-          -109.53275
-        ],
-        "id": 927,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1933,
-          "inflow": 1797,
-          "release": 1877,
-          "storage": 1725
-        }
-      },
-      "Upper Stillwater": {
-        "alias": null,
-        "anchor": [
-          30,
-          0
-        ],
-        "anno": "",
-        "cap": 31.382,
-        "coords": [
-          40.56565,
-          -110.70044
-        ],
-        "id": 963,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1968,
-          "inflow": 1832,
-          "release": 1912,
-          "storage": 1761
-        }
-      }
-    },
-    "title": "Uinta Basin",
-    "zoom": 9
-  }
+        "huc_level": 6,
+        "regions": {
+            "14060003_Duchesne": {
+                "alias": "Duchesne",
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.42,
+                    -110.65
+                ],
+                "huc-level": 8
+            },
+            "14060004_Strawberry": {
+                "alias": "Strawberry",
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.2,
+                    -110.815
+                ],
+                "huc-level": 8
+            },
+            "14060005_Lower_Green-Desolation_Canyon": {
+                "alias": "Desolation Canyon",
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    39.86,
+                    -110.5
+                ],
+                "huc-level": 8
+            },
+            "14060010_Lower_Green-Diamond": {
+                "alias": "Diamond",
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.35,
+                    -109.56
+                ],
+                "huc-level": 8
+            },
+            "140600_Lower_Green": {
+                "alias": "Lower Green",
+                "anchor": [
+                    0,
+                    0
+                ],
+                "coords": [
+                    40.4,
+                    -110.23
+                ],
+                "huc-level": 6
+            }
+        },
+        "reservoirs": {
+            "Currant Creek": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 15.464,
+                "coords": [
+                    40.33841,
+                    -111.05821
+                ],
+                "id": 952,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1957,
+                    "inflow": 1821,
+                    "release": 1901,
+                    "storage": 1750
+                }
+            },
+            "Moon Lake": {
+                "alias": null,
+                "anchor": [
+                    -30,
+                    0
+                ],
+                "anno": "",
+                "cap": 37.848,
+                "coords": [
+                    40.57445,
+                    -110.50665
+                ],
+                "id": 930,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1935,
+                    "inflow": 1799,
+                    "release": 1879,
+                    "storage": 1728
+                }
+            },
+            "Red Fleet": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    12
+                ],
+                "anno": "",
+                "cap": 25.7,
+                "coords": [
+                    40.57543,
+                    -109.42052
+                ],
+                "id": 960,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1965,
+                    "inflow": 1829,
+                    "release": 1909,
+                    "storage": 1758
+                }
+            },
+            "Soldier Creek": {
+                "alias": null,
+                "anchor": [
+                    55,
+                    0
+                ],
+                "anno": "",
+                "cap": 1105.91,
+                "coords": [
+                    40.13564,
+                    -111.02659
+                ],
+                "id": 962,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1967,
+                    "inflow": 1831,
+                    "release": 1911,
+                    "storage": 1760
+                }
+            },
+            "Starvation": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    0
+                ],
+                "anno": "",
+                "cap": 162.279,
+                "coords": [
+                    40.19324,
+                    -110.44722
+                ],
+                "id": 928,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1934,
+                    "inflow": 1798,
+                    "release": 1878,
+                    "storage": 1726
+                }
+            },
+            "Steinaker": {
+                "alias": null,
+                "anchor": [
+                    0,
+                    -14
+                ],
+                "anno": "",
+                "cap": 36.148,
+                "coords": [
+                    40.51456,
+                    -109.53275
+                ],
+                "id": 927,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1933,
+                    "inflow": 1797,
+                    "release": 1877,
+                    "storage": 1725
+                }
+            },
+            "Upper Stillwater": {
+                "alias": null,
+                "anchor": [
+                    30,
+                    0
+                ],
+                "anno": "",
+                "cap": 31.382,
+                "coords": [
+                    40.56565,
+                    -110.70044
+                ],
+                "id": 963,
+                "pop_dir": "up",
+                "region": "uc",
+                "sdis": {
+                    "elev": 1968,
+                    "inflow": 1832,
+                    "release": 1912,
+                    "storage": 1761
+                }
+            }
+        },
+        "title": "Uinta Basin",
+        "zoom": 9
+    }
 }

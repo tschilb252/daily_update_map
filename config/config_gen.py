@@ -55,29 +55,29 @@ ug_huc_filter = [1404, 140500]
 ug_title = 'Upper Green Basin'
 
 ug_regions = {
-    'Upper Green': {
-        'coords': [41.6, -110.1], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140401_Upper_Green': {
+        'coords': [41.6, -110.1], 'huc-level': 6, 'alias': 'Upper Green', 'anchor': (0,0)
     },
-    'Blacks Fork': {
-        'coords': [41.3, -110.4], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14040107_Blacks_Fork': {
+        'coords': [41.3, -110.4], 'huc-level': 8, 'alias': 'Blacks Fork', 'anchor': (0,0)
     },
-    'Big Sandy': {
-        'coords': [42.06, -109.64], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14040104_Big_Sandy': {
+        'coords': [42.06, -109.64], 'huc-level': 8, 'alias': 'Big Sandy', 'anchor': (0,0)
     },
-    'New Fork': {
-        'coords': [42.9, -109.8], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14040102_New_Fork': {
+        'coords': [42.9, -109.8], 'huc-level': 8, 'alias': 'New Fork', 'anchor': (0,0)
     },
-    'Upper Green-Flaming Gorge Reservoir': {
-        'coords': [41.12, -109.92], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14040106_Upper_Green-Flaming_Gorge_Reservoir': {
+        'coords': [41.12, -109.92], 'huc-level': 8, 'alias': 'Upper Green-Flaming Gorge', 'anchor': (0,0)
     },
-    'Little Snake': {
-        'coords': [41.05, -108.08], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14050003_Little_Snake': {
+        'coords': [41.05, -108.08], 'huc-level': 8, 'alias': 'Little Snake', 'anchor': (0,0)
     },
-    'Upper Yampa': {
-        'coords': [40.53, -107.35], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14050001_Upper_Yampa': {
+        'coords': [40.53, -107.35], 'huc-level': 8, 'alias': 'Upper Yampa', 'anchor': (0,0)
     },
-    'Upper White': {
-        'coords': [40.02, -107.85], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14050005_Upper_White': {
+        'coords': [40.02, -107.85], 'huc-level': 8, 'alias': 'Upper White', 'anchor': (0,0)
     },
     
 }
@@ -142,23 +142,23 @@ pb_huc_filter = [14060007, 14060009, 14070002, 14070003]
 pb_title = 'Price/San Rafael Basins'
 
 pb_regions = {
-    'Lower Green': {
-        'coords': [39.67, -111.53], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140600_Lower_Green': {
+        'coords': [39.67, -111.53], 'huc-level': 6, 'alias': 'Lower Green', 'anchor': (0,0)
     },
-    'Upper Colorado-Dirty Devil': {
-        'coords': [38.72, -111.86], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140700_Upper_Colorado-Dirty_Devil': {
+        'coords': [38.72, -111.86], 'huc-level': 6, 'alias': 'Dirty Devil', 'anchor': (0,0)
     },
-    'Price': {
-        'coords': [39.57, -110.85], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14060007_Price': {
+        'coords': [39.57, -110.85], 'huc-level': 8, 'alias': 'Price', 'anchor': (0,0)
     },
-    'San Rafael': {
-        'coords': [39.06, -110.9], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14060009_San_Rafael': {
+        'coords': [39.06, -110.9], 'huc-level': 8, 'alias': 'San Rafael', 'anchor': (0,0)
     },
-    'Muddy': {
-        'coords': [38.75, -111.2], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14070002_Muddy': {
+        'coords': [38.75, -111.2], 'huc-level': 8, 'alias': 'Muddy', 'anchor': (0,0)
     },
-    'Fremont': {
-        'coords': [38.45, -111.76], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14070003_Fremont': {
+        'coords': [38.45, -111.76], 'huc-level': 8, 'alias': 'Fremont', 'anchor': (0,0)
     }
 }
 
@@ -204,20 +204,20 @@ ub_huc_filter = [14060003, 14060004, 14060005, 14060010]
 ub_title = 'Uinta Basin'
 
 ub_regions = {
-    'Lower Green': {
-        'coords': [40.4, -110.23], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140600_Lower_Green': {
+        'coords': [40.4, -110.23], 'huc-level': 6, 'alias': 'Lower Green', 'anchor': (0,0)
     },
-    'Duchesne': {
-        'coords': [40.42, -110.65], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14060003_Duchesne': {
+        'coords': [40.42, -110.65], 'huc-level': 8, 'alias': 'Duchesne', 'anchor': (0,0)
     },
-    'Lower Green-Diamond': {
-        'coords': [40.35, -109.56], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14060010_Lower_Green-Diamond': {
+        'coords': [40.35, -109.56], 'huc-level': 8, 'alias': 'Diamond', 'anchor': (0,0)
     },
-    'Strawberry': {
-        'coords': [40.2, -110.815], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14060004_Strawberry': {
+        'coords': [40.2, -110.815], 'huc-level': 8, 'alias': 'Strawberry', 'anchor': (0,0)
     },
-    'Lower Green-Desolation Canyon': {
-        'coords': [39.86, -110.5], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14060005_Lower_Green-Desolation_Canyon': {
+        'coords': [39.86, -110.5], 'huc-level': 8, 'alias': 'Desolation Canyon', 'anchor': (0,0)
     },
 }
 
@@ -287,29 +287,29 @@ gb_huc_filter = [1601,160201,160202]
 gb_title = 'Wasatch Front Basins'
 
 gb_regions = {
-    'Bear': {
-        'coords': [41.6, -112.75], 'huc-level': 4, 'alias': None, 'anchor': (0,0)
+    '1601_Bear': {
+        'coords': [41.6, -112.75], 'huc-level': 4, 'alias': 'Bear', 'anchor': (0,0)
     },
-    'Upper Bear': {
-        'coords': [41.66, -111.21], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '160101_Upper_Bear': {
+        'coords': [41.66, -111.21], 'huc-level': 6, 'alias': 'Upper Bear', 'anchor': (0,0)
     },
-    'Lower Bear': {
-        'coords': [41.6, -112.31], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '160102_Lower_Bear': {
+        'coords': [41.6, -112.31], 'huc-level': 6, 'alias': 'Lower Bear', 'anchor': (0,0)
     },
-    'Provo': {
-        'coords': [40.54, -111.75], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '16020203_Provo': {
+        'coords': [40.54, -111.75], 'huc-level': 8, 'alias': 'Provo', 'anchor': (0,0)
     },
-    'Jordan': {
-        'coords': [40.7, -111.98], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '16020204_Jordan': {
+        'coords': [40.7, -111.98], 'huc-level': 8, 'alias': 'Jordan', 'anchor': (0,0)
     },
-    'Spanish Fork': {
-        'coords': [40.1, -111.58], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '16020202_Spanish_Fork': {
+        'coords': [40.1, -111.58], 'huc-level': 8, 'alias': 'Spanish Fork', 'anchor': (0,0)
     },
-    'Weber': {
-        'coords': [41.1, -111.85], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '160201_Weber': {
+        'coords': [41.1, -111.85], 'huc-level': 6, 'alias': 'Weber', 'anchor': (0,0)
     },
-    'Great Salt Lake': {
-        'coords': [40.77, -112.5], 'huc-level': 4, 'alias': None, 'anchor': (0,0)
+    '1602_Great_Salt_Lake': {
+        'coords': [40.77, -112.5], 'huc-level': 4, 'alias': 'Great Salt Lake', 'anchor': (0,0)
     },
     
 }
@@ -374,7 +374,12 @@ gb_reservoirs = {
         'id': 959, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1757, 'elev': 1964, 'inflow': 1828, 'release': 1908}
-    },
+    },      
+    'Pineview': {
+        'coords': [41.2684, -111.8009], 'region': 'uc', 'anno': '', 'cap': 222.273, 
+        'id': 946, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
+        'sdis': {'elev': 1951, 'inflow': 1815, 'release': 1895, 'storage': 1744}
+    }
 }    
  
 gb_config = {
@@ -398,35 +403,35 @@ sj_huc_filter = 1408
 sj_title = 'San Juan Basin'
 
 sj_regions = {
-    'San Juan': {
-        'coords': [37, -108.26], 'huc-level': 4, 'alias': None, 'anchor': (0,0)
+    '1408_San_Juan': {
+        'coords': [37, -108.26], 'huc-level': 4, 'alias': 'San Juan', 'anchor': (0,0)
     },
-    'Upper San Juan': {
-        'coords': [37, -107], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14080101_Upper_San_Juan': {
+        'coords': [37, -107], 'huc-level': 8, 'alias': 'Upper San Juan', 'anchor': (0,0)
     },
-    'Piedra': {
-        'coords': [37.53, -107.34], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14080102_Piedra': {
+        'coords': [37.53, -107.34], 'huc-level': 8, 'alias': 'Piedra', 'anchor': (0,0)
     },
     # 'Blanco': {
-    #     'coords': [38.7, -107.6], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    #     'coords': [38.7, -107.6], 'huc-level': 8, 'alias': 'Blanco', 'anchor': (0,0)
     # },
-    'Animas': {
-        'coords': [37.65, -107.8], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14080104_Animas': {
+        'coords': [37.65, -107.8], 'huc-level': 8, 'alias': 'Animas', 'anchor': (0,0)
     },
-    'Middle San Juan': {
-        'coords': [36.9, -109], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14080105_Middle_San_Juan': {
+        'coords': [36.9, -109], 'huc-level': 8, 'alias': 'Middle San Juan', 'anchor': (0,0)
     },
-    'Chaco': {
-        'coords': [36.45, -108.84], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14080106_Chaco': {
+        'coords': [36.45, -108.84], 'huc-level': 8, 'alias': 'Chaco', 'anchor': (0,0)
     },
-    'Mancos': {
-        'coords': [37.2, -108.7], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14080107_Mancos': {
+        'coords': [37.2, -108.7], 'huc-level': 8, 'alias': 'Mancos', 'anchor': (0,0)
     },
-    'Montezuma': {
-        'coords': [37.7, -109.28], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14080203_Montezuma': {
+        'coords': [37.7, -109.28], 'huc-level': 8, 'alias': 'Montezuma', 'anchor': (0,0)
     },
-    'Chinle': {
-        'coords': [36.8, -109.8], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14080204_Chinle': {
+        'coords': [36.8, -109.8], 'huc-level': 8, 'alias': 'Chinle', 'anchor': (0,0)
     },
     
 }
@@ -536,26 +541,26 @@ gunn_reservoirs = {
 }
     
 gunn_regions = {
-    'Gunnison': {
-        'coords': [38.7, -107.6], 'huc-level': 4, 'alias': None, 'anchor': (0,0)
+    '1402_Gunnisonn': {
+        'coords': [38.7, -107.6], 'huc-level': 4, 'alias': 'Gunnison', 'anchor': (0,0)
     },
-    'East-Taylor': {
-        'coords': [39, -106.9], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14020001_East-Taylor': {
+        'coords': [39, -106.9], 'huc-level': 8, 'alias': 'East-Taylor', 'anchor': (0,0)
     },
-    'Tomichi': {
-        'coords': [38.5, -106.7], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14020003_Tomichi': {
+        'coords': [38.5, -106.7], 'huc-level': 8, 'alias': 'Tomichi', 'anchor': (0,0)
     },
-    'Uncompahgre': {
-        'coords': [38.5, -108.1], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14020006_Uncompahgre': {
+        'coords': [38.5, -108.1], 'huc-level': 8, 'alias': 'Uncompahgre', 'anchor': (0,0)
     },
-    'Lower Gunnison': {
-        'coords': [38.7, -108.5], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14020005_Lower_Gunnison': {
+        'coords': [38.7, -108.5], 'huc-level': 8, 'alias': 'Lower Gunnison', 'anchor': (0,0)
     },
-    'Pecos Headwaters': {
-        'coords': [33, -105], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '13060001_Pecos_Headwaters': {
+        'coords': [33, -105], 'huc-level': 8, 'alias': 'Pecos Headwaters', 'anchor': (0,0)
     },
-    'North Fork Gunnison': {
-        'coords': [39.04, -107.74], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14020004_North_Fork_Gunnison': {
+        'coords': [39.04, -107.74], 'huc-level': 8, 'alias': 'North Fork Gunnison', 'anchor': (0,0)
     },
    
 }
@@ -581,23 +586,23 @@ rg_huc_filter = [1301, 1302, 1303, 1305, 1306, 14080101]
 rg_title = 'Rio Grande Basin'
 
 rg_regions = {
-    'Rio Grande': {
-        'coords': [34.7, -106.5], 'huc-level': 2, 'alias': None, 'anchor': (0,0)
+    '13_Rio_Grande_Region': {
+        'coords': [34.7, -106.5], 'huc-level': 2, 'alias': 'Rio Grande', 'anchor': (0,0)
     },
-    'Pecos Headwaters': {
-        'coords': [35.6, -104.5], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '13060001_Pecos_Headwaters': {
+        'coords': [35.6, -104.5], 'huc-level': 8, 'alias': 'Pecos Headwaters', 'anchor': (0,0)
     },
-    'Rio Grande Headwaters': {
-        'coords': [37.9, -106.65], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '130100_Rio_Grande_Headwaters': {
+        'coords': [37.9, -106.65], 'huc-level': 6, 'alias': 'Rio Grande Headwaters', 'anchor': (0,0)
     },
-    'Rio Grande-Elephant Butte': {
+    '130202_Rio_Grande-Elephant_Butte': {
         'coords': [34.7, -108.2], 'huc-level': 6, 'alias': 'Middle Rio Grande', 'anchor': (0,0)
     },
-    'Upper Rio Grande': {
-        'coords': [36.9, -106.85], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '130201_Upper_Rio_Grande': {
+        'coords': [36.9, -106.85], 'huc-level': 6, 'alias': 'Upper Rio Grande', 'anchor': (0,0)
     },
-    'Upper San Juan': {
-        'coords': [37, -108.55], 'huc-level': 8, 'alias': None, 'anchor': (0,0)
+    '14080101_Upper_San_Juan': {
+        'coords': [37, -108.55], 'huc-level': 8, 'alias': 'Upper San Juan', 'anchor': (0,0)
     },
 }
 
@@ -679,35 +684,35 @@ uc_huc_filter = 14
 uc_title = 'Upper Colorado Basin'
 
 uc_regions = {
-    'Upper Colorado': {
-        'coords': [39.8, -110.7], 'huc-level': 2, 'alias': None, 'anchor': (0,0)
+    '14_Upper_Colorado_Region': {
+        'coords': [39.8, -110.7], 'huc-level': 2, 'alias': 'Upper Colorado', 'anchor': (0,0)
     },
-    'Gunnison': {
-        'coords': [39.0, -108.3], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140200_Gunnison': {
+        'coords': [39.0, -108.3], 'huc-level': 6, 'alias': 'Gunnison', 'anchor': (0,0)
     },
-    'Colorado Headwaters': {
-        'coords': [40, -107.1], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140100_Colorado_Headwaters': {
+        'coords': [40, -107.1], 'huc-level': 6, 'alias': 'Colorado Headwaters', 'anchor': (0,0)
     },
-    'White-Yampa': {
-        'coords': [40.9, -107.9], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140500_White-Yampa': {
+        'coords': [40.9, -107.9], 'huc-level': 6, 'alias': 'White-Yampa', 'anchor': (0,0)
     },
-    'Upper Green': {
-        'coords': [42.9, -110.5], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140401_Upper_Green': {
+        'coords': [42.9, -110.5], 'huc-level': 6, 'alias': 'Upper Green', 'anchor': (0,0)
     },
-    'Lower Green': {
-        'coords': [40.5, -110.8], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140600_Lower_Green': {
+        'coords': [40.5, -110.8], 'huc-level': 6, 'alias': 'Lower Green', 'anchor': (0,0)
     },
-    'Upper Colorado-Dirty Devil': {
-        'coords': [38.2, -112.25], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140700_Upper_Colorado-Dirty_Devil': {
+        'coords': [38.2, -112.25], 'huc-level': 6, 'alias': 'Dirty Devil', 'anchor': (0,0)
     },
-    'Upper Colorado-Dolores': {
-        'coords': [37.7, -108.2], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140300_Upper_Colorado-Dolores': {
+        'coords': [37.7, -108.2], 'huc-level': 6, 'alias': 'Dolores', 'anchor': (0,0)
     },
-    'Lower San Juan': {
-        'coords': [37.7, -110.2], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140802_Lower_San_Juan': {
+        'coords': [37.7, -110.2], 'huc-level': 6, 'alias': 'Lower San Juan', 'anchor': (0,0)
     },
-    'Upper San Juan': {
-        'coords': [36.3, -108.5], 'huc-level': 6, 'alias': None, 'anchor': (0,0)
+    '140801_Upper_San_Juan': {
+        'coords': [36.3, -108.5], 'huc-level': 6, 'alias': 'Upper San Juan', 'anchor': (0,0)
     },
 }
 
@@ -786,7 +791,7 @@ if __name__ == '__main__':
     import sys
     from os import path
     import argparse
-    cli_desc = 'Creates Upper Colorado Daily Summary map for USBR.'
+    cli_desc = 'Creates Upper Colorado Daily Summary map configs for USBR.'
     parser = argparse.ArgumentParser(description=cli_desc)
     parser.add_argument("-V", "--version", help="show program version", action="store_true")
     parser.add_argument("-A", "--add", help="adds current config to all_config.json", action="store_true")   
@@ -795,23 +800,17 @@ if __name__ == '__main__':
     
     if args.version:
         print('region_status.py v1.0')
-        
-        
 
-    print('THIS FILE NEEDS TO BE UPDATED TO DEAL WITH NEW NRCS NAMING CONVENTION DO NOT USE')
-    sys.exit(0)
-    
-    
     this_dir = path.dirname(path.realpath(__file__))
     
     if args.remove:
         print(f'Removing {args.remove} from all_config.json if present.')
-        all_config_file_name = f'all_config.json'
+        all_config_file_name = 'all_config.json'
         with open(all_config_file_name, 'r') as j:
             all_config = json.load(j)
         all_config.pop(args.remove, None)
         with open(all_config_file_name, 'w') as j:
-            json.dump(all_config, j, indent=4, sort_keys=True)
+            json.dump(all_config, j, indent=2, sort_keys=True)
         sys.exit(0)
 
     for config_name, config in all_configs.items():
@@ -820,11 +819,11 @@ if __name__ == '__main__':
             json.dump(config, j, indent=4, sort_keys=True)
         print(f'Created {config_file_name}.')
         if args.add:
-            all_config_filename = f'all_config.json'
+            all_config_filename = 'all_config.json'
             all_config_path = path.join(this_dir, all_config_filename)
             with open(all_config_path, 'r') as j:
                 all_config = json.load(j)
             all_config[config_name] = config[config_name]
             with open(all_config_path, 'w') as j:
-                json.dump(all_config, j, indent=4, sort_keys=True)
+                json.dump(all_config, j, indent=2, sort_keys=True)
             print(f'  added {config_file_name} to all_config.json.')

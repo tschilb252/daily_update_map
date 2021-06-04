@@ -36,6 +36,18 @@
         ],
         "huc-level": 6
       },
+      "1601_Bear": {
+        "alias": "Bear",
+        "anchor": [
+          0,
+          0
+        ],
+        "coords": [
+          41.6,
+          -112.75
+        ],
+        "huc-level": 4
+      },
       "160201_Weber": {
         "alias": "Weber",
         "anchor": [
@@ -72,17 +84,17 @@
         ],
         "huc-level": 8
       },
-      "1601_Bear": {
-        "alias": "Bear",
+      "16020204_Jordan": {
+        "alias": "Jordan",
         "anchor": [
           0,
           0
         ],
         "coords": [
-          41.6,
-          -112.75
+          40.7,
+          -111.98
         ],
-        "huc-level": 4
+        "huc-level": 8
       },
       "1602_Great_Salt_Lake": {
         "alias": "Great Salt Lake",
@@ -95,18 +107,6 @@
           -112.5
         ],
         "huc-level": 4
-      },
-      "16020204_Jordan": {
-        "alias": "Jordan",
-        "anchor": [
-          0,
-          0
-        ],
-        "coords": [
-          40.7,
-          -111.98
-        ],
-        "huc-level": 8
       }
     },
     "reservoirs": {
@@ -286,6 +286,28 @@
           "storage": 1757
         }
       },
+      "Pineview": {
+        "alias": null,
+        "anchor": [
+          0,
+          0
+        ],
+        "anno": "",
+        "cap": 222.273,
+        "coords": [
+          41.2684,
+          -111.8009
+        ],
+        "id": 946,
+        "pop_dir": "up",
+        "region": "uc",
+        "sdis": {
+          "elev": 1951,
+          "inflow": 1815,
+          "release": 1895,
+          "storage": 1744
+        }
+      },
       "Rockport": {
         "alias": null,
         "anchor": [
@@ -328,28 +350,6 @@
           "inflow": 1796,
           "release": 1876,
           "storage": 1723
-        }
-      },
-      "Pineview": {
-        "alias": null,
-        "anchor": [
-          0,
-          0
-        ],
-        "anno": "",
-        "cap": 222.273,
-        "coords": [
-          41.2684, 
-          -111.8009
-        ],
-        "id": 946,
-        "pop_dir": "up",
-        "region": "uc",
-        "sdis": {
-          "elev": 1951,
-          "inflow": 1815,
-          "release": 1895,
-          "storage": 1744
         }
       }
     },
@@ -684,7 +684,7 @@
         "huc-level": 8
       },
       "140700_Upper_Colorado-Dirty_Devil": {
-        "alias": "Upper Colorado-Dirty Devil",
+        "alias": "Dirty Devil",
         "anchor": [
           0,
           0
@@ -1351,7 +1351,7 @@
         "huc-level": 8
       },
       "14060005_Lower_Green-Desolation_Canyon": {
-        "alias": "Lower Green-Desolation Canyon",
+        "alias": "Desolation Canyon",
         "anchor": [
           0,
           0
@@ -1363,7 +1363,7 @@
         "huc-level": 8
       },
       "14060010_Lower_Green-Diamond": {
-        "alias": "Lower Green-Diamond",
+        "alias": "Diamond",
         "anchor": [
           0,
           0
@@ -1580,7 +1580,7 @@
         "huc-level": 6
       },
       "140300_Upper_Colorado-Dolores": {
-        "alias": "Upper Colorado-Dolores",
+        "alias": "Dolores",
         "anchor": [
           0,
           0
@@ -1628,7 +1628,7 @@
         "huc-level": 6
       },
       "140700_Upper_Colorado-Dirty_Devil": {
-        "alias": "Upper Colorado-Dirty Devil",
+        "alias": "Dirty Devil",
         "anchor": [
           0,
           0
@@ -1872,7 +1872,7 @@
         "huc-level": 8
       },
       "14040106_Upper_Green-Flaming_Gorge_Reservoir": {
-        "alias": "Upper Green-Flaming Gorge Reservoir",
+        "alias": "Upper Green-Flaming Gorge",
         "anchor": [
           0,
           0
