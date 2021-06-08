@@ -468,7 +468,7 @@ sj_reservoirs = {
             {'storage': 14623, 'elev': 14621, 'inflow': 14617, 'release': 14620}
     },
     'Jackson': {
-        'coords': [37.40186, -108.27342], 'region': 'uc', 'anno': '', 'cap': 115.075, 
+        'coords': [37.40186, -108.27342], 'region': 'uc', 'anno': '', 'cap': 9.951, 
         'id': 935, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1733, 'elev': 1940, 'inflow': 1804, 'release': 1884}
