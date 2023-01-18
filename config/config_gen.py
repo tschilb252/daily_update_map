@@ -795,7 +795,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=cli_desc)
     parser.add_argument("-V", "--version", help="show program version", action="store_true")
     parser.add_argument("-A", "--add", help="adds current config to all_config.json", action="store_true")   
-    parser.add_argument("-r", "--remove", help="removes a config from all_config.json")   
+    parser.add_argument("-r", "--remove", help="removes a config from all_config.json", action="store_true")   
     args = parser.parse_args()
     
     if args.version:
