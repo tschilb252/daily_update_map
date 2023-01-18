@@ -541,7 +541,7 @@ gunn_reservoirs = {
 }
     
 gunn_regions = {
-    '1402_Gunnisonn': {
+    '1402_Gunnison': {
         'coords': [38.7, -107.6], 'huc-level': 4, 'alias': 'Gunnison', 'anchor': (0,0)
     },
     '14020001_East-Taylor': {
