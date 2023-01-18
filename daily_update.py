@@ -200,7 +200,7 @@ def add_region_markers(basin_map, regions, nrcs_url=NRCS_CHARTS_URL, map_date=No
             swe_txt = r_get(swe_url).text
             prec_txt = r_get(prec_url).text
             swe_regex = r"(?<=% of Median - )(.*)(?=%<br>%)"
-            prec_regex = r"(?<=% of Average - )(.*)(?=%<br>%)"
+            prec_regex = r"(?<=% of Median - )(.*)(?=%<br>%)"
         
             swe_re = re.search(swe_regex, swe_txt, re.MULTILINE)
             prec_re = re.search(prec_regex, prec_txt, re.MULTILINE)
