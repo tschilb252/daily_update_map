@@ -33,6 +33,8 @@ default_css = get_default_css()
 folium.folium.Map.default_js = default_js
 folium.folium.Map.default_css = default_css
 
+REQUEST_HEADER = {"Request Header": "usbr", "Header value": "Bureau of Reclamation Bot"}
+
 def get_expand_button(title=''):
     return f'''
     <div class="buton" style="position: fixed; top: 10px; left: 55px; z-index:9999;">
@@ -197,8 +199,8 @@ def add_region_markers(basin_map, regions, nrcs_url=NRCS_CHARTS_URL, map_date=No
         swe_url = f'{nrcs_url}/WTEQ/assocHUC{huc_level}/{region}{region_suffix}.html'
         prec_url = f'{nrcs_url}/PREC/assocHUC{huc_level}/{region}{region_suffix}.html'
         try:
-            swe_txt = r_get(swe_url).text
-            prec_txt = r_get(prec_url).text
+            swe_txt = r_get(swe_url, headers=REQUEST_HEADER).text
+            prec_txt = r_get(prec_url, headers=REQUEST_HEADER).text
             swe_regex = r"(?<=% of Median - )(.*)(?=%<br>%)"
             prec_regex = r"(?<=% of Median - )(.*)(?=%<br>%)"
         
