@@ -374,7 +374,7 @@ def get_colormap(low=50, high=150):
         vmin=50,
         vmax=150
     )
-    colormap.caption = '% of Average Precipitation or % Median Snow Water Equivalent'
+    colormap.caption = '% of Median Precipitation or % Median Snow Water Equivalent'
     return colormap
 
 def filter_geo_json(geo_json_path, huc_level=2, filter_str=''):
