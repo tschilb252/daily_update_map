@@ -33,7 +33,7 @@ default_css = get_default_css()
 folium.folium.Map.default_js = default_js
 folium.folium.Map.default_css = default_css
 
-REQUEST_HEADER = {"Request Header": "usbr", "Header value": "Bureau of Reclamation Bot"}
+REQUEST_HEADER = {}#{"Request Header": "usbr", "Header value": "Bureau of Reclamation Bot"}
 
 def get_expand_button(title=''):
     return f'''
