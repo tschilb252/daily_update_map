@@ -54,7 +54,7 @@ def get_legend():
         <b>Basin Data</b>
       </a>
       <a class="dropdown-item" href="https://www.wcc.nrcs.usda.gov/" target="_blank">
-        <span><i class="fa fa-umbrella"></i>&nbsp % Avg. Precipitation
+        <span><i class="fa fa-umbrella"></i>&nbsp % Median Precipitation
       </a>
       <a class="dropdown-item" href="https://www.wcc.nrcs.usda.gov/" target="_blank">
         <span><i class="fa fa-snowflake-o"></i>&nbsp % Median SWE
