@@ -275,7 +275,7 @@ def add_huc_chropleth(data_type='swe', show=False, huc_level='6',
                       gis_path='gis', huc_filter='', use_topo=False):
     
     huc_str = f'HUC{huc_level}'
-    stat_type_dict = {'swe': 'Median', 'prec': 'Avg.'}
+    stat_type_dict = {'swe': 'Median', 'prec': 'Median'}
     stat_type = stat_type_dict.get(data_type, '')
     layer_name = f'{huc_str} % {stat_type} {data_type.upper()}'
     if use_topo:
