@@ -240,7 +240,7 @@ def add_huc_layer(level=2, gis_path='gis', embed=False, show=True, huc_filter=''
     huc_geojson_path = path.join(gis_path, f'{huc_str}.geojson')
     with open(huc_geojson_path, 'r') as gj:
                 huc_geojson = json.load(gj)
-    if True:#try:
+    try:
         weight = -0.25 * float(level) + 2.5
         if type(huc_filter) == int:
             huc_filter = str(huc_filter)
@@ -267,9 +267,9 @@ def add_huc_layer(level=2, gis_path='gis', embed=False, show=True, huc_filter=''
             smooth_factor=1
         )
         return geojson
-    #except Exception as err:
-        #print(f'Could not add HUC {level} layer to map! - {err}')
-        #return None
+    except Exception as err:
+        print(f'Could not add HUC {level} layer to map! - {err}')
+        return None
     
 def add_huc_chropleth(data_type='swe', show=False, huc_level='6', 
                       gis_path='gis', huc_filter='', use_topo=False):
