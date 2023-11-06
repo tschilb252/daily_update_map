@@ -27,7 +27,7 @@ regions = {
 
 reservoirs = {
     'Flaming Gorge': {
-        'coords': [40.91474, -109.42185], 'region': 'uc', 'anno': '', 'cap': 3749.0, 
+        'coords': [40.91474, -109.42185], 'region': 'uc', 'anno': '', 'cap': 3671.0, 
         'id': 917, 'alias': None, 'anchor': (0,-15), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1718, 'elev': 1927, 'inflow': 1791, 'release': 1871}
@@ -84,7 +84,7 @@ ug_regions = {
 
 ug_reservoirs = {
     'Flaming Gorge': {
-        'coords': [40.91474, -109.42185], 'region': 'uc', 'anno': '', 'cap': 3749.0, 
+        'coords': [40.91474, -109.42185], 'region': 'uc', 'anno': '', 'cap': 3671.0, 
         'id': 917, 'alias': None, 'anchor': (50,30), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1718, 'elev': 1927, 'inflow': 1791, 'release': 1871}
@@ -521,19 +521,19 @@ gunn_reservoirs = {
             {'storage': 1746, 'elev': 1953, 'inflow': 1817, 'release': 1897}
     },
     'Blue Mesa': {
-        'coords': [38.45305, -107.33677], 'region': 'uc', 'anno': '', 'cap': 827.94, 
+        'coords': [38.45305, -107.33677], 'region': 'uc', 'anno': '', 'cap': 827.95, 
         'id': 913, 'alias': None, 'anchor': (-40,35), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1714, 'elev': 1923, 'inflow': 1787, 'release': 1867}
     },
     'Morrow Point': {
-        'coords': [38.45191, -107.53791], 'region': 'uc', 'anno': '', 'cap': 117.025, 
+        'coords': [38.45191, -107.53791], 'region': 'uc', 'anno': '', 'cap': 117.05, 
         'id': 914, 'alias': None, 'anchor': (10,-25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1715, 'elev': 1924, 'inflow': 1788, 'release': 1868}
     },
     'Crystal': {
-        'coords': [38.51046, -107.62374], 'region': 'uc', 'anno': '', 'cap': 17.536, 
+        'coords': [38.51046, -107.62374], 'region': 'uc', 'anno': '', 'cap': 17.55, 
         'id': 915, 'alias': None, 'anchor': (-10,10), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1716, 'elev': 1925, 'inflow': 1789, 'release': 1869}
@@ -724,37 +724,37 @@ uc_reservoirs = {
             {'storage': 1717, 'elev': 1926, 'inflow': 1790, 'release': 1870}
     },
     'Flaming Gorge': {
-        'coords': [41.0934, -109.5406], 'region': 'uc', 'anno': '', 'cap': 3749,
+        'coords': [41.0934, -109.5406], 'region': 'uc', 'anno': '', 'cap': 3671,
         'id': 917, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1718, 'elev': 1927, 'inflow': 1791, 'release': 1871}
     },
     'Blue Mesa': {
-        'coords': [38.453, -107.337], 'region': 'uc', 'anno': '', 'cap': 827.94,
+        'coords': [38.453, -107.337], 'region': 'uc', 'anno': '', 'cap': 827.95,
         'id': 913, 'alias': None, 'anchor': (-115,25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1714, 'elev': 1923, 'inflow': 1787, 'release': 1867}
     },
     'Morrow Point': {
-        'coords': [38.452, -107.538], 'region': 'uc', 'anno': '', 'cap': 117.25,
+        'coords': [38.452, -107.538], 'region': 'uc', 'anno': '', 'cap': 117.05,
         'id': 914, 'alias': None, 'anchor': (-15,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1715, 'elev': 1924, 'inflow': 1843, 'release': 1868}
     },
     'Crystal': {
-        'coords': [38.51, -107.624], 'region': 'uc', 'anno': '', 'cap': 17.536,
+        'coords': [38.51, -107.624], 'region': 'uc', 'anno': '', 'cap': 17.55,
         'id': 915, 'alias': None, 'anchor': (115,-25), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1716, 'elev': 1925, 'inflow': 1844, 'release': 1869}
     },
     'Navajo': {
-        'coords': [36.801, -107.612], 'region': 'uc', 'anno': '', 'cap': 1696,
+        'coords': [36.801, -107.612], 'region': 'uc', 'anno': '', 'cap': 1648,
         'id': 920, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1720, 'elev': 1929, 'inflow': 1793, 'release': 1873}
     },
     'Lake Powell': {
-        'coords': [37.0688, -111.2439], 'region': 'uc', 'anno': '', 'cap': 24322,
+        'coords': [37.0688, -111.2439], 'region': 'uc', 'anno': '', 'cap': 23314,
         'id': 919, 'alias': None, 'anchor': (0,0), 'pop_dir': 'up',
         'sdis': 
             {'storage': 1719, 'elev': 1928, 'inflow': 1792, 'release': 1872}
