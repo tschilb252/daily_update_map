@@ -17,7 +17,7 @@ from datetime import datetime
 from requests import get as r_get
 
 STATIC_URL = f'https://www.usbr.gov/uc/water/hydrodata/assets'
-NRCS_CHARTS_URL = 'https://www.nrcs.usda.gov/Internet/WCIS/AWS_PLOTS/basinCharts/POR'
+NRCS_CHARTS_URL = 'https://nwcc-apps.sc.egov.usda.gov/awdb/basin-plots/POR'
 
 def get_plotly_js():
     return f'{STATIC_URL}/plotly.js'

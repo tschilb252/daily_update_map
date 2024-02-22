@@ -174,8 +174,8 @@ def get_frcst_data(site_id, map_date=dt.now()):
 
 def get_embed(href):
     embed = (
-        f'<div class="container embed-responsive embed-responsive-4by3" style="overflow: hidden; height: 650px; width: 720px;">'
-        f'  <iframe class="embed-responsive-item" src="{href}" scrolling="no" frameborder="0" allowfullscreen></iframe>'
+        f'<div class="container embed-responsive embed-responsive-4by3" style="overflow: hidden; height: 450px; width: 720px;">'
+        f'  <iframe class="embed-responsive-item" src="{href}" scrolling="no" frameborder="0" allowfullscreen style="border: 0px none; margin-left: 0px; height: 790px; margin-top: -345px; width: 720px;"></iframe>'
         f'</div>'
     )   
     return embed
@@ -201,8 +201,8 @@ def add_region_markers(basin_map, regions, nrcs_url=NRCS_CHARTS_URL, map_date=No
         try:
             swe_txt = r_get(swe_url, headers=REQUEST_HEADER).text
             prec_txt = r_get(prec_url, headers=REQUEST_HEADER).text
-            swe_regex = r"(?<=% of Median - )(.*)(?=%<br>%)"
-            prec_regex = r"(?<=% of Median - )(.*)(?=%<br>%)"
+            swe_regex = r"(?<=% of Median - )(.*)(?=%\\u003cbr\\u003e%)"
+            prec_regex = r"(?<=% of Median - )(.*)(?=%\\u003cbr\\u003e%)"
         
             swe_re = re.search(swe_regex, swe_txt, re.MULTILINE)
             prec_re = re.search(prec_regex, prec_txt, re.MULTILINE)
@@ -531,7 +531,6 @@ if __name__ == '__main__':
         for huc_level in huc_levels:
             # huc_filter = tuple(set(i[:len(huc_level)] for i in huc_filter))
             print(f'    Adding HUC{huc_level} boundary...')
-            
             huc_layer = add_huc_layer(
                 level=int(huc_level), 
                 gis_path=gis_dir,
